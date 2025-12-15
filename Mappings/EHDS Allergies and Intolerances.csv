@@ -1,5 +1,5 @@
-﻿"Archetypes included
-(Container archetype)";Text;Description;Data Type;"Included
+﻿"Archetypes included (Container archetype)";
+Text;Description;Data Type;"Included
 (Yes/No)";Occurrences;Comment / Suggestion;Path;FHIR path?;Mapping comments
 openEHR-EHR-SECTION.adhoc.v1;EHDS Allergies and Intolerances;A generic section header which should be renamed in a template to suit a specific clinical context.;ARCHETYPE / SECTION;Yes;Mandatory;;/;;
 "openEHR-EHR-EVALUATION.adverse_reaction_risk.v2
@@ -80,4 +80,5 @@ TEXT";Yes;Optional;It is acknowledged that this assessment is very subjective. T
   No information about allergies";Yes;Mandatory;"For example: ""No information available about adverse reactions""; No information available about problems or diagnoses""; ""No information available about previous procedures performed""; or ""No information available about medications used"".";/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/data[at0001]/items[at0002];;
 ;Reason for absence;Description of the reason why there is no information available.;TEXT;No;Prohibited;For example: patient is unconscious or refuses to provide information. Coding the reason with a terminology is desirable, if possible.;/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/data[at0001]/items[at0005];;
 ;Last updated;The date at which the absence was last updated.;DATE TIME;Yes;Optional;;/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/protocol[at0003]/items[at0004];;
+
 ;Extension;Additional information required to capture local content or to align with other reference models/formalisms.;SLOT / CLUSTER;No;Optional, repeating;For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.;/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/protocol[at0003]/items[at0006];;
