@@ -1,4 +1,4 @@
-﻿"Archetypes included (Container archetype)"; Text;Description;Data Type;"Included(Yes/No)";Occurrences;Comment / Suggestion;Path;FHIR path?;Mapping comments
+"Archetypes included (Container archetype)";Text;Description;Data Type;"Included(Yes/No)";Occurrences;Comment / Suggestion;Path;FHIR path?;Mapping comments
 openEHR-EHR-SECTION.adhoc.v1;EHDS Allergies and Intolerances;A generic section header which should be renamed in a template to suit a specific clinical context.;ARCHETYPE / SECTION;Yes;Mandatory;;/;;
 "openEHR-EHR-EVALUATION.adverse_reaction_risk.v2
 (openEHR-EHR-SECTION.adhoc.v1)";Allergy Intolerance;Clinical assessment of the propensity for an individual to experience a harmful or undesirable physiological response if exposed, or re-exposed, to a substance.;ARCHETYPE / EVALUATION;Yes;Optional, repeating;"Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.";/items[openEHR-EHR-EVALUATION.adverse_reaction_risk.v2, 'Allergy Intolerance'];;
@@ -80,4 +80,5 @@ TEXT";Yes;Optional;It is acknowledged that this assessment is very subjective. T
 ;Last updated;The date at which the absence was last updated.;DATE TIME;Yes;Optional;;/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/protocol[at0003]/items[at0004];;
 
 ;Extension;Additional information required to capture local content or to align with other reference models/formalisms.;SLOT / CLUSTER;No;Optional, repeating;For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.;/items[openEHR-EHR-EVALUATION.absence.v2, 'Absence of information']/protocol[at0003]/items[at0006];;
+
 
