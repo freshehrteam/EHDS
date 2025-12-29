@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "295fa472fc3fd0a29df9eed95ff61a75",
+      "MD5-CAM-1.0.1" : "e1cc38bc67c15a82fd39731e50d2acb9",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "1.0.0-alpha.4",
+      "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
     },
     "details" : {
@@ -1045,6 +1045,9 @@
           },
           "/data[at0001]/items[at0101.1]" : {
             "source" : "DAM, openEHR"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "agentOrAllergen" : "EHDSAllergyIntolerance.agentOrAllergen"
           }
         },
         "pt-br" : {
@@ -1348,13 +1351,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.8",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "agentOrAllergen",
-            "description" : "Identification of a substance, or substance class, that is considered to put the individual at risk of an adverse reaction event.",
-            "comment" : "Both an individual substance and a substance class are valid entries in 'Substance'. A substance may be a compound of simpler substances, for example a medicinal product. It is strongly recommended that the 'Substance' is coded with a terminology capable of triggering decision support, where possible. For example: Snomed CT, DM+D, RxNorm, NDFRT, ATC, New Zealand Universal List of Medicines and Australian Medicines Terminology. Free text entry should only be used if there is no appropriate terminology available."
           }
         },
         "pt-br" : {
