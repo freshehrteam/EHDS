@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e1cc38bc67c15a82fd39731e50d2acb9",
+      "MD5-CAM-1.0.1" : "9a3a59a3f3dd5c2eb03c7b07f7605c6c",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
       "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
@@ -1045,9 +1045,6 @@
           },
           "/data[at0001]/items[at0101.1]" : {
             "source" : "DAM, openEHR"
-          },
-          "/data[at0001]/items[at0002.1]" : {
-            "agentOrAllergen" : "EHDSAllergyIntolerance.agentOrAllergen"
           }
         },
         "pt-br" : {
