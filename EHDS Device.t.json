@@ -1,0 +1,508 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "dbd6f4b3-a3e6-41b1-a21e-3530ac1ca212",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2026-01-06"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "9823f51f1dcbb4f22ddf6f9097889ada",
+      "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es-ar" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es-ar"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ar-sy" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ar-sy"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ca" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ca"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-CLUSTER.ehdsdevice.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "CLUSTER",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0001.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0003.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0002.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "1..1",
+        "nodeId" : "at0021.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_IDENTIFIER",
+            "defaultValue" : {
+              "@type" : "DV_IDENTIFIER"
+            },
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0004.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0005.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0020.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0022.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0023.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0006.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0025.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0007.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0024.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_IDENTIFIER",
+            "defaultValue" : {
+              "@type" : "DV_IDENTIFIER"
+            },
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0008.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "ar-sy" : { },
+      "en" : {
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "identifier",
+          "description" : "Unspecified identifier, which can be further specified in a template or at run time.",
+          "comment" : "Coding of the name of the identifier with a coding system is desirable, if available."
+        },
+        "at0021.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021.1",
+          "text" : "identifier",
+          "description" : "A numeric or alphanumeric string that is associated with this device within a given system.",
+          "comment" : "Often fixed to the device as a barcode."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "EHDS Device",
+          "description" : "An instrument, apparatus, implant, material or similar, used in the provision of healthcare. In this context, a medical device includes a broad range of devices which act through a variety of physical, mechanical, thermal or similar means but specifically excludes devices which act through medicinal means such as pharmacological, metabolic or immunological methods.  The scope is inclusive of disposable devices as well as durable or persisting devices that require tracking, maintenance activities or regular calibration, recognising that each type of device has specific data recording requirements."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001.1",
+          "text" : "name",
+          "description" : "Identification of the medical device, preferably by a common name, a formal fully descriptive name or, if required, by class or category of device.",
+          "comment" : "This data element will capture the term, phrase or category used in clinical practice. For example: <brand name><machine> (XYZ Audiometer); <size> <brand name> <intravenous catheter> (14G Jelco IV catheter); or <brand name/type> <implant>. Coding with a terminology is desirable, where possible, although this may be local and depending on local supplies available.\r\n"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003.1",
+          "text" : "type",
+          "description" : "The category or kind of device.",
+          "comment" : "Not applicable if a category is already recorded in 'Device name'.\r\n Example: if the 'Device' is named as a 'urinary catheter'; the 'Type' may be recorded as 'indwelling' or 'condom'.Coding with a terminology is desirable, where possible. This may include use of GTIN or EAN numbers."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "manufacturer",
+          "description" : "Name of manufacturer."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "manufactureDate",
+          "description" : "Date the device was manufactured."
+        },
+        "at0020.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0020.1",
+          "text" : "serialNumber",
+          "description" : "Number assigned by the manufacturer which can be found on the device, and should be specific to each device., its label, or accompanying packaging."
+        },
+        "at0023.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023.1",
+          "text" : "modelNumber",
+          "description" : "The exact model number assigned by the manufacturer and found on the device label or accompanying packaging."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006.1",
+          "text" : "lotNumber",
+          "description" : "The number assigned by the manufacturer which identifies a group of items manufactured at the same time, usually found on the label or packaging material."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025.1",
+          "text" : "version",
+          "description" : "Identification of the version of software being used in the medical device.",
+          "comment" : "When the medical device is an actual software application, record the version of the software using this data element. When the medical device has multiple software applications embedded within it, record each software component in a separate CLUSTER archetype within the Components SLOT - either as a nested instance of another CLUSTER.device archetype or using a CLUSTER archetype designed specifically for recording software details (but not yet available at time of this archetype development)."
+        },
+        "at0007.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007.1",
+          "text" : "expiryDate",
+          "description" : "Date after which the device/product is no longer fit for use, usually found on the device itself or printed on the accompanying packaging.",
+          "comment" : "This date usually applies only to single use or disposable devices."
+        },
+        "at0008.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0008.1",
+          "text" : "note",
+          "description" : "Additional narrative about the device not captured in other fields."
+        }
+      },
+      "es-ar" : { },
+      "pt-br" : { },
+      "nb" : { },
+      "de" : { },
+      "sv" : { },
+      "nl" : { },
+      "fr" : { },
+      "ca" : { },
+      "es" : { }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "85819a20-80aa-3007-adf9-5ddec66967ec",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "EHDS Device",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es-ar"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ar-sy"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ca"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
