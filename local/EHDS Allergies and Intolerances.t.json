@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "36583860ae7c273d803b2530c6b091b6",
+      "MD5-CAM-1.0.1" : "2767e0bf131bba2a5dd70c2d875e9e9a",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
       "sem_ver" : "1.0.0-alpha.10",
       "build_uid" : ""
@@ -1047,6 +1047,13 @@
           },
           "/data[at0001]/items[at0101.1]" : {
             "source" : "DAM, openEHR"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "mapTargetName" : "agentorAllergen",
+            "mapTargetConstraints" : "SNOMED IPS agent",
+            "mapTargetNotes" : "Work in progress",
+            "ConceptMapUrl" : "http://org.fhir/ConceptMap",
+            "mapTargetFhirPath" : ".section.code"
           }
         },
         "pt-br" : {
