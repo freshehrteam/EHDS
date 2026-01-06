@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2dbbfd4766aa14fd4be96733e073e416",
+      "MD5-CAM-1.0.1" : "31a9a45d8d750af0299e3dbb1df971d7",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "1.0.0-alpha.7",
+      "sem_ver" : "1.0.0-alpha.8",
       "build_uid" : ""
     },
     "details" : {
@@ -1197,6 +1197,33 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0026", "at0027" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0098.1",
           "attributes" : [ {
@@ -1578,6 +1605,40 @@
             "text" : "(Synthesized)",
             "code" : "ac0.19",
             "description" : ""
+          },
+          "at0110.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0110.1",
+            "text" : "resolutionCircumstances",
+            "description" : "Additional narrative about the Problem/Diagnosis qualifier values, not captured in other fields."
+          },
+          "at0089.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0089.1",
+            "text" : "problemStatus",
+            "description" : "Status of the remission of an incurable diagnosis.",
+            "comment" : "For example: the status of a cancer or haematological diagnosis."
+          },
+          "at0071.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0071.1",
+            "text" : "problemStatus",
+            "description" : "Category of the occurrence for this problem or diagnosis.",
+            "comment" : "This data element can be an additional qualifier to the 'New' value in the 'Episodicity' value set, that is a condition such as asthma can have recurring new episodes that have periods of resolution in between. However it can be important to identify the first ever episode of asthma from all of the other episodes."
+          },
+          "at0083.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0083.1",
+            "text" : "problemStatus",
+            "description" : "Phase of healing for an acute problem or diagnosis.",
+            "comment" : "For example: tracking the progress of resolution of a middle ear infection."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "problemStatus",
+            "description" : "Category that supports division of problems and diagnoses into Active or Inactive problem lists.",
+            "comment" : "The Active/Inactive and Current/Past data elements have similar clinical impact but represent slightly different semantics. Both are actively used in different clinical settings, but usually not together. If a Current/Past qualifier is recorded, then this data element is likely to be redundant. An exception where a condition can be current but inactive is asthma that is not causing acute symptoms."
           }
         },
         "sl" : {
@@ -2816,7 +2877,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "externalResource",
+            "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
+          }
+        },
         "sv" : { },
         "de" : { },
         "nb" : { },
@@ -3156,6 +3224,12 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0079.1",
               "attributes" : [ ],
@@ -3184,9 +3258,47 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0077.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0003.1",
               "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0005.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0047", "at0048", "at0049" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3200,6 +3312,38 @@
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0030.1",
               "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0073.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0074", "at0075", "at0076" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3243,8 +3387,18 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0070.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
@@ -3299,7 +3453,50 @@
             "comment" : "Unvollständige Datumsangaben sind zulässig. Wenn der Patient unter einem Jahr alt ist, dann ist das vollständige Datum oder ein Minimum von Monat und Jahr notwendig, um genaue Altersberechnungen zu ermöglichen - z.B. wenn es zur Entscheidungsunterstützung verwendet wird. Datumswerte, die als \"Alter zum Zeitpunkt der Genesung\" erfasst/importiert werden, sollten anhand des Geburtsdatums der Person in ein Datum umgewandelt werden."
           }
         },
-        "en" : { },
+        "en" : {
+          "at0030.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030.1",
+            "text" : "endDate",
+            "description" : "Estimated or actual date/time of resolution or remission for this problem or diagnosis, as determined by a healthcare professional.",
+            "comment" : "Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of resolution\" should be converted to a date using the subject's date of birth.\r\n"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "EHDSCondition",
+            "description" : "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.",
+            "comment" : "Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "problem",
+            "description" : "Identification of the problem or diagnosis, by name.",
+            "comment" : "Coding of the name of the problem or diagnosis with a terminology is preferred, where possible."
+          },
+          "at0077.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0077.1",
+            "text" : "onsetDate",
+            "description" : "Estimated or actual date/time that signs or symptoms of the problem/diagnosis were first observed.",
+            "comment" : "Data captured/imported as \"Age at onset\" should be converted to a date using the subject's date of birth."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "severity",
+            "description" : "An assessment of the overall severity of the problem or diagnosis.",
+            "comment" : "If severity is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. Note: more specific grading of severity can be recorded using the Specific details SLOT."
+          },
+          "at0073.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0073.1",
+            "text" : "diagnosisAssertionStatus",
+            "description" : "The level of confidence in the identification of the diagnosis.",
+            "comment" : "If an alternative valueset is required, these values can be added to the DV_TEXT data type in a template."
+          }
+        },
         "ar-sy" : {
           "at0030.1" : {
             "@type" : "ARCHETYPE_TERM",
