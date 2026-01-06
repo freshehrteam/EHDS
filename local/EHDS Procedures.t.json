@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8c3428e9f8050908baae47d7421213da",
+      "MD5-CAM-1.0.1" : "fe1d53db3059e0175e81a396f7be0198",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "1.0.0-alpha.5",
+      "sem_ver" : "1.0.0-alpha.6",
       "build_uid" : ""
     },
     "details" : {
@@ -944,7 +944,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ISM_TRANSITION",
-          "occurrences" : "0..0",
           "nodeId" : "at0047.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -1151,8 +1150,20 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0049.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0070.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
@@ -1167,6 +1178,13 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0058.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0063.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
@@ -1262,6 +1280,15 @@
               "attributes" : [ ],
               "attributeTuples" : [ ],
               "archetypeRef" : "EHDS Body structure",
+              "referenceType" : "templateId"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "EHDS Device",
               "referenceType" : "templateId"
             } ]
           } ],
@@ -1406,7 +1433,48 @@
             "description" : "*The procedure has been performed and all associated clinical activities completed.(en)"
           }
         },
-        "en" : { },
+        "en" : {
+          "at0048.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0048.1",
+            "text" : "outcome",
+            "description" : "Outcome of procedure performed.",
+            "comment" : "Coding with a terminology is preferred, where possible."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "note",
+            "description" : "Additional narrative about the activity or care pathway step not captured in other fields."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "complication",
+            "description" : "Details about any complication arising from the procedure.",
+            "comment" : "Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. Examples: Hematuria after a kidney biopsy, tissue irritation after insertion of intravenous catheter."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "EHDSProcedure",
+            "description" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "code",
+            "description" : "Identification of the procedure by name.",
+            "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
+          },
+          "at0070.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0070.1",
+            "text" : "reason",
+            "description" : "The clinical or process-related reason for the procedure.",
+            "comment" : "Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'."
+          }
+        },
         "ar-sy" : {
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
