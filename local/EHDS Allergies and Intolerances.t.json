@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2767e0bf131bba2a5dd70c2d875e9e9a",
+      "MD5-CAM-1.0.1" : "0a446fe0e9fccaaddf37ea5fedb96585",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "1.0.0-alpha.10",
+      "sem_ver" : "1.0.0-alpha.11",
       "build_uid" : ""
     },
     "details" : {
@@ -1045,15 +1045,26 @@
           "" : {
             "source" : "openEHR,FHIR"
           },
-          "/data[at0001]/items[at0101.1]" : {
-            "source" : "DAM, openEHR"
-          },
           "/data[at0001]/items[at0002.1]" : {
-            "mapTargetName" : "agentorAllergen",
-            "mapTargetConstraints" : "SNOMED IPS agent",
-            "mapTargetNotes" : "Work in progress",
-            "ConceptMapUrl" : "http://org.fhir/ConceptMap",
-            "mapTargetFhirPath" : ".section.code"
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.agentOrAllergen"
+          },
+          "/data[at0001]/items[at0130.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.status"
+          },
+          "/data[at0001]/items[at0063.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.certainty"
+          },
+          "/data[at0001]/items[at0101.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.criticality"
+          },
+          "/data[at0001]/items[at0133.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.onsetDate"
+          },
+          "/data[at0001]/items[at0058.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.typeOfPropensity"
+          },
+          "/data[at0001]/items[at0006.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.description"
           }
         },
         "pt-br" : {
@@ -1749,6 +1760,25 @@
           "misuse" : "No utilizar para registrar eventos adversos, como errores en el proceso clínico, intervenciones o productos. Por ejemplo: uso indebido o dosificación incorrecta o mala administración de un agente o sustancia; errores de etiquetaje; daños o heridas causadas por una operación o procedimiento; sobredosis/envenenamiento, etc. Utilizar un arquetipo específico para esta finalidad.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.reaction"
+          },
+          "/items[at0006.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.reaction.manifestation"
+          },
+          "/items[at0008.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.reaction.date"
+          },
+          "/items[at0010.1]" : {
+            "mapTargetFhirPath" : "EHDSAllergyIntolerance.reaction.severity"
+          }
         }
       }
     },
