@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2efb4ce8b02b9a56e8ab5418f9aba384",
+      "MD5-CAM-1.0.1" : "7cdbb1439146a6c94a4f450d2f6892d8",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.3",
+      "sem_ver" : "1.0.0-alpha.4",
       "build_uid" : ""
     },
     "details" : {
@@ -260,7 +260,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "EHDS Medication Summary",
+          "text" : "EHDS Medication Use",
           "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         }
       },
