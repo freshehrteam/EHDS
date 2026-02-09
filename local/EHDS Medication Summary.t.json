@@ -19,8 +19,8 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "63e435f1d7c6837ed76c7414f7a2cc70",
-      "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
+      "MD5-CAM-1.0.1" : "5da20d7a7524e1a7468f39ea922dc0c7",
+      "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
       "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
@@ -189,6 +189,21 @@
         "misuse" : "Não deve ser deixado inalterado ao nível do template.",
         "originalResourceUri" : { },
         "otherDetails" : { }
+      },
+      "pt" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt"
+        },
+        "purpose" : "Para fornecer um cabeçalho de secção genérico que será renomeado ao nível do template para se adequar a um contexto clínico específico.",
+        "keywords" : [ ],
+        "use" : "Use para criar um título de secção ao nível do template que será renomeado para se adequar ao contexto clínico específico. Por exemplo: «Título ad hoc» renomeado para «Resultados do exame».",
+        "misuse" : "Não deve ser deixado inalterado ao nível do template.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -323,7 +338,8 @@
       },
       "ca" : { },
       "es" : { },
-      "pt-pt" : { }
+      "pt-pt" : { },
+      "pt" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -347,7 +363,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8BEC919844E82D2FCE2272FD3CDE7E12"
+        "PARENT:MD5-CAM-1.0.1" : "F37648882B3DD5A6D87B8A14F7E02892"
       },
       "details" : {
         "de" : {
@@ -4311,6 +4327,20 @@
         "value" : "ISO_639-1"
       },
       "codeString" : "pt-pt"
+    },
+    "author" : {
+      "name" : "Vanessa Pereira",
+      "organisation" : "Luxembourg Institute of Health (LIH)",
+      "email" : "vanessapereira@protonmail.com"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt"
     },
     "author" : {
       "name" : "Vanessa Pereira",
