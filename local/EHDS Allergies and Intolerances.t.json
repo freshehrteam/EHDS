@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "fb3cf1c584fb775b619b685e0123c980",
+      "MD5-CAM-1.0.1" : "88c6b7a22c7e824efbba42b0bc113bbc",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.19",
+      "sem_ver" : "1.0.0-alpha.20",
       "build_uid" : ""
     },
     "details" : {
@@ -807,7 +807,7 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/data[at0001]/items[at0002.1]" : {
+          "/data[at0001]/items[at0005.1]" : {
             "mapTargetName" : "emptyReason",
             "mapTargetFhirPath" : "EHDSPatientSummary.allergiesAndIntolerances.emptyReason",
             "mapTargetDefinition" : "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete).",
