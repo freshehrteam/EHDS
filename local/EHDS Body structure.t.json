@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "84f5f5540becd7fbde097fd4bae47f8e",
+      "MD5-CAM-1.0.1" : "2b773dd7e04dded4944ff5cde9961120",
       "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -156,6 +156,16 @@
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetName" : "EHDSBodyStructure"
+        }
       }
     }
   },
