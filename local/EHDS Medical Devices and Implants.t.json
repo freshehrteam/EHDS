@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "739dc027972d655e5282b5fe673fa372",
+      "MD5-CAM-1.0.1" : "0adfe9841a7677389a5955e1685250dc",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.9",
+      "sem_ver" : "1.0.0-alpha.10",
       "build_uid" : ""
     },
     "details" : {
@@ -212,7 +212,9 @@
     "documentation" : {
       "en" : {
         "" : {
-          "mapTargetName" : "EHDSPatientSummary.medicalDevicesAndImplants"
+          "mapTargetName" : "EHDSPatientSummary.medicalDevicesAndImplants",
+          "mapTargetDefinition" : "Section: Medical devices and implants",
+          "mapTargetCardinality" : "1..1"
         }
       }
     }
@@ -235,10 +237,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.4",
+        "nodeId" : "at0.7",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-exclusion_global-001.v1",
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-absence-001.v2",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -412,6 +414,19 @@
           "misuse" : "Brukes ikke for å rekvirere høreapparat - Bruk INSTRUCTION.request arketypene for dette formålet.\r\n\r\nBrukes ikke for å rekvirere aktiviteter som forekommer under planlegging og tilbassing av medisinsk utstyr - bruk passende ACTION arketype for dette formålet.\r\n\r\nBrukes ikke for å registrere aktiviteter som forekommer under planlegging og tilpassing av et implantat - bruk arketypen ACTION.procedure for dette formålet.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "EHDSDeviceUse",
+            "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.deviceUse",
+            "mapTargetDefinition" : "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.",
+            "mapTargetCardinality" : "0..*"
+          }
         }
       }
     },
@@ -596,12 +611,6 @@
             "code" : "at0009.1",
             "text" : "endDate",
             "description" : "Date when the device stopped being used or was removed."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "EHDSDeviceUse",
-            "description" : "An ongoing and persistent overview about medical devices that have been fitted or implanted."
           }
         },
         "de" : {
@@ -669,7 +678,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "8356dc11-fae9-449e-9d89-fef3f7b8e6f1",
+    "uid" : "2c97f119-1c1e-4c11-8ccd-dc714f014ea4",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -678,108 +687,28 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "94A7237B611A8FAB5C0F0DBEA236C3F9"
+        "PARENT:MD5-CAM-1.0.1" : "2DC80F474683F0694427F87B2BA48457"
       },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer allgemeinen Übersicht von Ausschlüssen. Diese umfasst alle Erkrankungen, Diagnosen, Familienanamnese, Medikamente, Prozeduren, unerwünschte Nebenwirkungen oder andere klinische Ereignisse, die entweder gerade nicht aktuell sind, oder die in der Vergangenheit nicht vorhanden waren.",
-          "keywords" : [ "Ausschluss, Verneinung, ausschließen, Abwesenheit" ],
-          "use" : "Zur Darstellung einer allgemeinen Übersicht von Ausschlüssen. Diese umfasst alle Erkrankungen, Diagnosen, Familienanamnese, Medikamente, Prozeduren, unerwünschte Nebenwirkungen oder andere klinische Ereignisse, die entweder gerade nicht aktuell sind, oder die in der Vergangenheit nicht vorhanden waren.\r\n\r\nDieser Archetyp wurde speziell erstellt, um eine klare und unmissverständliche Aussage zum Gesamtausschluss eines klinischen Merkmals aus der Gesundheitsakte zu treffen. Diese Verfahrensweise wird bevorzugt, um zuverlässig Kennzeichen und Terminolgien zu verwenden, die einen Ausschluss ausdrücken.\r\n\r\nJede allgemeine Angabe sollte in einem einzelnen Archetyp dokumentiert werden - zum Beispiel in einem einzelnen Archetyp für Medikamente und einem anderen für unerwünschte Nebenwirkungen.\r\n\r\nDas Datenelement \"Allgemeine Ausschlusserklärung\" ermöglicht die Dokumentation von einzelnen Ausschlussangaben. Die Ausschlussangaben unterscheiden sich zur \"Allgemeinen Ausschlusserklärung\" in der Laufzeitnamenseinschränkung dem unterschiedlichen allgemeinen Ausschluss. Die Laufzeitnameseinschränkung wird während der Templatemodellierung oder im Rahmen einer Softwareanwendung vorgenommen.\r\n\r\nBitte beachten, dass die Ausschlusserklärungen nur zum Zeitpunkt der Dokumentation aktuell und genau sind. Es ist möglich, dass bei einem Individuum bei dem keine bekannte Geschichte eines Problems oder Diagnose dokumentiert wird (Verwendung der Ausschlusserklärung), es zum gleichen Zeitpunkt des Gesprächs / der Beratung das erste Auftreten eines Problems oder einer Diagnose kommen kann (Verwendung des Archetypes EVALUATION.problem_diagnosis). In zukünftigen Ausschlusserklärungen kann das Individuum möglicherweise eine bekannte Geschichte des Problems oder der Diagnose aufweisen.",
-          "misuse" : "Nicht zur Dokumentation des Ausschlusses eines bestimmten Problems/einer bestimmten Diagnose, eines Medikamentes, einer Prozedur, einer Familienanamnese, einer unerwünschten Nebenwirkung oder eines anderen klinischen Ereignisses - für diesen Zweck bitte den Archetyp EVALUATION.exclusion_specific benutzen.\r\n\r\nNicht zur Dokumentation des Ausschlusses von einem Teil einer medizinischen Untersuchung - für diesen Zweck bitte den Archetyp CLUSTER.exclusion_exam oder innerhalb eines entsprechenden OBSERVATION oder CLUSTER Archetyps verwenden.\r\n\r\nNicht zur Dokumentation von Ausschlüssen von Symptomen, für diesen Zweck bitte den Archetyp CLUSTER.exclusion_symptom oder innerhalb eines entsprechenden OBSERVATION oder CLUSTER Archetyps verwenden.\r\n\r\nNicht zur Dokumentation von fehlenden Informationen verwenden - für diesen Zweck bitte den Archetyp EVALUATION.absense benutzen.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att generellt utesluta alla problem/diagnoser, ärftlighet, läkemedel, ingrepp, biverkningar eller annat, som antingen inte föreligger nu eller som inte har uppträtt tidigare.",
-          "keywords" : [ "utesluta, exkludera, avsaknad" ],
-          "use" : "Används för att generellt utesluta alla problem/diagnoser, ärftlighet, läkemedel, ingrepp, biverkningar eller annat, som antingen inte föreligger nu eller som inte har uppträtt tidigare.\r\n",
-          "misuse" : "Ska inte användas för att utesluta specifikaproblem/diagnoser, ärftlighet, läkemedel, ingrepp, biverkningar eller annat, som antingen inte föreligger nu eller som inte har uppträtt tidigare. Använd då i stället arketypen EVALUATION.exclusion_specific.\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere et overordnet eksklusjonsutsagn om alle problemer/diagnoser, familiære sykdommer, legemidler, prosedyrer, overfølsomheter eller andre kliniske konsepter som ikke er tilstede hos et individ, enten i nåtid eller fortid.",
-          "keywords" : [ "eksklusjon, negasjon, utelukkelse, fravær" ],
-          "use" : "Brukes til å registrere et overordnet eksklusjonsutsagn om alle problemer/diagnoser, familiære sykdommer, legemidler, prosedyrer, overfølsomheter eller andre kliniske konsepter som ikke er tilstede hos et individ, enten i nåtid eller fortid.\r\n\r\nArketypen er laget spesifikt for å kunne uttrykke klart og tydelig en overordnet utelukkelse av en type klinisk konsept fra journalen. Denne tilnærmingen er valgt i stedet for å basere seg på flagg eller terminologi for å uttrykke negasjon.\r\n\r\nHver globale eksklusjon registreres i en egen instans av arketypen, for eksempel en egen instans for utelukkelse av legemidler og en annen for overfølsomhetsreaksjoner.\r\n\r\nElementet \"Overordnet utsagn\" brukes til å registrere et enkelt globalt eksklusjonsutsagn. De forskjellige typene utsagn som er listet opp i elementets runtime name constraint navngir de forskjellige globale eksklusjonene. En runtime name constraint kan brukes enten under templatmodellering eller i en applikasjon.\r\n\r\nMerk at eksklusjonsutsagn kun kan regnes som aktuelle og pålitelige på det tidspunktet de registreres. Et journalnotat kan gjerne uttrykke at et individ har ingen problemer eller diagnoser i sin historikk (ved hjelp av et eksklusjonsutsagn) i den samme konsultasjonen der det for første gang registreres et problem eller en diagnose (ved hjelp av arketypen EVALUATION.problem_diagnosis). I senere journalnotater kan individet ha det aktuelle problemet eller diagnosen som del av sin kjente historikk.",
-          "misuse" : "Brukes ikke for å registrere eksklusjon av et spesifikt problem eller diagnose, legemiddel, prosedyre, familiær sykdom, overfølsomhet eller annet klinisk konsept - bruk arketypen EVALUATION.exclusion_specific for dette formålet.\r\n\r\nBrukes ikke for å registrere eksklusjon av noen komponent av en fysisk undersøkelse - bruk arketypen CLUSTER.exclusion_exam i en passende OBSERVATION- eller CLUSTER-arketype.\r\n\r\nBrukes ikke for å registrere eksklusjon av symptomer - bruk arketypen CLUSTER.exclusion_symptom i en passende OBSERVATION- eller CLUSTER-arketype.\r\n\r\nBrukes ikke for å registrere fravær av informasjon - bruk arketypen EVALUATION.absence for dette formålet.",
-          "copyright" : "© Nasjonal IKT HF, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para registrar uma declaração global de exclusão sobre todos Problema / diagnóstico, História familiar, Medicamentos, Procedimentos, Reações adversas ou outro item clínico que não estão presentes atualmente ou não estiveram presentes no passado.",
-          "keywords" : [ "exclusão, negação, excluir, ausência" ],
-          "use" : "Use para registrar uma declaração geral de exclusão sobre todos os Problema / diagnóstico, História familiar, Medicamentos, Procedimentos, Reações adversas ou outro item clínico que não estão presentes ou não estiveram presentes no passado.\r\n\r\nEste arquétipo foi especificamente concebido para fazer uma declaração clara e inequívoca de uma exclusão global de um tipo de item clínico do registro de saúde. Esta abordagem é usada preferencialmente, em vez de se basear em sinalizadores ou terminologia para expressar negação.\r\n\r\nCada declaração global deve ser registrada em uma instância separada - por exemplo, uma instância separada para uma declaração sobre medicamentos e outra para reações adversas.\r\n\r\nO elemento de dados \"Declaração Global\" permite a gravação de uma única declaração Global. As diferentes declarações globais listadas na restrição de nome de tempo de execução \"declaração global\" identificam as diferentes exclusões globais. Esta restrição de nome pode ser aplicada durante a construção do modelo ou em tempo de execução dentro de um aplicativo de software.\r\n\r\nPor favor observe que as declarações de exclusão só podem ser consideradas atuais e precisas no momento da gravação. É possível que um registro seja capaz de afirmar que um indivíduo tenha nenhum histórico conhecido de quaisquer problemas ou diagnósticos (utilizando uma instrução de exclusão) e na mesma consulta seja gravada a evidência de sua primeira experiência de um problema ou diagnóstico (usando o arquétipo EVALUATION.problem_diagnosis). Em declarações de registro futuras, o indivíduo pode ter um histórico CONHECIDO do problema ou diagnóstico registrado em sua lista de problemas.",
-          "misuse" : "Não deve ser utilizado para registar a exclusão de um problema específico / diagnóstico, medicação, procedimento, história familiar, reação adversa ou outro item clínico - use o arquétipo EVALUATION.exclusion_specific para este fim.\r\n\r\nNão deve ser usado para registrar a exclusão de qualquer componente de um exame físico, use o arquétipo CLUSTER.exclusion_exam dentro de um arquétipo apropriado do tipo OBSERVATION ou CLUSTER.\r\n\r\nNão deve ser usado para registrar a exclusão de sintomas, use o arquétipo CLUSTER.exclusion_symptom dentro de um arquétipo apropriado do tipo OBSERVATION ou CLUSTER.\r\n\r\nNão deve ser usado para registrar a ausência de informações - use o arquétipo EVALUATION.absense para este fim.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
         "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record an overall statement of exclusion about all Problem/diagnosis, Family history, Medications, Procedures, Adverse reactions or other clinical item that are either not currently present, or have not been present in the past.",
-          "keywords" : [ "exclusion, negation, rule out, rule-out, r/o, absence" ],
-          "use" : "Use to record an overall statement of exclusion about all Problem/diagnosis, Family history, Medications, Procedures, Adverse reactions or other clinical item that are either not currently present, or have not been present in the past.\r\n\r\nThis archetype has been specifically designed to make a clear and unambiguous statement of an overall exclusion of a type of clinical item from the health record. This approach is used in preference to relying on flags or terminology to express negation.\r\n\r\nEach global statement should be recorded in a separate instance - for example a separate instance for a statement about medications and another for adverse reactions.\r\n\r\nThe 'Global statement' data element allows for recording of a single Global statement. The different Global statements listed in the \"Global statement' run-time name constraint identifies the the different global exclusions. This name constraint can be applied during template modelling or at run-time within a software application.\r\n\r\nPlease note that exclusion statements can only be considered to be current and accurate at the point-in-time of recording. It is possible for a record to be able to state that an individual has NO KNOWN history of any problems or diagnoses (using an exclusion statement) at the same consultation as recording the evidence of their first experience of a problem or diagnosis (using the EVALUATION.problem_diagnosis archetype). In future record statements, the individual may have a KNOWN history of the problem or diagnosis recorded in their problem list.",
-          "misuse" : "Not to be used to record the exclusion of a specific problem/diagnosis, medication, procedure, family history, adverse reaction or other clinical item - use the EVALUATION.exclusion_specific archetype for this purpose.\r\n\r\nNot to be used to record the exclusion of any component of a physical examination - use the CLUSTER.exclusion_exam archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the exclusion of symptoms use the CLUSTER.exclusion_symptom archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the absence of information - use the EVALUATION.absense archetype for this purpose.",
-          "copyright" : "© Nasjonal IKT HF, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "purpose" : "Une déclaration globale d'exclusion concernant tous les problèmes/diagnostics, les antécédents familiaux, les médicaments, les procédures, les effets indésirables ou autres éléments cliniques qui ne sont pas présents actuellement ou qui ne l'ont pas été dans le passé.",
-          "keywords" : [ "exclusion, négation, exclusion, exclusion, r / o, absence" ],
-          "use" : "*Use to record an overall statement of exclusion about all Problem/diagnosis, Family history, Medications, Procedures, Adverse reactions or other clinical item that are either not currently present, or have not been present in the past.\r\n\r\nThis archetype has been specifically designed to make a clear and unambiguous statement of an overall exclusion of a type of clinical item from the health record. This approach is used in preference to relying on flags or terminology to express negation.\r\n\r\nEach global statement should be recorded in a separate instance - for example a separate instance for a statement about medications and another for adverse reactions.\r\n\r\nThe 'Global statement' data element allows for recording of a single Global statement. The different Global statements listed in the \"Global statement' run-time name constraint identifies the the different global exclusions. This name constraint can be applied during template modelling or at run-time within a software application.\r\n\r\nPlease note that exclusion statements can only be considered to be current and accurate at the point-in-time of recording. It is possible for a record to be able to state that an individual has NO KNOWN history of any problems or diagnoses (using an exclusion statement) at the same consultation as recording the evidence of their first experience of a problem or diagnosis (using the EVALUATION.problem_diagnosis archetype). In future record statements, the individual may have a KNOWN history of the problem or diagnosis recorded in their problem list.(en)",
-          "misuse" : "*Not to be used to record the exclusion of a specific problem/diagnosis, medication, procedure, family history, adverse reaction or other clinical item - use the EVALUATION.exclusion_specific archetype for this purpose.\r\n\r\nNot to be used to record the exclusion of any component of a physical examination - use the CLUSTER.exclusion_exam archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the exclusion of symptoms use the CLUSTER.exclusion_symptom archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the absence of information - use the EVALUATION.absense archetype for this purpose.(en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
+          "/data[at0001]/items[at0005]" : {
+            "mapTargetName" : "emptyReason",
+            "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.emptyReason",
+            "mapTargetDefinition" : "Reason for absence of data",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.exclusion_global.v1",
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.absence.v2",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-exclusion_global-001.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-absence-001.v2"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -801,34 +730,52 @@
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "name",
+                "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
+                  "rmTypeName" : "DV_TEXT",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
+                    "rmAttributeName" : "value",
                     "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.8" ],
-                      "selectedTerminologies" : [ ]
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "No information about medical devices or implants" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0003",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
-              "nodeId" : "at0011.1",
-              "attributes" : [ ],
+              "nodeId" : "at0004.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -841,138 +788,18 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Global exclusion of problems/diagnoses",
-            "description" : "Overall statement of exclusion of all problems or diagnoses at the time of recording."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        },
-        "nb" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Overordnet eksklusjon av problemer/diagnoser",
-            "description" : "Overordnet eksklusjonsutsagn om alle problemer eller diagnoser ved registreringstidspunktet."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        },
-        "pt-br" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Exclusão global de problemas / diagnósticos",
-            "description" : "Declaração geral de exclusão de todos os problemas ou diagnósticos no momento da gravação."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        },
-        "de" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Allgemeiner Ausschluss von Problemen/Diagnosen",
-            "description" : "Zur Dokumentation einer Gesamterklärung zum Ausschluss über alle Erkrankungen oder Diagnosen zum Zeitpunkt der Dokumentation."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        },
-        "sv" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Generellt uteslutande av problem/diagnoser",
-            "description" : "*Overall statement of exclusion of all problems or diagnoses at the time of recording.(en)"
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        },
-        "fr" : {
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Exclusion globale des problèmes/diagnostics",
-            "description" : "Une déclaration globale d'exclusion de tous les problèmes ou diagnostics au moment de l'enregistrement."
-          },
-          "ac0.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.8",
-            "description" : ""
-          }
-        }
+        "en" : { },
+        "pt-br" : { },
+        "de" : { },
+        "fr" : { },
+        "es" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0003", "at0004", "at0005", "at0006" ]
-        },
-        "ac0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.2",
-          "members" : [ "at0003", "at0004", "at0005", "at0006" ]
-        },
-        "ac0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.3",
-          "members" : [ "at0003", "at0004", "at0005" ]
-        },
-        "ac0.4" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.4",
-          "members" : [ "at0003", "at0004", "at0005" ]
-        },
-        "ac0.5" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.5",
-          "members" : [ "at0003", "at0004" ]
-        },
-        "ac0.6" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.6",
-          "members" : [ "at0003", "at0004" ]
-        },
-        "ac0.7" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.7",
-          "members" : [ "at0003" ]
-        },
-        "ac0.8" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.8",
-          "members" : [ "at0003" ]
-        }
-      }
+      "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "d7bd414b-824b-4271-b19c-bfd7b610757b",
+    "buildUid" : "b9213aea-2687-4637-88bf-33917cb9e373",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -992,36 +819,8 @@
         "codeString" : "de"
       },
       "author" : {
-        "name" : "Katrin Troeltzsch",
-        "organisation" : "Nationales Centrum für Tumorerkrankungen, Heidelberg",
-        "email" : "katrin.troeltzsch@med.uni-heidelberg.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Åsa Skagerhult",
-        "organisation" : "Region Östergötland",
-        "email" : "asa.skagerhult@regionostergotland.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Silje Ljosland Bakke",
-        "organisation" : "Nasjonal IKT HF"
+        "name" : "Ramona Wellmann",
+        "organisation" : "Medizinische Hochschule Hannover"
       },
       "otherDetails" : { }
     }, {
@@ -1033,11 +832,10 @@
         "codeString" : "pt-br"
       },
       "author" : {
-        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
-        "organisation" : "Core Consulting",
-        "email" : "contato@coreconsulting.com.br"
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Hospital Sirio Libanes, Brazil",
+        "email" : "vladimir.pizzo@hsl.org.br"
       },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -1048,9 +846,23 @@
         "codeString" : "fr"
       },
       "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better",
-        "email" : "vanessapereira@protonmail.com"
+        "name" : "Bassem Khouzam, Vanessa Pereira",
+        "organisation" : "Medtronic, Better - Pathfinder",
+        "email" : "bassem.khouzam@medtronic.com, vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
       },
       "otherDetails" : { }
     } ]
