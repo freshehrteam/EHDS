@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2b773dd7e04dded4944ff5cde9961120",
+      "MD5-CAM-1.0.1" : "9b33669316a8162184c20ebc8b76142e",
       "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -164,7 +164,35 @@
     "documentation" : {
       "en" : {
         "" : {
-          "mapTargetName" : "EHDSBodyStructure"
+          "mapTargetName" : "EHDSBodyStructure",
+          "mapTargetDefinition" : "Model for body structure"
+        },
+        "/items[at0001.1]" : {
+          "mapTargetName" : "location",
+          "mapTargetFhirPath" : "EHDSBodyStructure.location",
+          "mapTargetDefinition" : "Body site",
+          "mapTargetCardinality" : "0..1",
+          "mapTargetBindings" : "SNOMED CT"
+        },
+        "/items[at0065.1]" : {
+          "mapTargetName" : "locationQualifier",
+          "mapTargetFhirPath" : "EHDSBodyStructure.locationQualifier",
+          "mapTargetDefinition" : "Additional qualifier of the body structure (e.g. upper, lower, left side).",
+          "mapTargetCardinality" : "0..*",
+          "mapTargetBindings" : "SNOMED CT"
+        },
+        "/items[at0002.1]" : {
+          "mapTargetName" : "laterality",
+          "mapTargetFhirPath" : "EHDSBodyStructure.laterality",
+          "mapTargetDefinition" : "Body structure laterality (e.g. left, right).",
+          "mapTargetCardinality" : "0..1",
+          "mapTargetBindings" : "SNOMED CT"
+        },
+        "/items[at0023.1]" : {
+          "mapTargetName" : "description",
+          "mapTargetFhirPath" : "EHDSBodyStructure.description",
+          "mapTargetDefinition" : "Textual description of the body structure",
+          "mapTargetCardinality" : "0..1"
         }
       }
     }
@@ -209,12 +237,13 @@
               "rmAttributeName" : "defining_code",
               "children" : [ {
                 "@type" : "C_TERMINOLOGY_CODE",
-                "rmTypeName" : "CODE_PHRASE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
                 "occurrences" : "1..1",
                 "terminologyId" : {
                   "value" : "local"
                 },
-                "constraint" : [ "at0003", "at0004", "at0083" ]
+                "constraint" : [ "ac0.3" ],
+                "selectedTerminologies" : [ ]
               } ]
             } ],
             "attributeTuples" : [ ]
@@ -315,6 +344,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
           "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "sl" : {
@@ -328,6 +363,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
+          "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
           "description" : ""
         }
       },
@@ -344,39 +385,11 @@
           "code" : "ac0.2",
           "description" : ""
         },
-        "at0000.1" : {
+        "ac0.3" : {
           "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000.1",
-          "text" : "EHDSBodyStructure",
-          "description" : "A physical site on or within the human body."
-        },
-        "at0001.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001.1",
-          "text" : "location",
-          "description" : "Identification of a single physical site either on, or within, the human body.",
-          "comment" : "This data element is the only mandated data point in this archetype and should be used as the primary data point to record an anatomical location with a commonly used name. It is strongly recommended that 'Body site name' be recorded as specifically as is anatomically possible. For example: record 'upper eyelid' rather than recording 'eyelid' with 'upper' as a qualifier; 'fifth rib' rather than 'rib' with a numeric qualifier. Use the other data elements for laterality, aspect, region and anatomical line to provide more detail.\r\n\r\nThis data element should be coded with a terminology capable of triggering decision support, where possible - an appropriate termset for use here could comprise individual concepts or a list of precoordinated terms. Free text should be used only if there is no appropriate terminology available.\r\n\r\nIf 'Body site name' is already identified in an archetype in which this Anatomical location archetype has been nested, then this data element may be redundant. However, it might be reasonable to duplicate 'Body site name' in this archetype to support semantic querying using this archetype, instead of the archetype in which it has been nested."
-        },
-        "at0065.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0065.1",
-          "text" : "locationQualifier",
-          "description" : "Additional detail using a specific region or a point on, or within, the identified body site.",
-          "comment" : "Use to increase precision of identification of the body site, if required. For example, the upper right quadrant or McBurney's point on the abdominal wall or interphalangeal joint of the great toe. If the 'Body site name' data element uses pre-coordinated terms that include the specific site, then this data element is redundant.\r\nIn most situations this will be a single specific site. This data element has multiple occurrences to support less common use cases which need to identify a single anatomical location involving two or more adjacent and continuous specific sites. For example, to describe the specific site of a single tumour extending across the 2nd, 3rd and 4th ribs."
-        },
-        "at0002.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0002.1",
-          "text" : "laterality",
-          "description" : "The side of the body on which the identified body site is located.",
-          "comment" : "If the 'Body site name' includes a pre-coordinated term that already specifies laterality, this data element may be redundant. If the findings require documentation of a body site on both the left and right sides of the body, or involving both sides of a paired structure or region, use 'Left and right' only when the same anatomical site is affected on both sides and side-specific detail is not required. If the findings differ significantly between sides, each should be recorded as a separate instance of this archetype with the appropriate laterality."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023.1",
-          "text" : "description",
-          "description" : "Narrative description that can be used to further refine and support the 'Body site name'.",
-          "comment" : "For example: adjacent to the vermilion border; a tattoo covers the bottom half of this area."
+          "text" : "(Synthesized)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "nb" : {
@@ -390,6 +403,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
+          "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
           "description" : ""
         }
       },
@@ -405,6 +424,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
           "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "de" : {
@@ -418,6 +443,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
+          "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
           "description" : ""
         }
       },
@@ -433,6 +464,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
           "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "sv" : {
@@ -446,6 +483,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
+          "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
           "description" : ""
         }
       },
@@ -461,6 +504,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
           "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "ca" : {
@@ -475,6 +524,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
           "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
+          "description" : ""
         }
       },
       "es" : {
@@ -488,6 +543,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.2",
+          "description" : ""
+        },
+        "ac0.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.3",
           "description" : ""
         }
       }
@@ -508,6 +569,11 @@
         "@type" : "VALUE_SET",
         "id" : "ac0.2",
         "members" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+      },
+      "ac0.3" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.3",
+        "members" : [ "at0003", "at0004", "at0083" ]
       }
     }
   },
