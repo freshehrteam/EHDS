@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0adfe9841a7677389a5955e1685250dc",
+      "MD5-CAM-1.0.1" : "4efe9b14c91089efd8ac91a65b99e4ce",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.10",
+      "sem_ver" : "1.0.0-alpha.11",
       "build_uid" : ""
     },
     "details" : {
@@ -426,6 +426,18 @@
             "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.deviceUse",
             "mapTargetDefinition" : "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.",
             "mapTargetCardinality" : "0..*"
+          },
+          "/data[at0001]/items[at0022]/items[at0008.1]" : {
+            "mapTargetName" : "startDate",
+            "mapTargetFhirPath" : "EHDSDeviceUse.startDate",
+            "mapTargetDefinition" : "Date when the device was implantable to the patient or the external device was first in use.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/data[at0001]/items[at0022]/items[at0009.1]" : {
+            "mapTargetName" : "endDate",
+            "mapTargetFhirPath" : "EHDSDeviceUse.endDate",
+            "mapTargetDefinition" : "Date when the device was explanted from the patient or the external device was no longer in use.",
+            "mapTargetCardinality" : "0..1"
           }
         }
       }
@@ -510,7 +522,16 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0008.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -530,7 +551,16 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0009.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -549,7 +579,7 @@
                 }, {
                   "@type" : "C_ARCHETYPE_ROOT",
                   "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
+                  "occurrences" : "1..1",
                   "nodeId" : "at0010.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ],
@@ -599,20 +629,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0008.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008.1",
-            "text" : "startDate",
-            "description" : "Date of fitting or implant of the device."
-          },
-          "at0009.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009.1",
-            "text" : "endDate",
-            "description" : "Date when the device stopped being used or was removed."
-          }
-        },
+        "en" : { },
         "de" : {
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
