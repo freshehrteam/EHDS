@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5e0c3578d25aa55938c51d2e65d669f2",
+      "MD5-CAM-1.0.1" : "5951ad6e038ff4263609f47d8e6200f3",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -191,6 +191,54 @@
           "mapTargetFhirPath" : "EHDSDevice.identifier",
           "mapTargetDefinition" : "Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used.",
           "mapTargetCardinality" : "1..*"
+        },
+        "/items[at0004.1]" : {
+          "mapTargetName" : "manufacturer",
+          "mapTargetFhirPath" : "EHDSDevice.manufacturer",
+          "mapTargetDefinition" : "Name of device manufacturer",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0005.1]" : {
+          "mapTargetName" : "manufactureDate",
+          "mapTargetFhirPath" : "EHDSDevice.manufactureDate",
+          "mapTargetDefinition" : "The date and time when the device was manufactured",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0020.1]" : {
+          "mapTargetName" : "serialNumber",
+          "mapTargetFhirPath" : "EHDSDevice.serialNumber",
+          "mapTargetDefinition" : "Serial number assigned by the manufacturer",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0023.1]" : {
+          "mapTargetName" : "modelNumber",
+          "mapTargetFhirPath" : "EHDSDevice.modelNumber",
+          "mapTargetDefinition" : "The manufacturer's model number for the device",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0006.1]" : {
+          "mapTargetName" : "lotNumber",
+          "mapTargetFhirPath" : "EHDSDevice.lotNumber",
+          "mapTargetDefinition" : "Lot number of manufacture",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0025.1]" : {
+          "mapTargetName" : "version",
+          "mapTargetFhirPath" : "EHDSDevice.version",
+          "mapTargetDefinition" : "The actual design of the device or software version running on the device",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0007.1]" : {
+          "mapTargetName" : "expiryDate",
+          "mapTargetFhirPath" : "EHDSDevice.expiryDate",
+          "mapTargetDefinition" : "The date and time beyond which this device is no longer valid or should not be used (if applicable).",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0008.1]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "EHDSDevice.note",
+          "mapTargetDefinition" : "Device notes and comments",
+          "mapTargetCardinality" : "0..*"
         }
       }
     }
@@ -255,7 +303,16 @@
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "nodeId" : "at0005.1",
-        "attributes" : [ ],
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE_TIME",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
         "attributeTuples" : [ ]
       }, {
         "@type" : "C_COMPLEX_OBJECT",
@@ -292,7 +349,16 @@
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "nodeId" : "at0007.1",
-        "attributes" : [ ],
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE_TIME",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
         "attributeTuples" : [ ]
       }, {
         "@type" : "C_COMPLEX_OBJECT",
@@ -327,58 +393,7 @@
     "conceptCode" : "at0000",
     "termDefinitions" : {
       "ar-sy" : { },
-      "en" : {
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004.1",
-          "text" : "manufacturer",
-          "description" : "Name of manufacturer."
-        },
-        "at0005.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005.1",
-          "text" : "manufactureDate",
-          "description" : "Date the device was manufactured."
-        },
-        "at0020.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0020.1",
-          "text" : "serialNumber",
-          "description" : "Number assigned by the manufacturer which can be found on the device, and should be specific to each device., its label, or accompanying packaging."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023.1",
-          "text" : "modelNumber",
-          "description" : "The exact model number assigned by the manufacturer and found on the device label or accompanying packaging."
-        },
-        "at0006.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006.1",
-          "text" : "lotNumber",
-          "description" : "The number assigned by the manufacturer which identifies a group of items manufactured at the same time, usually found on the label or packaging material."
-        },
-        "at0025.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0025.1",
-          "text" : "version",
-          "description" : "Identification of the version of software being used in the medical device.",
-          "comment" : "When the medical device is an actual software application, record the version of the software using this data element. When the medical device has multiple software applications embedded within it, record each software component in a separate CLUSTER archetype within the Components SLOT - either as a nested instance of another CLUSTER.device archetype or using a CLUSTER archetype designed specifically for recording software details (but not yet available at time of this archetype development)."
-        },
-        "at0007.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0007.1",
-          "text" : "expiryDate",
-          "description" : "Date after which the device/product is no longer fit for use, usually found on the device itself or printed on the accompanying packaging.",
-          "comment" : "This date usually applies only to single use or disposable devices."
-        },
-        "at0008.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0008.1",
-          "text" : "note",
-          "description" : "Additional narrative about the device not captured in other fields."
-        }
-      },
+      "en" : { },
       "es-ar" : { },
       "pt-br" : { },
       "nb" : { },
