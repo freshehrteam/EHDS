@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "574ca4c7fc8aa6fbfc3e240e9043f8f5",
+      "MD5-CAM-1.0.1" : "4e9efc267b5c7ffd1fd2516706a9fcf1",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
       "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
@@ -260,7 +260,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "EHDS Medications",
+          "text" : "EHDS Medication Summary",
           "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         }
       },
@@ -3085,16 +3085,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0004.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
