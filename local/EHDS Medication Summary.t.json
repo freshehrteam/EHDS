@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "4f7097a131448861d15743f9a8b5ad8c",
+      "MD5-CAM-1.0.1" : "ddc49863fcf5c0887952a3927ed068ac",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.6",
+      "sem_ver" : "1.0.0-alpha.7",
       "build_uid" : ""
     },
     "details" : {
@@ -204,6 +204,18 @@
         "misuse" : "Não deve ser deixado inalterado ao nível do template.",
         "originalResourceUri" : { },
         "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetFhirPath" : "EHDSPatientSummary.medicationSummary",
+          "mapTargetDefinition" : "Current and relevant past medicines.",
+          "mapTargetCardinality" : "1..1"
+        }
       }
     }
   },
