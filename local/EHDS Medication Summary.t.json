@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "ddc49863fcf5c0887952a3927ed068ac",
+      "MD5-CAM-1.0.1" : "145263bb0d6b6db579aed380e40eebf1",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.7",
+      "sem_ver" : "1.0.0-alpha.8",
       "build_uid" : ""
     },
     "details" : {
@@ -475,7 +475,14 @@
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
-        "en" : { },
+        "en" : {
+          "/data[at0001]/items[at0002.1]" : {
+            "mapTargetName" : "emptyReason",
+            "mapTargetFhirPath" : "EHDSPatientSummary.medicationSummary.emptyReason",
+            "mapTargetDefinition" : "Use if no medicines are listed",
+            "mapTargetCardinality" : "0..1"
+          }
+        },
         "de" : {
           "/data[at0001]/items[at0002.1]" : {
             "FHIR" : "AllergyIntolerance.code:absentOrUnknownAllergyIntolerance"
@@ -822,7 +829,14 @@
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
-        "en" : { },
+        "en" : {
+          "/data[at0001]/items[at0005.1]" : {
+            "mapTargetName" : "emptyReason",
+            "mapTargetFhirPath" : "EHDSPatientSummary.medicationSummary.emptyReason",
+            "mapTargetDefinition" : "Use if no medicines are listed",
+            "mapTargetCardinality" : "0..1"
+          }
+        },
         "de" : {
           "/data[at0001]/items[at0002.1]" : {
             "FHIR" : "AllergyIntolerance.code:absentOrUnknownAllergyIntolerance"
