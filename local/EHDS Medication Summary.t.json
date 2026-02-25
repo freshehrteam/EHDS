@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8f6e9d0bb9dc16a4897576055327062c",
+      "MD5-CAM-1.0.1" : "e81e05a189efc602faf3e0ba21542a62",
       "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.14",
+      "sem_ver" : "1.0.0-alpha.15",
       "build_uid" : ""
     },
     "details" : {
@@ -263,7 +263,7 @@
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..1",
+        "occurrences" : "0..*",
         "nodeId" : "at0.9",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -1946,7 +1946,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "50B8849AB9B274AB2D8E0456FA33FF85"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von zusammenfassenden oder dauerhaften Informationen über alle Anwendungen eines bestimmten Medikaments oder einer Medikamentengruppe oder -klasse, insbesondere wenn das Anwendungsmuster oder die kumulative Dosierung überwacht werden muss.",
+          "keywords" : [ "Medikament, Arzneimittel, Arznei, lebenslang, Medikation, Sebstmedikation, Medizin, Anamnese, Lebenszeit, kumulativ, Dosis, Anwendung, Verabreichung, Verbrauch" ],
+          "use" : "Zur Darstellung zusammenfassender Informationen über die Anrwendung eines einzelnen Medikaments oder einer Medikamentengruppe oder -klasse, insbesondere wenn das Anwendungsmuster oder die kumulative Dosierung überwacht werden muss.\r\n\r\nDieser Archetyp wurde entwickelt, um einen Überblick über die Anrwendung von Medikamenten nur in bestimmten Situationen darzustellen, in denen es einen Mehrwert für die Gesundheitsakte darstellt, z. B. eine einzelne Instanz des Archetyps wird verwendet, um eine oder mehrere Anwendungsepisoden zu erfassen, sodass ein Anwendungsmuster identifiziert und/oder eine kumulative Dosis berechnet werden kann.\r\n \r\nAnwendungsbeispiele für diesen Archetyp:\r\n- Monitoring der ein Leben lang eingenommenen kumulativen Dosis von Doxorubicin- oder Methotrexat.\r\n- Monitoring der Dauer von hochdosierten Bisphosphanaten.\r\n- Monitoring der Anwendung eines experimentellen Medikaments in einer Studie.\r\n\r\nVerwenden Sie eine neue Instanz dieses Archetyps, um Details zu jedem Medikament oder jeder Gruppe oder Klasse von Medikamenten darzustellen.\r\n\r\nAuslöser für das Beenden einer Episode und das Beginnen einer neuen spiegeln weitgehend die lokalen Präferenzen der Datenerfassung und klinischen Prioritäten wider, einschließlich, wenn die Person:\r\n- das Medikament für einen längeren Zeitraum (der wahrscheinlich lokal definiert ist) nicht mehr einnimmt.\r\n- die angewendete Menge oder ihr Anwendungsmuster erheblich verändert.\r\n- die Art und Weise, wie das Medikament verabreicht wurde, ändert.",
+          "misuse" : "Der Archetyp darf nicht zur Darstellung einer „Medikamentenliste“ verwendet werden. Verwenden Sie für diesen Zweck den Archetyp COMPOSITION.medication_list. Darüber hinaus darf er nicht verwendet werden, um ein Medikament innerhalb einer „Medikamentenliste“ darzustellen – verwenden Sie zu diesem Zweck entweder den INSTRUCTION.medication_order oder den ACTION.medication Archetyp.\r\n\r\nNicht zur Darstellung einer Verordnung von einem zu verabreichenden oder einzunehmenden Medikament - verwenden Sie zu diesem Zweck den Archetyp INSTRUCTION.medication_order.\r\n\r\nNicht zur Dokumentation der tatsächlichen Verabreichung oder Einnahme eines Medikaments - verwenden Sie den Archetyp ACTION.medication für diesen Zweck.\r\n\r\nNicht zur Darstellung des Anwendungsstatus oder von Antworten auf vordefinierte Screening-Fragen zum Medikament zu verwenden - verwenden Sie zu diesem Zweck den Archetyp OBSERVATION.medication_screening.\r\n\r\nNicht zu verwenden, um eine Beobachtung über die Verwendung eines Medikaments darzustellen – verwenden Sie zu diesem Zweck den Archetyp OBSERVATION.medication_statement.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag eller varig (persistent) informasjon om all bruk av ett spesifisert legemiddel, gruppe eller klasse av legemidler, spesielt der bruksmønsteret eller kumulativ mengde må overvåkes.",
+          "keywords" : [ "medisin, livslang, medikament, kur, legemiddel, historikk, levetid, kumulativ, dose, administrasjon, behandling" ],
+          "use" : "Brukes for å registrere et sammendrag eller varig (persistent) informasjon om all bruk av ett spesifisert legemiddel, gruppe eller klasse av legemidler, spesielt der bruksmønsteret eller kumulativ mengde må overvåkes.\r\n\r\nDenne arketypen er utviklet for å representere en oversikt over bruken av legemidler kun i tilfeller der det gir verdi for pasientjournalen, for eksempel hvor den kumulative dosen av et legemiddel har betydelige toksiske effekter eller langtidsbruk har negative helseeffekter. For hver periode et legemiddel er brukt oppdateres samme instans av arketypen, slik at man kan følge bruken over tid og kumulativ mengde kan regnes ut.\r\n\r\nFor eksempel:\r\n- overvåkning av kumulativ dose av Doxorubicin tatt i løpet av livet.\r\n- overvåking av varigheten av høydose bisfosfonater.\r\n- overvåking av bruk av et eksperimentelt legemiddel i en studie.\r\n\r\nBruk en ny instans av denne arketypen for å registre detaljer om hvert enkelt legemiddel, gruppe eller klasse av legemidler.\r\n\r\nDet som skal trigge en avslutning av en periode og starte en ny avhenger av lokale behov og hva som blir prioritert klinisk. For eksempel:\r\n- individet har opphold i bruken av legemiddelet i en vesentlig tidsperiode.\r\n- stor endring i mengde eller bruksmønster.\r\n- endringer i administreringsvei for legemiddelet.",
+          "misuse" : "Brukes ikke for å representere en legemiddeliste, bruk COMPOSITION.medication_list for dette formålet. Brukes heller ikke for å representere et legemiddel i en \"Legemiddelliste\". Bruk arketypen INSTRUCTION.medication_order (Legemiddelordinering) eller arketypen ACTION.medication (Legemiddelhåndtering) til dette formålet.\r\n\r\nBrukes ikke for å dokumentere forordningen av et legemiddel - bruk arketypen INSTRUCTION.medication_order (Legemiddelordinering) til dette formålet.\r\n\r\nBrukes ikke for å dokumentere administreringen av et legemiddel - bruk arketypen ACTION.medication (Legemiddelhåndtering) til dette formålet\r\n\r\nBrukes ikke for å registrere svar på spørsmål om legemiddelbruk i typiske spørreskjema-settinger, som Ja/Nei på spesifikke legemidler. Bruk arketypen OBSERVATION.medication_screening til dette formålet.\r\n\r\nBrukes ikke for å registrere status på bruken av ett spesifikt legemiddel på et bestemt tidspunkt - bruk arketypen OBSERVATION.medication_statement til dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "*To record summary or persistent information about the use of a single medication or group or class of medications, especially where the pattern of use or cumulative dosage needs to be monitored. (en)",
+          "keywords" : [ "*drug, lifelong, medication, self-medicate, medicine, history, lifetime, cumulative, dose, use, administration, consumption (en)" ],
+          "use" : "*Use to record summary information about the use of a single medication or group or class of medications, especially where the pattern of use or cumulative dosage needs to be monitored.\r\n \r\nThis archetype has been designed to represent an overview of the use of medication only in specific situations where it adds value to the health record, such as where the cumulative dose of the medication has significant toxic effects or long term use has adverse health impacts. A single instance of the archetype will be used to capture one or more episodes of use, so that a pattern of use can be identified and/or a cumulative dose can be calculated.\r\n \r\nExamples of use include:\r\n- monitoring of the cumulative dose of doxorubicin or methotrexate taken over a lifetime.\r\n- monitoring the duration of high dose bisphosphanates.\r\n- monitoring the use of an experimental medication in a trial.\r\n \r\nUse a new instance of this archetype to record details about each medication or group or class of medications.\r\n \r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences and clinical priorities, including if the individual:\r\n- stops using the medication for a significant period of time (which will likely be locally defined).\r\n- significantly changes their amount or pattern of use.\r\n- changes in the route by which the medication was administed. (en)",
+          "misuse" : "*Not to be used to represent a 'Medication list' - use COMPOSITION.medication_list for this purpose. In addition, not to be used to represent a medication within a 'Medication list' - use either an INSTRUCTION.medication_order or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for documenting the actual administration or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording the status of use or screening question/answer pairs regarding the medication - use OBSERVATION.medication_screening for this purpose.\r\n\r\nNot to be used to record an observation about the use of a medication - use OBSERVATION.medication_statement for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record summary or persistent information about the use of a single medication or group or class of medications, especially where the pattern of use or cumulative dosage needs to be monitored.",
+          "keywords" : [ "drug, lifelong, medication, self-medicate, medicine, history, lifetime, cumulative, dose, use, administration, consumption" ],
+          "use" : "Use to record summary information about the use of a single medication or group or class of medications, especially where the pattern of use or cumulative dosage needs to be monitored.\r\n \r\nThis archetype has been designed to represent an overview of the use of medication only in specific situations where it adds value to the health record, such as where the cumulative dose of the medication has significant toxic effects or long term use has adverse health impacts. A single instance of the archetype will be used to capture one or more episodes of use, so that a pattern of use can be identified and/or a cumulative dose can be calculated.\r\n \r\nExamples of use include:\r\n- monitoring of the cumulative dose of doxorubicin or methotrexate taken over a lifetime.\r\n- monitoring the duration of high dose bisphosphanates.\r\n- monitoring the use of an experimental medication in a trial.\r\n \r\nUse a new instance of this archetype to record details about each medication or group or class of medications.\r\n \r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences and clinical priorities, including if the individual:\r\n- stops using the medication for a significant period of time (which will likely be locally defined).\r\n- significantly changes their amount or pattern of use.\r\n- changes in the route by which the medication was administered.",
+          "misuse" : "Not to be used to represent a 'Medication list' - use COMPOSITION.medication_list for this purpose. In addition, not to be used to represent a medication within a 'Medication list' - use either an INSTRUCTION.medication_order or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for documenting the actual administration or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording the status of use or screening question/answer pairs regarding the medication - use OBSERVATION.medication_screening for this purpose.\r\n\r\nNot to be used to record an observation about the use of a medication - use OBSERVATION.medication_statement for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.medication_summary.v1",
     "differential" : true,
@@ -1958,17 +2020,295 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0028.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0028.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0008",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0011.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0018.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0020.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0014.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0016.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_QUANTITY",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0012.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0031.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DURATION",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_DURATION",
+                          "rmTypeName" : "DURATION",
+                          "occurrences" : "1..1",
+                          "patternedConstraint" : "PYMDTH",
+                          "constraint" : [ {
+                            "lower" : "PT0H",
+                            "lowerIncluded" : true,
+                            "upperIncluded" : false,
+                            "lowerUnbounded" : false,
+                            "upperUnbounded" : true
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0013.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0032.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0022.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0015.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0010.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0030.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0027.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT0S",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : false,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0005",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0006.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { },
-        "de" : { }
+        "en" : {
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.2",
+            "text" : "Clinical indication (2)",
+            "description" : "The overall clinical indication for the use of the medication.",
+            "comment" : "Coding with an external terminology is preferred, where possible. For example: 'Osteoporosis'."
+          }
+        },
+        "nb" : {
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Klinisk indikasjon (2)",
+            "description" : "Overordnet klinisk indikasjon for bruk av legemiddelet.",
+            "comment" : "Koding med en terminologi foretrekkes, der det er mulig. For eksempel: \"Osteoporose\"."
+          }
+        },
+        "pt-br" : {
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "*Clinical indication (en) (2)",
+            "description" : "*The overall clinical indication for the administration or consumption of the medication. (en)",
+            "comment" : "*Coding with an external terminology is preferred, where possible. For example: 'Osteoporosis'. (en)"
+          }
+        },
+        "de" : {
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Klinische Indikation (2)",
+            "description" : "Die allgemeine klinische Indikation für die Anrwendung des Medikaments.",
+            "comment" : "Wenn möglich, wird die Codierung mit einer externen Terminologie bevorzugt. Zum Beispiel: „Osteoporose“."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
