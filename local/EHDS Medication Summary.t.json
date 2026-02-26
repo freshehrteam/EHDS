@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cee5f01f0519139648871cf1c94d5a7f",
+      "MD5-CAM-1.0.1" : "a07854145566b3bfde7c7a0d72762d7e",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.21",
+      "sem_ver" : "1.0.0-alpha.22",
       "build_uid" : ""
     },
     "details" : {
@@ -1122,7 +1122,10 @@
             "mapTargetDefinition" : "Coded reason for the use of the medication (typically diagnosis, or a procedure)",
             "mapTargetCardinality" : "0..*"
           },
-          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0023.2]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0006.1]" : {
+            "mapTargetName" : "EHDSMedicationStatement.medication"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0029.1]" : {
             "mapTargetName" : "medicationReasonText",
             "mapTargetFhirPath" : "EHDSMedicationStatement.medicationReasonText",
             "mapTargetDefinition" : "Reason for the use of the medication (typically diagnosis, or a procedure) in free text.",
@@ -1169,7 +1172,6 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0006.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -1198,13 +1200,6 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0023.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0023.2",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
@@ -1251,7 +1246,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0029.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -1290,42 +1284,10 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0023.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023.2",
-            "text" : "Clinical indication (2)",
-            "description" : "The clinical symptom, sign or diagnosis that necessitates the use of the medication.",
-            "comment" : "For example: 'Angina' or 'Migraine'. Coding of the clinical indication with a terminology is preferred, where possible. This data element has multiple occurrences to allow recording of more than one clinical indication per medication."
-          }
-        },
-        "de" : {
-          "at0023.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023.1",
-            "text" : "Klinische Indikation (2)",
-            "description" : "Der klinische Grund für die Anwendung des Medikaments.",
-            "comment" : "Zum Beispiel: \"Angina\" oder \"Migräne\". Die Kodierung der klinischen Indikation mit einer Terminologie wird, wenn möglich, bevorzugt. Dieses Datenelement ist mehrfach vorhanden, um die Erfassung von mehr als einer klinischen Indikation pro Medikament zu ermöglichen."
-          }
-        },
-        "nl" : {
-          "at0023.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023.1",
-            "text" : "Medische indicatie (2)",
-            "description" : "De medische reden voor gebruik van het medicatie product.",
-            "comment" : "*For example: 'Angina' or 'Migraine'. Coding of the clinical indication with a terminology is preferred, where possible. This data element has multiple occurrences to allow recording of more than one clinical indication per medication. (en)"
-          }
-        },
-        "nb" : {
-          "at0023.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023.1",
-            "text" : "Klinisk indikasjon (2)",
-            "description" : "Den kliniske årsaken for bruken av legemiddelet.",
-            "comment" : "For eksempel: \"Angina\" eller \"Migrene\". Der det er mulig foretrekkes at den den kliniske indikasjonen blir kodet med en terminologi. Dette dataelementet tillater flere forekomster per legemiddel."
-          }
-        }
+        "en" : { },
+        "de" : { },
+        "nl" : { },
+        "nb" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
