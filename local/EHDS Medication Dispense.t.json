@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "af4103601409cdfad82a8b313dd01bf4",
+      "MD5-CAM-1.0.1" : "bfa597f48dab5abcc68bff35b79711e4",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
     },
     "details" : {
@@ -406,6 +406,31 @@
         "PARENT:MD5-CAM-1.0.1" : "F37648882B3DD5A6D87B8A14F7E02892"
       },
       "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/description[at0017]/items[at0132.1]" : {
+            "mapTargetName" : "substitutionOccurred",
+            "mapTargetFhirPath" : "EHDSMedicationDispense.substitution.substitutionOccurred",
+            "mapTargetDefinition" : "Indicated whether substitution was made by the dispenser",
+            "mapTargetCardinality" : "1..1"
+          },
+          "/description[at0017]/items[at0133.1]" : {
+            "mapTargetName" : "substitution.reason",
+            "mapTargetFhirPath" : "EHDSMedicationDispense.substitution.reason",
+            "mapTargetDefinition" : "Reason why the substitution was made or why the expected substitution was not made.",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/description[at0017]/items[at0024.1]" : {
+            "mapTargetName" : "comment",
+            "mapTargetFhirPath" : "EHDSMedicationDispense.comment",
+            "mapTargetDefinition" : "Additional information or comments",
+            "mapTargetCardinality" : "0..*"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ACTION.medication.v1",
     "differential" : true,
@@ -1833,7 +1858,8 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "nodeId" : "at0140",
+              "occurrences" : "0..0",
+              "nodeId" : "at0140.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
@@ -2230,6 +2256,27 @@
         "PARENT:MD5-CAM-1.0.1" : "EE0C097D86C864115F3C4480B21599C4"
       },
       "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0158]" : {
+            "mapTargetName" : "dispensedQuantity",
+            "mapTargetFhirPath" : "EHDSMedicationDispense.dispensedQuantity",
+            "mapTargetDefinition" : "Number of dispensed packages if the pack size is known, or number of smaller items/units",
+            "mapTargetCardinality" : "1..1",
+            "mapTargetBindings" : "UCUM, EDQM Standard Terms"
+          },
+          "/items[at0159]" : {
+            "mapTargetName" : "dispensedQuantity",
+            "mapTargetFhirPath" : "EHDSMedicationDispense.dispensedQuantity",
+            "mapTargetDefinition" : "Number of dispensed packages if the pack size is known, or number of smaller items/units",
+            "mapTargetCardinality" : "1..1",
+            "mapTargetBindings" : "UCUM, EDQM Standard Terms"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.medication_supply_amount.v0",
     "differential" : true,
