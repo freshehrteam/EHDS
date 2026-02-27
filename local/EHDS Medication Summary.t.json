@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "7a936913d42eacf222183175dfae4c35",
+      "MD5-CAM-1.0.1" : "7cc346ade5a021b67c4af3142d6bc32d",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
       "sem_ver" : "1.0.0-alpha.23",
       "build_uid" : ""
@@ -274,15 +274,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-medication_statement-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "INSTRUCTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.9",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-INSTRUCTION.ovl-medication_order-001.v3",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -3480,148 +3471,6 @@
         "email" : "bfleao@terra.com.br"
       },
       "accreditation" : "MD, PhD",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "32da9865-23f9-4565-b902-69dfee88cda8",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "F116C050DE9CF44A61E064FEEA0494DE"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-INSTRUCTION.ovl-medication_order-001.v3"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "INSTRUCTION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "pt-br" : { },
-        "es-ar" : { },
-        "de" : { },
-        "sv" : { },
-        "ca" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "b3d018f2-28c7-4d2c-ab3f-3ef146701037",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Sarah Ballout",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "ballout.sarah@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Emma Malm",
-        "organisation" : "Karolinska Universitetssjukhuset",
-        "email" : "emma.malm@cambio.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand, Silje Ljosland Bakke",
-        "organisation" : "Helse Vest IKT AS",
-        "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral",
-        "email" : "amarch@cas.austral.edu.ar"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Osmeire Chamelette Sanzovo",
-        "organisation" : "Hospital Sírio Libanês - SP",
-        "email" : "osmeire.acsanzovo@hsl.org.br"
-      },
-      "accreditation" : "R.N.",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ca"
-      },
-      "author" : {
-        "name" : "Jaqueline Peredo",
-        "email" : "jperedo2003@gmail.com"
-      },
       "otherDetails" : { }
     } ]
   } ],
