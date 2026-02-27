@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "62c1b51346ff84b2feecbc20b00ddb9f",
+      "MD5-CAM-1.0.1" : "b391c5d008e0499fb528b9581c0156e7",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.7",
+      "sem_ver" : "1.0.0-alpha.8",
       "build_uid" : ""
     },
     "details" : {
@@ -506,6 +506,18 @@
             "mapTargetFhirPath" : "EHDSMedicationPrescription.prescriptionItem.medication",
             "mapTargetDefinition" : "Prescribed product, branded, generic, virtual, extemporal, etc",
             "mapTargetCardinality" : "1..1"
+          },
+          "/activities[at0001]/description[at0002]/items[at0018.1]" : {
+            "mapTargetName" : "indication[x]",
+            "mapTargetFhirPath" : "EHDSMedicationPrescription.prescriptionItem.indication[x]",
+            "mapTargetDefinition" : "Reason for the prescription (typically diagnosis, or a procedure)",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/activities[at0001]/description[at0002]/items[at0148.1]" : {
+            "mapTargetName" : "intendedUseType",
+            "mapTargetFhirPath" : "EHDSMedicationPrescription.prescriptionItem.intendedUseType",
+            "mapTargetDefinition" : "Intent of the prescription - prophylaxis, treatment, anesthesia, etc",
+            "mapTargetCardinality" : "0..1"
           }
         }
       }
@@ -607,7 +619,8 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "CLUSTER",
-                  "nodeId" : "at0062",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0062.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "items",
@@ -621,7 +634,8 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0178",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0178.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -645,7 +659,8 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0051",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0051.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -693,7 +708,8 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0150",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0150.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -741,14 +757,13 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0018.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
+                  "occurrences" : "0..1",
                   "nodeId" : "at0148.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
@@ -769,16 +784,32 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0012.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0013.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
