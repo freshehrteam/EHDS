@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0826d7d3316ff148a2e5b5d9e9aebbfa",
+      "MD5-CAM-1.0.1" : "4696f5003c156bd6990932d3135d7430",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.9",
+      "sem_ver" : "1.0.0-alpha.10",
       "build_uid" : ""
     },
     "details" : {
@@ -536,6 +536,12 @@
             "mapTargetFhirPath" : "EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]",
             "mapTargetDefinition" : "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)",
             "mapTargetCardinality" : "0..1"
+          },
+          "/activities[at0001]/description[at0002]/items[at0167.1]" : {
+            "mapTargetName" : "prescriptionItem.comment",
+            "mapTargetFhirPath" : "EHDSMedicationPrescription.prescriptionItem.comment",
+            "mapTargetDefinition" : "Additional information or comments",
+            "mapTargetCardinality" : "0..*"
           }
         }
       }
@@ -993,7 +999,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0167.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
