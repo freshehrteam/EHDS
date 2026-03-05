@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f6fcbe8a17d100af1ca4263cb5ffbeab",
+      "MD5-CAM-1.0.1" : "c93ebf1e50f348a4e818fb3c14a5c411",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.24",
+      "sem_ver" : "1.0.0-alpha.25",
       "build_uid" : ""
     },
     "details" : {
@@ -1122,9 +1122,6 @@
             "mapTargetDefinition" : "Coded reason for the use of the medication (typically diagnosis, or a procedure)",
             "mapTargetCardinality" : "0..*"
           },
-          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0006.1]" : {
-            "mapTargetName" : "EHDSMedicationStatement.medication"
-          },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0029.1]" : {
             "mapTargetName" : "medicationReasonText",
             "mapTargetFhirPath" : "EHDSMedicationStatement.medicationReasonText",
@@ -1172,6 +1169,7 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0006.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
