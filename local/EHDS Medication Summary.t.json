@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c93ebf1e50f348a4e818fb3c14a5c411",
+      "MD5-CAM-1.0.1" : "5e1fd76c79b3353a98d2f9d13fe3af80",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
       "sem_ver" : "1.0.0-alpha.25",
       "build_uid" : ""
@@ -1127,6 +1127,12 @@
             "mapTargetFhirPath" : "EHDSMedicationStatement.medicationReasonText",
             "mapTargetDefinition" : "Reason for the use of the medication (typically diagnosis, or a procedure) in free text.",
             "mapTargetCardinality" : "0..1"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0006.1]" : {
+            "mapTargetName" : "productName",
+            "mapTargetFhirPath" : "EHDSMedication.productName",
+            "mapTargetDefinition" : "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.",
+            "mapTargetCardinality" : "0..1"
           }
         }
       }
@@ -1169,7 +1175,6 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0006.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -1488,9 +1493,6 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/items[at0132]" : {
-            "mapTargetName" : "EHDSMedication.productName"
-          },
           "" : {
             "mapTargetName" : "EHDSMedication"
           },
@@ -1498,13 +1500,22 @@
             "mapTargetName" : "EHDSMedication.doseForm"
           },
           "/items[at0151]" : {
-            "mapTargetName" : "EHDSMedication.marketingAuthorisationHolder"
+            "mapTargetName" : "marketingAuthorisationHolder",
+            "mapTargetFhirPath" : "EHDSMedication.marketingAuthorisationHolder",
+            "mapTargetDefinition" : "Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product.",
+            "mapTargetCardinality" : "0..1"
           },
           "/items[at0150]" : {
             "mapTargetName" : "EHDSMedication.batch.lotNumber"
           },
           "/items[at0003]" : {
             "mapTargetName" : "EHDSMedication.batch.expirationDate"
+          },
+          "/items[at0132.1]" : {
+            "mapTargetName" : "identifyingCode[x]",
+            "mapTargetFhirPath" : "EHDSMedication.identifyingCode[x]",
+            "mapTargetDefinition" : "Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.",
+            "mapTargetCardinality" : "0..*"
           }
         }
       }
@@ -1523,6 +1534,12 @@
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
         "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0132.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..1",
