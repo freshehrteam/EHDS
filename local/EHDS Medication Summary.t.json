@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "7cc346ade5a021b67c4af3142d6bc32d",
+      "MD5-CAM-1.0.1" : "f6fcbe8a17d100af1ca4263cb5ffbeab",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.23",
+      "sem_ver" : "1.0.0-alpha.24",
       "build_uid" : ""
     },
     "details" : {
@@ -3225,6 +3225,19 @@
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0066]" : {
+            "mapTargetName" : "periodOfUse",
+            "mapTargetFhirPath" : "EHDSMedicationStatement.periodOfUse",
+            "mapTargetDefinition" : "Period when patient took, is taking or is expected to take the medication. This information may be expressed using start and end date times OR indicating the duration. The first is used to indicate a specified interval (e.g., from March 15th, 2017); the latter for indicating a 'floating' period (e.g., 2 weeks). In case of unbounded period (continuous therapy), the end element will be valued with an exceptional value.",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
