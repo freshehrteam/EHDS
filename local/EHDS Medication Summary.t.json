@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5e1fd76c79b3353a98d2f9d13fe3af80",
+      "MD5-CAM-1.0.1" : "f89f1332d3303463c26f3dcba41fe0e9",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
       "sem_ver" : "1.0.0-alpha.25",
       "build_uid" : ""
@@ -1497,7 +1497,10 @@
             "mapTargetName" : "EHDSMedication"
           },
           "/items[at0071.1]" : {
-            "mapTargetName" : "EHDSMedication.doseForm"
+            "mapTargetName" : "doseForm",
+            "mapTargetFhirPath" : "EHDSMedication.doseForm",
+            "mapTargetDefinition" : "Dose form(s) on a product level. Dose form for a single package item is defined below.",
+            "mapTargetCardinality" : "0..1"
           },
           "/items[at0151]" : {
             "mapTargetName" : "marketingAuthorisationHolder",
