@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f2c9e910c08c978a8202c4fa49cf2e4f",
+      "MD5-CAM-1.0.1" : "33d3b9605528c68a6a81ec8305d398bc",
       "PARENT:MD5-CAM-1.0.1" : "E76E5F22B844A271994F5CCE9A8A1A10",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -249,6 +249,12 @@
           "mapTargetDefinition" : "Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition.",
           "mapTargetCardinality" : "0..1",
           "mapTargetBindings" : "HL7 Condition Verification Status"
+        },
+        "/data[at0001]/items[at0081]" : {
+          "mapTargetName" : "category",
+          "mapTargetFhirPath" : "EHDSCondition.category",
+          "mapTargetDefinition" : "Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations).",
+          "mapTargetCardinality" : "0..*"
         }
       }
     }
@@ -475,14 +481,7 @@
         "attributeTuples" : [ ]
       } ]
     } ],
-    "attributeTuples" : [ ],
-    "attributeCustomizations" : {
-      "guideline_id" : {
-        "aliases" : {
-          "en" : "guideline_id"
-        }
-      }
-    }
+    "attributeTuples" : [ ]
   },
   "terminology" : {
     "@type" : "ARCHETYPE_TERMINOLOGY",
@@ -2885,7 +2884,33 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "1a7855101e086ad48a325b720f390c1e"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "externalResource",
+            "mapTargetFhirPath" : "EHDSCondition.externalResource",
+            "mapTargetDefinition" : "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines.",
+            "mapTargetCardinality" : "0..*"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.external_resource.v0",
     "differential" : true,
