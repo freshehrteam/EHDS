@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "ad3418fc28fc1b64afd1b43d6e9da5ab",
-      "PARENT:MD5-CAM-1.0.1" : "E76E5F22B844A271994F5CCE9A8A1A10"
+      "MD5-CAM-1.0.1" : "17d21808e90a7c69c32b7c344a7f3c10",
+      "PARENT:MD5-CAM-1.0.1" : "E76E5F22B844A271994F5CCE9A8A1A10",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -211,8 +213,8 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSCondition",
-          "mapTargetDefinition" : "EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
-          "mapTargetFhirPath" : "EHDSPatientSummary.problems.problem",
+          "mapTargetDefinition" : "Model for a clinical condition, problem, diagnosis, or other event, situation, or issue that has risen to a level of concern.",
+          "mapTargetFhirPath" : "EHDSCondition",
           "mapTargetCardinality" : "0..*"
         },
         "/data[at0001]/items[at0002.1]" : {
