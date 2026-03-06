@@ -14,7 +14,7 @@ A fit gap analysis is provided for the 6 core concepts of the EPS:
 4. Medical devices and implants
 5. Procedures
 6. Patient (partially in scope)
-<br />
+
 
 ### Methodology
 
@@ -34,7 +34,7 @@ The mapping templates are in /local.
 
 ### Mapping CSVs
 
-The mapping CSVs are in /mappings.
+The mapping CSVs are in /Mappings.
 <br />
 <br />
 
