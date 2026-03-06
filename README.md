@@ -40,7 +40,7 @@ The mapping CSVs are in /Mappings.
 
 ### freshEHR Mapping Comments (work in progress!):
 
-The mapping comments are documented here: https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa
+The mapping comments are documented [here](https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa).
 <br />
 <br />
 <br />
