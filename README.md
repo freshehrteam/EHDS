@@ -1,8 +1,9 @@
-# Introduction
+### Introduction
 
 This repository contains the results of a comparative analysis between the European Health Data Space (EHDS) European Patient Summary (EPS) and international openEHR Clinical Knowledge Manager (CKM) archetypes, conducted by freshEHR Clinical informatics Ltd. on behalf of Nictiz.
 
-# Scope
+
+### Scope
 
 A fit gap analysis is provided for the 6 core concepts of the EPS:
 
@@ -13,7 +14,8 @@ A fit gap analysis is provided for the 6 core concepts of the EPS:
 5. Procedures
 6. Patient (partially in scope)
 
-# Methodology
+
+### Methodology
 
 Each of the 6 core concepts from EPS consists of one or more [EHDS Logical Models (version 0.2.1)](https://www.xt-ehr.eu/fhir/models/0.2.1/). Logical Models may be shared between concepts. 
 
@@ -21,16 +23,19 @@ openEHR section templates are created at the level of a concept. An embedded tem
 
 The section templates are exported in Web Template format and converted into CSVs using [this online tool](https://wt2xt-app-sd8pw.ondigitalocean.app/).
 
-# openEHR Templates 
+
+### openEHR Templates 
 
 The mapping templates are in /local.
 
-# Mapping CSVs
+
+### Mapping CSVs
 
 The mapping CSVs are in /mappings.
 
-# freshEHR Mapping Comments (work in progress!):
 
-https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa
+### freshEHR Mapping Comments (work in progress!):
+
+The mapping comments are documented here: https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa
 
 More information about the project can be found [here](https://freshehr.notion.site/Mapping-EHDS-EPS-to-openEHR-31bfae3e474880ba9a1ee30fc8931487).
