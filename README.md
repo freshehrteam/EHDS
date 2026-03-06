@@ -42,6 +42,7 @@ The mapping CSVs are in /Mappings.
 
 The mapping comments are documented [here](https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa).
 <br />
+<br />
 More information about the project can be found [here](https://freshehr.notion.site/Mapping-EHDS-EPS-to-openEHR-31bfae3e474880ba9a1ee30fc8931487).
 <br />
 <br />
