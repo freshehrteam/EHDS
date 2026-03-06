@@ -19,8 +19,8 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "729e72977c6f32b90ec9de1c11adf5ea",
-      "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
+      "MD5-CAM-1.0.1" : "a10caa90c629a0de550f2f85dfafa8f2",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
       "sem_ver" : "1.0.0-alpha.22",
       "build_uid" : ""
     },
@@ -206,6 +206,21 @@
         "misuse" : "Não deve ser deixado inalterado ao nível do template.",
         "originalResourceUri" : { },
         "otherDetails" : { }
+      },
+      "tr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "tr"
+        },
+        "purpose" : "Belirli bir klinik bağlama uyacak şekilde bir şablonda yeniden adlandırılacak genel bir bölüm başlığı sağlamak için.",
+        "keywords" : [ ],
+        "use" : "Bir şablonda, belirli klinik bağlama uyacak şekilde yeniden adlandırılacak bir bölüm başlığı oluşturmak için kullanılır. Örneğin: “Geçici başlık”ın “Muayene bulguları” olarak yeniden adlandırılması.",
+        "misuse" : "Bir şablonda değiştirilmeden bırakılmamalıdır.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -353,7 +368,8 @@
       "ca" : { },
       "es" : { },
       "pt-pt" : { },
-      "pt" : { }
+      "pt" : { },
+      "tr" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -2356,5 +2372,21 @@
       "email" : "vanessapereira@protonmail.com"
     },
     "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "tr"
+    },
+    "author" : {
+      "name" : "Olha Nikolaieva",
+      "organisation" : "University Hospital Basel",
+      "email" : "olha.nikolaieva@usb.ch"
+    },
+    "otherDetails" : {
+      "other_contributors" : "Koray Atalag, GALATA-Digital, New Zealand"
+    }
   } ]
 }
