@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "3c3de3a0a962dd5dde117846229c1c96",
-      "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9"
+      "MD5-CAM-1.0.1" : "213670333b42cf1cacf04eb6e30979ba",
+      "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -172,6 +174,12 @@
           "mapTargetDefinition" : "Textual description of the allergy or intolerance.",
           "mapTargetCardinality" : "0..1",
           "mapTargetName" : "description"
+        },
+        "" : {
+          "mapTargetName" : "EHDSAllergyIntolerance",
+          "mapTargetFhirPath" : "EHDSAllergyIntolerance",
+          "mapTargetDefinition" : "EHDS refined base model for allergy/intolerance",
+          "mapTargetCardinality" : "0..*"
         }
       },
       "pt-br" : {
@@ -238,7 +246,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-EVALUATION.adversereaction risk.v2"
+    "value" : "openEHR-EHR-EVALUATION.adversereaction_risk.v2"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -703,7 +711,7 @@
     }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "95734032-1020-35c1-82bb-35579cd6acf1",
+  "buildUid" : "100a16d7-bdb5-3ab1-961e-a83bd66a5c88",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
