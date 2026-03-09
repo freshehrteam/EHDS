@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f64ec74c741b4a361a0f01280015998d",
-      "PARENT:MD5-CAM-1.0.1" : "03778F98B6DF455040F12E3E2F1BF4A9",
-      "sem_ver" : "1.0.0-alpha.12",
+      "MD5-CAM-1.0.1" : "abb14530107cea2d686e5298deadc9da",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
+      "sem_ver" : "1.0.0-alpha.13",
       "build_uid" : ""
     },
     "details" : {
@@ -204,6 +204,21 @@
         "misuse" : "Não deve ser deixado inalterado ao nível do template.",
         "originalResourceUri" : { },
         "otherDetails" : { }
+      },
+      "tr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "tr"
+        },
+        "purpose" : "Belirli bir klinik bağlama uyacak şekilde bir şablonda yeniden adlandırılacak genel bir bölüm başlığı sağlamak için.",
+        "keywords" : [ ],
+        "use" : "Bir şablonda, belirli klinik bağlama uyacak şekilde yeniden adlandırılacak bir bölüm başlığı oluşturmak için kullanılır. Örneğin: “Geçici başlık”ın “Muayene bulguları” olarak yeniden adlandırılması.",
+        "misuse" : "Bir şablonda değiştirilmeden bırakılmamalıdır.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -342,7 +357,8 @@
       "ca" : { },
       "es" : { },
       "pt-pt" : { },
-      "pt" : { }
+      "pt" : { },
+      "tr" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -1086,5 +1102,21 @@
       "email" : "vanessapereira@protonmail.com"
     },
     "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "tr"
+    },
+    "author" : {
+      "name" : "Olha Nikolaieva",
+      "organisation" : "University Hospital Basel",
+      "email" : "olha.nikolaieva@usb.ch"
+    },
+    "otherDetails" : {
+      "other_contributors" : "Koray Atalag, GALATA-Digital, New Zealand"
+    }
   } ]
 }
