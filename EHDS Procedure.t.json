@@ -1,0 +1,1441 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "82e79f18-76b9-4b5c-a930-1115eecbc4b7",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2026-03-09"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "0a6eb2f1308b6db0fefc155285631ed9",
+      "PARENT:MD5-CAM-1.0.1" : "45BC112EC407C650BE2526518737BED2"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-pt" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-pt"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ru" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ru"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ar-sy" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ar-sy"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "zh-cn" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "zh-cn"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ca" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ca"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetName" : "EHDSProcedure",
+          "mapTargetFhirPath" : "EHDSPatientSummary.procedures.procedure",
+          "mapTargetDefinition" : "List of procedures",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/description[at0001]/items[at0002.1]" : {
+          "mapTargetName" : "code",
+          "mapTargetFhirPath" : "EHDSProcedure.code",
+          "mapTargetDefinition" : "Code identifying the procedure",
+          "mapTargetCardinality" : "0..1",
+          "mapTargetBindings" : "SNOMED CT"
+        },
+        "/description[at0001]/items[at0070.1]" : {
+          "mapTargetName" : "reason",
+          "mapTargetFhirPath" : "EHDSProcedure.reason[x]",
+          "mapTargetDefinition" : "The reason why the procedure was performed. This may be a concept from a terminology or a reference to a specific instance that describes the reason.",
+          "mapTargetCardinality" : "0..*",
+          "mapTargetBindings" : "SNOMED CT, ICD-10, Orphacode if rare disease is diagnosed"
+        },
+        "/description[at0001]/items[at0048.1]" : {
+          "mapTargetName" : "outcome",
+          "mapTargetFhirPath" : "EHDSProcedure.outcome",
+          "mapTargetDefinition" : "The outcome of the procedure - did it resolve the reasons for the procedure being performed?",
+          "mapTargetCardinality" : "0..1",
+          "mapTargetBindings" : "SNOMED CT"
+        },
+        "/description[at0001]/items[at0006.1]" : {
+          "mapTargetName" : "complication",
+          "mapTargetFhirPath" : "EHDSProcedure.complication",
+          "mapTargetDefinition" : "Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.",
+          "mapTargetCardinality" : "0..*",
+          "mapTargetBindings" : "ICD-10, SNOMED CT, Orphacode if rare disease is diagnosed"
+        },
+        "/description[at0001]/items[at0005.1]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "EHDSProcedure.note",
+          "mapTargetDefinition" : "Additional information about the procedure",
+          "mapTargetCardinality" : "0..1"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-ACTION.procedure.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-ACTION.t_procedure.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "ACTION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "ism_transition",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0004.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "526" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0004" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0034.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "524" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0034" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0007.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "526" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0007" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0035.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "524" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0035" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0038.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "527" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0038" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0039.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "528" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0039" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0036.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "529" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0036" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0068.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "245" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0068" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "nodeId" : "at0047.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "245" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0047" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0040.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "530" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0040" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0041.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "531" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0041" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0043.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "532" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0043" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "description",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0002.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0049.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0070.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0065.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0058.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0063.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0048.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0069.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0006.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0066.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0060.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0061.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DURATION",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_DURATION",
+                    "rmTypeName" : "DURATION",
+                    "occurrences" : "1..1",
+                    "constraint" : [ {
+                      "lower" : "PT0S",
+                      "lowerIncluded" : true,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : false,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0067.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0014.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "nodeId" : "at0005.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_ARCHETYPE_ROOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0003.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ],
+            "archetypeRef" : "EHDS Body structure",
+            "referenceType" : "templateId"
+          }, {
+            "@type" : "C_ARCHETYPE_ROOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0003.2",
+            "attributes" : [ ],
+            "attributeTuples" : [ ],
+            "archetypeRef" : "EHDS Device",
+            "referenceType" : "templateId"
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "nodeId" : "at0053",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0054.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_IDENTIFIER",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0056.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_IDENTIFIER",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "pt-br" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "*"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "O procedimento foi adiado."
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "O procedimento planejado foi cancelado antes do início."
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "O procedimento, ou procedimento secundário, no caso de procedimentos sequenciados, foi iniciado."
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "O procedimento foi abortado."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "O procedimento foi realizado e todas as atividades clínicas associadas concluídas."
+        }
+      },
+      "sl" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "*"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "*The procedure has been postponed.(en)"
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "*The planned procedure has been cancelled prior to commencement.(en)"
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "*The procedure, or subprocedure in a multicomponent procedure, has been commenced.(en)"
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "*The procedure has been aborted.(en)"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "*The procedure has been performed and all associated clinical activities completed.(en)"
+        }
+      },
+      "en" : { },
+      "ar-sy" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "*"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "*The procedure has been postponed.(en)"
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "*The planned procedure has been cancelled prior to commencement.(en)"
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "*The procedure, or subprocedure in a multicomponent procedure, has been commenced.(en)"
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "*The procedure has been aborted.(en)"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "*The procedure has been performed and all associated clinical activities completed.(en)"
+        }
+      },
+      "ru" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "*"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "*The procedure has been postponed.(en)"
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "*The planned procedure has been cancelled prior to commencement.(en)"
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "*The procedure, or subprocedure in a multicomponent procedure, has been commenced.(en)"
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "*The procedure has been aborted.(en)"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "*The procedure has been performed and all associated clinical activities completed.(en)"
+        }
+      },
+      "nb" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "Prosedyren er planlagt."
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "Prosedyren er utsatt."
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "Den planlagte prosedyren har blitt avlyst før den ble igangsatt."
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "Prosedyren eller en del av en prosedyre som består av flere delprosedyrer er påbegynt."
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "Prosedyren har blitt avbrutt."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "Prosedyren er utført og alle tilknyttede kliniske handlinger er fullførte."
+        }
+      },
+      "es" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "*"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "Procedimiento pospuesto"
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "Procedimiento cancelado antes de comenzar"
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "Procedimiento iniciado"
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "Procedimiento interrumpido"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "Procedimiento completado"
+        }
+      },
+      "de" : {
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Preparation",
+          "description" : "Die Prozedur, die durchgeführt werden soll, ist geplant."
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038.1",
+          "text" : "On hold",
+          "description" : "Die Prozedur wurde verschoben."
+        },
+        "at0039.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039.1",
+          "text" : "Not done",
+          "description" : "Die geplante Prozedur wurde vor Beginn storniert."
+        },
+        "at0068.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0068.1",
+          "text" : "In progress",
+          "description" : "Die Prozedur, oder eine Subprozedur in einem mehrstufigen Vorgehen, wurde begonnen."
+        },
+        "at0041.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0041.1",
+          "text" : "Stopped",
+          "description" : "Die Prozedur wurde abgebrochen."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Completed",
+          "description" : "Die Prozedur wurde durchgeführt und alle damit verbundenen klinischen Aktivitäten wurden beendet."
+        }
+      },
+      "pt-pt" : { },
+      "sv" : { },
+      "ca" : { },
+      "zh-cn" : { }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "8c60c7f3-0bee-3066-be85-b52bbb97719d",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "EHDS Procedure",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ru"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ar-sy"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-pt"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ca"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "zh-cn"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
