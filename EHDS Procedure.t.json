@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0a6eb2f1308b6db0fefc155285631ed9",
-      "PARENT:MD5-CAM-1.0.1" : "45BC112EC407C650BE2526518737BED2"
+      "MD5-CAM-1.0.1" : "1a7b4f8f6fd224a4cb0852f53d5d9d74",
+      "PARENT:MD5-CAM-1.0.1" : "45BC112EC407C650BE2526518737BED2",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -175,8 +177,8 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSProcedure",
-          "mapTargetFhirPath" : "EHDSPatientSummary.procedures.procedure",
-          "mapTargetDefinition" : "List of procedures",
+          "mapTargetFhirPath" : "EHDSProcedure",
+          "mapTargetDefinition" : "EHDS refined base model for an action that is or was performed on or for a patient",
           "mapTargetCardinality" : "0..*"
         },
         "/description[at0001]/items[at0002.1]" : {
