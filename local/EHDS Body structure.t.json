@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9b33669316a8162184c20ebc8b76142e",
+      "MD5-CAM-1.0.1" : "9af759dbd0a769e247df47b102c3ca41",
       "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8",
       "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
@@ -165,7 +165,9 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSBodyStructure",
-          "mapTargetDefinition" : "Model for body structure"
+          "mapTargetDefinition" : "EHDS refined base model for Body structure",
+          "mapTargetCardinality" : "0..*",
+          "mapTargetFhirPath" : "EHDSBodyStructure"
         },
         "/items[at0001.1]" : {
           "mapTargetName" : "location",
