@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1812465e6e441936460282dd7ecf87ad",
-      "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E"
+      "MD5-CAM-1.0.1" : "beb08b615a4dab025822535485ffbf11",
+      "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -67,8 +69,8 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSDeviceUse",
-          "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.deviceUse",
-          "mapTargetDefinition" : "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.",
+          "mapTargetFhirPath" : "EHDSDeviceUse",
+          "mapTargetDefinition" : "EHDS refined base model for device use information",
           "mapTargetCardinality" : "0..*"
         },
         "/data[at0001]/items[at0022]/items[at0008.1]" : {
@@ -90,7 +92,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-EVALUATION.medicaldevice summary.v0"
+    "value" : "openEHR-EHR-EVALUATION.medicaldevice_summary.v0"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -278,7 +280,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "2064db74-8f14-3281-8fa6-8d9f66e7b54f",
+  "buildUid" : "8e6363b8-0dcc-338e-a096-d93e161dd6e9",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
