@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "abb14530107cea2d686e5298deadc9da",
+      "MD5-CAM-1.0.1" : "2ca9690bc0918633c5507a7bfc43466e",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.13",
+      "sem_ver" : "1.0.0-alpha.14",
       "build_uid" : ""
     },
     "details" : {
@@ -264,7 +264,16 @@
         "nodeId" : "at0.1",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-device_summary-025.v0",
+        "archetypeRef" : "EHDS Device use",
+        "referenceType" : "templateId"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.9",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -372,326 +381,6 @@
   "templateId" : "EHDS Medical Devices and Implants",
   "otherMetaData" : { },
   "templateOverlays" : [ {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "fff64045-1d0b-4529-af4e-c0334e1dfbaf",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer fortlaufenden und dauerhaften Übersicht über Medizinprodukte, die angepasst oder implantiert wurden.",
-          "keywords" : [ ],
-          "use" : "Zur Darstellung einer Zusammenfassung der angepassten oder implantierten Medizinprodukte, einschließlich, aber nicht beschränkt auf:\r\n- Hörhilfen, wie Hörgeräte oder Hörimplantate;\r\n- Orthesen oder Prothesen; \r\n- Zahnersatz oder Zahnimplantate; und\r\n- Brille oder Kontaktlinsen.\r\n\r\nDieser Archetyp wurde entwickelt, um eine Übersicht über den Einsatz von Medizinprodukten im Zeitverlauf darzustellen. Er kann als Zusammenfassung in Nachrichten oder zwischen klinischen Systemen verwendet werden, wenn die Details nicht erforderlich sind. Wenn in der Vergangenheit bestimmte Geräte verwendet wurden, können in diesem Archetyp so viele Details wie möglich hinzugefügt werden, um einen Kontext zu schaffen, der Entscheidungen über aktuelle oder zukünftige Geräte des gleichen Typs beeinflussen kann.\r\n\r\nIn der Praxis werden einige klinische Systeme spezifische und detaillierte INSTRUCTION- und ACTION-Archetypen aufzeichnen müssen, um die Anforderung eines Medizinprodukts und nachfolgende Aktivitäten, die während der Ausführung dieser Anforderung aufgezeichnet werden müssen, widerzuspiegeln. Es ist unvermeidlich, dass es in dieser Zusammenfassung und diesen detaillierten Archetypen einige Überschneidungen geben wird. Alle werden in verschiedenen Situationen benötigt. \r\n\r\nWenn Kliniker den Prozess der Anforderung und Bereitstellung von Medizinprodukten aufzeichnen, sollte diese Zusammenfassung aus diesen Aufzeichnungen abgeleitet werden, um sicherzustellen, dass es keine Duplikate bei der klinischen Eingabe gibt.",
-          "misuse" : "Nicht zur Anforderung eines Medizinproduktes verwenden - verwenden Sie dazu die INSTRUCTION.request Familie.\r\n\r\nNicht zur Aufzeichnung von Aktivitäten, die bei der Planung und Ausstattung des Patienten mit diesem Gerät auftreten - verwenden Sie dazu den Archetyp ACTION.device_fitting.\r\n\r\nNicht zur Aufzeichnung von Aktivitäten, die bei der Planung und Anpassung eines Implantats auftreten - verwenden Sie dazu den Archetyp ACTION.procedure.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record an ongoing and persistent overview about medical devices that have been fitted or implanted.",
-          "keywords" : [ ],
-          "use" : "Use to record a summary of medical devices that have been fitted or implanted including, but not limited to:\r\n- assisted hearing devices, such as hearing aids or auditory implants;\r\n- orthotics or artificial limbs; \r\n- dentures or dental implants; and\r\n- eyeglasses or contact lenses.\r\n\r\nThis archetype has been specifically designed to assist in providing an overview of management of medical devices over time. It may be used to share as a summary within messages or between clinical systems, where the detail is not required. If specific devices have been used in the past, as much detail as is available can be added in this archetype to create a context which may influence decisions about current or future devices of the same type.\r\n\r\nIn practice, some clinical systems will need to record specific and detailed INSTRUCTION and ACTION archetypes to reflect the request for an medical device and subseqent activities that need to be recorded as that request is carried out. It is inevitable that there will be some overlap in this summary and these detailed archetypes. All are neccessary in various situations. \r\n\r\nIf clinicians are recording the process of request and provision of medical devices, then this summary should be derived from those recordings, to ensure that there is no duplication of clinical input.",
-          "misuse" : "Not to be used to request a medical device - use the INSTRUCTION.request family for this purpose.\r\n\r\nNot to be used to record the activities that occur in the planning and fitting of a device - use the ACTION.device_fitting archetype for this purpose.\r\n\r\nNot to be used to record the activities that occur in the planning and fitting of an implant - use the ACTION.procedure archetype for this purpose.",
-          "copyright" : "© Northern Territory Department of Health, Australia, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere en pågående og persistent oversikt over medisinsk utstyr som er tilpasset eller implantert.",
-          "keywords" : [ ],
-          "use" : "For å registrere en oversikt over medisinsk utstyr som er tilpasset eller implantert.\r\nFor eksempel:\r\n- ortoser eller kunstige lemmer.\r\n- tannpoteser eller tannimplantater.\r\n- briller eller kontaktlinser.\r\n\r\nDenne arketypen er spesifikt utviklet for å bidra til en administrert oversikt over medisinsk utstyr over tid. Den kan benyttes som et sammendrag i meldinger eller mellom ulike kliniske systemer hvor detaljer ikke er påkrevd. Har en benyttet høreapparat tidligere kan man registrere tilgjengelig informasjon om dette for å skape kontekst som kan ha betydning for valg av nåværende eller framtidig utstyr.\r\n\r\nI praksis vil noen kliniske systemer måtte registrere spesifikke og detaljerte INSTRUCTION og ACTION arketyper for å gjenspeile en forespørsel for et høreapparat og etterfølgende aktiviteter må registreres etter hvert som forespørselen er utført. Det er uunngåelig at det vil bli overlapp i dette sammendraget og i de detaljerte arketypene. Alle er nødvendige i ulike situasjoner.\r\n\r\nOm klinikere registrerer hele prosessen fra en forespørsel og fram til utstyret framskaffes, skal dette sammendraget avledes fra disse registreringene for å sikre at duplisering av kliniske registreringer ikke forekommer.",
-          "misuse" : "Brukes ikke for å rekvirere høreapparat - Bruk INSTRUCTION.request arketypene for dette formålet.\r\n\r\nBrukes ikke for å rekvirere aktiviteter som forekommer under planlegging og tilbassing av medisinsk utstyr - bruk passende ACTION arketype for dette formålet.\r\n\r\nBrukes ikke for å registrere aktiviteter som forekommer under planlegging og tilpassing av et implantat - bruk arketypen ACTION.procedure for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "" : {
-            "mapTargetName" : "EHDSDeviceUse",
-            "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.deviceUse",
-            "mapTargetDefinition" : "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.",
-            "mapTargetCardinality" : "0..*"
-          },
-          "/data[at0001]/items[at0022]/items[at0008.1]" : {
-            "mapTargetName" : "startDate",
-            "mapTargetFhirPath" : "EHDSDeviceUse.startDate",
-            "mapTargetDefinition" : "Date when the device was implantable to the patient or the external device was first in use.",
-            "mapTargetCardinality" : "0..1"
-          },
-          "/data[at0001]/items[at0022]/items[at0009.1]" : {
-            "mapTargetName" : "endDate",
-            "mapTargetFhirPath" : "EHDSDeviceUse.endDate",
-            "mapTargetDefinition" : "Date when the device was explanted from the patient or the external device was no longer in use.",
-            "mapTargetCardinality" : "0..1"
-          }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.device_summary.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-device_summary-025.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0020.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0002.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "at0003", "at0004", "at0005" ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0015.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "nodeId" : "at0022",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0007.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0012.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0014.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0009.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0023.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0019.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "1..1",
-                  "nodeId" : "at0010.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "EHDS Device",
-                  "referenceType" : "templateId"
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0013.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "EHDS Body structure",
-                  "referenceType" : "templateId"
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0016",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0017.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Device use statement",
-            "description" : "Eine fortlaufende und dauerhafte Übersicht über Medizinprodukte, die angepasst oder implantiert wurden."
-          },
-          "at0020.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020.1",
-            "text" : "Device",
-            "description" : "Names des Medizinprodukttyps.",
-            "comment" : "Zum Beispiel: Hörgeräte, Brillen, Kontaktlinsen, Zahnspangen, Zahnprothesen, Orthesen oder Prothesen."
-          }
-        },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "f4f97e6a-d208-482f-b23e-f8467691121f",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Aljoscha Kindermann",
-        "organisation" : "Heidelberg University Hospital",
-        "email" : "aljoscha.kindermann@med.uni-heidelberg.de"
-      },
-      "accreditation" : "Data Steward",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand",
-        "organisation" : "Helse Bergen HF",
-        "email" : "john.tore.valand@helse-bergen.no"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "2c97f119-1c1e-4c11-8ccd-dc714f014ea4",
     "description" : {
@@ -946,6 +635,236 @@
         "name" : "Julio de Sosa",
         "organisation" : "Servei Català de la Salut",
         "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "73c74c1a-4378-4f8d-bab5-9c94affadcac",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "C5C6B6FF98874D3207D569A6722DA6AA"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0002]" : {
+            "mapTargetName" : "note",
+            "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.note",
+            "mapTargetDefinition" : "Free text notes by the health professional",
+            "mapTargetCardinality" : "0..1"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "fa" : { },
+        "ar-sy" : { },
+        "de" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "zh-cn" : { },
+        "nb" : { },
+        "sv" : { },
+        "ca" : { },
+        "es" : { },
+        "el" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "7b37912b-fe56-47f4-91dc-f7466393170e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Nadim Anani, Darin Leonhardt",
+        "organisation" : "Health Informatics Centre, Karolinska Institutet, Sweden, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "leonhardt.darin@mh-hannover.de"
+      },
+      "accreditation" : "fluent in both English and German, Medical Informatics 'MSc' degree from Heidelberg, 2 years professional experience in health informatics, some translation experience, openEHR knowledge.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Dr. Leonardo Der Jachadurian",
+        "organisation" : "Bitios.com"
+      },
+      "accreditation" : "Medical Doctor (Internal Medicine Specialist)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Ingrid Heitmann",
+        "organisation" : "NTNU and OUS, Registered nurse",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Emerson Urushibata",
+        "organisation" : "Universidade de São Paulo"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "el"
+      },
+      "author" : {
+        "name" : "Erasmia Partafylla",
+        "organisation" : "Sigmasoft",
+        "email" : "c.partafylla@sigmasoft.gr"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fa"
+      },
+      "author" : {
+        "name" : "Shahla Foozonkhah",
+        "organisation" : "Ocean Informatics",
+        "email" : "shahla.foozonkhah@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "MAY L",
+        "organisation" : "CSDC",
+        "email" : "hcn2020@126.com"
+      },
+      "accreditation" : "What goes here?",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "TRADCREA"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
       },
       "otherDetails" : { }
     } ]
