@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5951ad6e038ff4263609f47d8e6200f3",
+      "MD5-CAM-1.0.1" : "be41c0b07ca6aa8952ec75fbe0bb97bb",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.3",
+      "sem_ver" : "1.0.0-alpha.4",
       "build_uid" : ""
     },
     "details" : {
@@ -165,7 +165,9 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSDevice",
-          "mapTargetDefinition" : "Device model"
+          "mapTargetFhirPath" : "EHDSDevice",
+          "mapTargetDefinition" : "EHDS refined base model for Device information",
+          "mapTargetCardinality" : "0..*"
         },
         "/items[at0001.1]" : {
           "mapTargetName" : "name",
@@ -303,16 +305,7 @@
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "nodeId" : "at0005.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_DATE_TIME",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       }, {
         "@type" : "C_COMPLEX_OBJECT",
@@ -349,16 +342,7 @@
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "nodeId" : "at0007.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_DATE_TIME",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       }, {
         "@type" : "C_COMPLEX_OBJECT",
