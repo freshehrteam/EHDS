@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "4e17c8ef9fecd1c84395d729d75ea59d",
+      "MD5-CAM-1.0.1" : "8a1d66d4ae21062b80341dd2c119ee10",
       "PARENT:MD5-CAM-1.0.1" : "301D939F428B1A2F46DDE641AAFC47E5",
-      "sem_ver" : "1.0.0-alpha.3",
+      "sem_ver" : "1.0.0-alpha.4",
       "build_uid" : ""
     },
     "details" : {
@@ -146,10 +146,16 @@
           "mapTargetCardinality" : "0..1"
         },
         "/items[at0150]" : {
-          "mapTargetName" : "EHDSMedication.batch.lotNumber"
+          "mapTargetName" : "batch.lotNumber",
+          "mapTargetFhirPath" : "EHDSMedication.batch.lotNumber",
+          "mapTargetDefinition" : "Batch identifier of the medicinal product",
+          "mapTargetCardinality" : "0..1"
         },
         "/items[at0003]" : {
-          "mapTargetName" : "EHDSMedication.batch.expirationDate"
+          "mapTargetName" : "batch.expirationDate",
+          "mapTargetFhirPath" : "EHDSMedication.batch.expirationDate",
+          "mapTargetDefinition" : "Batch expiration date of the medicinal product.",
+          "mapTargetCardinality" : "0..1"
         },
         "/items[at0132.1]" : {
           "mapTargetName" : "identifyingCode[x]",
@@ -605,6 +611,13 @@
           },
           "/items[at0115.1]" : {
             "mapTargetName" : "EHDSMedication.item.ingredient.strengthInfo.strength"
+          },
+          "/items[at0139.1]" : {
+            "mapTargetName" : "item.amount",
+            "mapTargetFhirPath" : "EHDSMedication.item.amount",
+            "mapTargetDefinition" : "Number of such manufactured items in this product (5 vials)",
+            "mapTargetCardinality" : "0..1",
+            "mapTargetBindings" : "UCUM for units of measure. EDQM Standard Terms for units of presentation."
           }
         }
       }
@@ -719,7 +732,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0139.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
