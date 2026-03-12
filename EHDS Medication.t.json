@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8f07c26c83a90dde315d81188ee4d90c",
-      "PARENT:MD5-CAM-1.0.1" : "301D939F428B1A2F46DDE641AAFC47E5"
+      "MD5-CAM-1.0.1" : "cd3aba3d2e23d02a45de762cf5506786",
+      "PARENT:MD5-CAM-1.0.1" : "301D939F428B1A2F46DDE641AAFC47E5",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -126,7 +128,10 @@
     "documentation" : {
       "en" : {
         "" : {
-          "mapTargetName" : "EHDSMedication"
+          "mapTargetName" : "EHDSMedication",
+          "mapTargetFhirPath" : "EHDSMedication",
+          "mapTargetDefinition" : "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile. Model is suitable for generic/virtual medications as well as branded/real products.",
+          "mapTargetCardinality" : "0..*"
         },
         "/items[at0071.1]" : {
           "mapTargetName" : "doseForm",
