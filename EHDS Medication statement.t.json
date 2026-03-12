@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0db4b4291ace2633dde079b32b980303",
-      "PARENT:MD5-CAM-1.0.1" : "AA0BE8C0835250EE579F834B51A6633C"
+      "MD5-CAM-1.0.1" : "77c44db443238712f85dbc025757ba01",
+      "PARENT:MD5-CAM-1.0.1" : "AA0BE8C0835250EE579F834B51A6633C",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -79,8 +81,8 @@
       "en" : {
         "" : {
           "mapTargetName" : "EHDSMedicationStatement",
-          "mapTargetFhirPath" : "EHDSPatientSummary.medicationSummary.medicationTreatment",
-          "mapTargetDefinition" : "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not.",
+          "mapTargetFhirPath" : "EHDSMedicationStatement",
+          "mapTargetDefinition" : "Statement about a single medication as part of a medication summary.",
           "mapTargetCardinality" : "0..*"
         },
         "/data[at0001]/events[at0002.1]/data[at0003]/items[at0023.1]" : {
@@ -108,7 +110,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-OBSERVATION.medicationuse statement.v0"
+    "value" : "openEHR-EHR-OBSERVATION.medicationuse_statement.v0"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -264,7 +266,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "7def7429-85fd-3094-ab8a-936ea5922b3b",
+  "buildUid" : "eb19be0b-5f0e-3b49-86f1-61a4e6ec1752",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
