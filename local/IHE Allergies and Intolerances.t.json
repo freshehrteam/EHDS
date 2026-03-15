@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "6d59f364f09af2a3863b4d0a9771a0c0",
+      "MD5-CAM-1.0.1" : "2c8cdcb00d9b754df9cdf5fb14ed3790",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.26",
+      "sem_ver" : "1.1.0-alpha.26",
       "build_uid" : ""
     },
     "details" : {
@@ -268,15 +268,6 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-absence-011.v2",
         "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..*",
-        "nodeId" : "at0.12",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Allergy intolerance",
-        "referenceType" : "templateId"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -289,7 +280,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "EHDS Allergies and Intolerances",
+          "text" : "Allergies and Intolerances",
           "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         }
       },
