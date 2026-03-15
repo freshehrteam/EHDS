@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "fb964042a31dd25fdf8161460349d54c",
+      "MD5-CAM-1.0.1" : "49ba36edb84b182cf48df9624e16d378",
       "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : ""
@@ -266,30 +266,7 @@
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
             "nodeId" : "at0002.1",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "value",
-              "children" : [ {
-                "@type" : "C_COMPLEX_OBJECT",
-                "rmTypeName" : "DV_CODED_TEXT",
-                "occurrences" : "1..1",
-                "attributes" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "defining_code",
-                  "children" : [ {
-                    "@type" : "C_TERMINOLOGY_CODE",
-                    "rmTypeName" : "TERMINOLOGY_CODE",
-                    "occurrences" : "0..1",
-                    "terminologyId" : {
-                      "value" : "ehdsi-activeingredient"
-                    },
-                    "constraint" : [ "ac0.13" ],
-                    "selectedTerminologies" : [ "ehdsi-activeingredient" ]
-                  } ]
-                } ],
-                "attributeTuples" : [ ]
-              } ]
-            } ],
+            "attributes" : [ ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_COMPLEX_OBJECT",
