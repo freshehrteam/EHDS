@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8409808127eb68fab856f3d1e8b6e75a",
+      "MD5-CAM-1.0.1" : "39c29cb0016bcd9cb77745a8092f2d78",
       "PARENT:MD5-CAM-1.0.1" : "B2D87AA57E3D01820E7DAE733A4644F7",
       "original_language" : "ISO_639-1::en",
-      "sem_ver" : "1.0.0-alpha.5",
+      "sem_ver" : "1.1.0",
       "build_uid" : ""
     },
     "details" : {
@@ -117,56 +117,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ]
       } ]
-    }, {
-      "@type" : "C_ATTRIBUTE",
-      "rmAttributeName" : "content",
-      "existence" : "0..1",
-      "children" : [ {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.94",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Allergies and Intolerances",
-        "referenceType" : "templateId"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.96",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Problems",
-        "referenceType" : "templateId"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.98",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Medication Summary",
-        "referenceType" : "templateId"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.100",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Medical Devices and Implants",
-        "referenceType" : "templateId"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.102",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "EHDS Procedures",
-        "referenceType" : "templateId"
-      } ]
     } ],
     "attributeTuples" : [ ]
   },
@@ -178,7 +128,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "EHDS Patient Summary",
+          "text" : "IHE Patient Summary",
           "description" : "Generic document containing a summary of health information about an individual."
         }
       },
