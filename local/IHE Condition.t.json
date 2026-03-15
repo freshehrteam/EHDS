@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "aaaca71330ea781d826a8a4359641b13",
+      "MD5-CAM-1.0.1" : "833ec4380ea7e924e4d4eff355449ca3",
       "PARENT:MD5-CAM-1.0.1" : "E76E5F22B844A271994F5CCE9A8A1A10",
-      "sem_ver" : "1.0.0-alpha.3",
+      "sem_ver" : "1.1.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -431,16 +431,7 @@
           }, {
             "@type" : "C_ARCHETYPE_ROOT",
             "rmTypeName" : "CLUSTER",
-            "occurrences" : "0..*",
-            "nodeId" : "at0039.1",
-            "attributes" : [ ],
-            "attributeTuples" : [ ],
-            "archetypeRef" : "EHDS Body structure",
-            "referenceType" : "templateId"
-          }, {
-            "@type" : "C_ARCHETYPE_ROOT",
-            "rmTypeName" : "CLUSTER",
-            "occurrences" : "0..*",
+            "occurrences" : "0..0",
             "nodeId" : "at0043.1",
             "attributes" : [ ],
             "attributeTuples" : [ ],
