@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "d57e4379745a539201d478b86d167aab",
+      "MD5-CAM-1.0.1" : "f8fae0c279f738ba78b1f62de051594f",
       "PARENT:MD5-CAM-1.0.1" : "7642B7C6FD3E445EA35DA32279728164",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -145,16 +145,22 @@
           "mapTargetDefinition" : "Free text usage/dosage instructions when structured dosage information is not fully provided",
           "mapTargetCardinality" : "0..1"
         },
-        "/items[at0144]" : {
+        "/items[at0134]" : {
+          "mapTargetName" : "doseAndRate.rate[x]",
+          "mapTargetFhirPath" : "EHDSDosaging.doseAndRate.rate[x]",
+          "mapTargetDefinition" : "Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0144.1]" : {
           "mapTargetName" : ".doseAndRate.dose[x]",
           "mapTargetFhirPath" : "EHDSDosaging.doseAndRate.dose[x]",
           "mapTargetDefinition" : "Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)",
           "mapTargetCardinality" : "0..1"
         },
-        "/items[at0134]" : {
-          "mapTargetName" : "doseAndRate.rate[x]",
-          "mapTargetFhirPath" : "EHDSDosaging.doseAndRate.rate[x]",
-          "mapTargetDefinition" : "Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)",
+        "/items[at0102.1]" : {
+          "mapTargetName" : "timing.repeat.duration.duration",
+          "mapTargetFhirPath" : "EHDSDosaging.timing.repeat.duration",
+          "mapTargetDefinition" : "Duration of administration (e.g '5 minutes', '1 hour')",
           "mapTargetCardinality" : "0..1"
         }
       }
@@ -174,6 +180,26 @@
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "items",
       "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0144.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_QUANTITY",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
@@ -197,7 +223,6 @@
       }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
-        "occurrences" : "0..0",
         "nodeId" : "at0102.1",
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
@@ -442,6 +467,19 @@
           "misuse" : "Ne doit pas être utilisé pour enregistrer les détails du chronométrage sur des périodes plus longues qu'une seule période de 24 heures. Utilisez l'archétype CLUSTER.timing_repetition à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "timing",
+            "mapTargetFhirPath" : "EHDSDosaging.timing",
+            "mapTargetDefinition" : "When medication should be administered (period, time of day, frequency, etc)",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
