@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1cdc7d3f9cde1b4b542e55cd23eb70f6",
-      "PARENT:MD5-CAM-1.0.1" : "7642B7C6FD3E445EA35DA32279728164"
+      "MD5-CAM-1.0.1" : "d57e4379745a539201d478b86d167aab",
+      "PARENT:MD5-CAM-1.0.1" : "7642B7C6FD3E445EA35DA32279728164",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -126,19 +128,34 @@
     "documentation" : {
       "en" : {
         "" : {
-          "mapTargetName" : "EHDSDosaging"
+          "mapTargetName" : "EHDSDosaging",
+          "mapTargetFhirPath" : "EHDSDosaging",
+          "mapTargetDefinition" : "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.",
+          "mapTargetCardinality" : "0..*"
         },
         "/items[at0164]" : {
-          "mapTargetName" : "EHDSDosaging.sequence"
+          "mapTargetName" : "sequence",
+          "mapTargetFhirPath" : "EHDSDosaging.sequence",
+          "mapTargetDefinition" : "Order of the dosage instruction, in case one treatment consists of several dosaging schemes",
+          "mapTargetCardinality" : "0..1"
         },
         "/items[at0178]" : {
-          "mapTargetName" : "EHDSDosaging.text"
+          "mapTargetName" : "text",
+          "mapTargetFhirPath" : "EHDSDosaging.text",
+          "mapTargetDefinition" : "Free text usage/dosage instructions when structured dosage information is not fully provided",
+          "mapTargetCardinality" : "0..1"
         },
         "/items[at0144]" : {
-          "mapTargetName" : "EHDSDosaging.doseAndRate.dose[x]"
+          "mapTargetName" : ".doseAndRate.dose[x]",
+          "mapTargetFhirPath" : "EHDSDosaging.doseAndRate.dose[x]",
+          "mapTargetDefinition" : "Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)",
+          "mapTargetCardinality" : "0..1"
         },
         "/items[at0134]" : {
-          "mapTargetName" : "EHDSDosaging.doseAndRate.rate[x]"
+          "mapTargetName" : "doseAndRate.rate[x]",
+          "mapTargetFhirPath" : "EHDSDosaging.doseAndRate.rate[x]",
+          "mapTargetDefinition" : "Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)",
+          "mapTargetCardinality" : "0..1"
         }
       }
     }
