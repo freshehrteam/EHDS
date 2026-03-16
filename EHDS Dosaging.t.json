@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f8fae0c279f738ba78b1f62de051594f",
+      "MD5-CAM-1.0.1" : "186785766ff73e3fc2957b9a9a0f4e57",
       "PARENT:MD5-CAM-1.0.1" : "7642B7C6FD3E445EA35DA32279728164",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -479,6 +479,12 @@
             "mapTargetFhirPath" : "EHDSDosaging.timing",
             "mapTargetDefinition" : "When medication should be administered (period, time of day, frequency, etc)",
             "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0004]" : {
+            "mapTargetName" : "timing.event",
+            "mapTargetFhirPath" : "EHDSDosaging.timing.event",
+            "mapTargetDefinition" : "Exact date and/or time of the administration",
+            "mapTargetCardinality" : "0..*"
           }
         }
       }
