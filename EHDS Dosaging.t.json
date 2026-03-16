@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cf4f462de90d646f9db269385d6305fc",
+      "MD5-CAM-1.0.1" : "004f3cb664c27bb124fd261d4079b442",
       "PARENT:MD5-CAM-1.0.1" : "7642B7C6FD3E445EA35DA32279728164",
-      "sem_ver" : "1.0.0-alpha.4",
+      "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
     },
     "details" : {
@@ -635,6 +635,12 @@
             "mapTargetName" : "timing.event",
             "mapTargetFhirPath" : "EHDSDosaging.timing.event",
             "mapTargetDefinition" : "Exact date and/or time of the administration",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/items[at0003]" : {
+            "mapTargetName" : "timing.repeat.dayOfWeek",
+            "mapTargetFhirPath" : "EHDSDosaging.timing.repeat.dayOfWeek",
+            "mapTargetDefinition" : "The day of the week of administration, e.g Mon, Tue, etc",
             "mapTargetCardinality" : "0..*"
           }
         }
