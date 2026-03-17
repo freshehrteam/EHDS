@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e496dcb732511d120ba8ee2e0c03c0f3",
+      "MD5-CAM-1.0.1" : "ed0b8a7f03ff2843d4b04c1379c10fe8",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.6",
+      "sem_ver" : "1.0.0-alpha.7",
       "build_uid" : ""
     },
     "details" : {
@@ -1527,6 +1527,20 @@
       },
       "details" : { }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0159.1]" : {
+            "mapTargetName" : "packSize",
+            "mapTargetFhirPath" : "EHDSMedication.packSize",
+            "mapTargetDefinition" : "Overall amount of product in one package (100ml; 20 tablets; 1 creme & 6 pessaries)",
+            "mapTargetCardinality" : "0..*",
+            "mapTargetBindings" : "UCUM for units of measure. EDQM Standard Terms for units of presentation."
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.medication_supply_amount.v0",
     "differential" : true,
     "archetypeId" : {
@@ -1584,6 +1598,12 @@
               "attributeTuples" : [ ]
             } ]
           } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0159.1",
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
