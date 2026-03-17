@@ -223,7 +223,7 @@ FHIR Resource Medication, HL7 [Internet]. Available at: https://www.hl7.org/fhir
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"301D939F428B1A2F46DDE641AAFC47E5">
+		["MD5-CAM-1.0.1"] = <"aa4e843317bf1f4f79cbfd37d4d494ab">
 		["build_uid"] = <"61159117-6bd8-4837-80d9-e5dc9830aff7">
 		["revision"] = <"2.0.3">
 	>
@@ -278,6 +278,7 @@ definition
 			ELEMENT[at0151] occurrences matches {0..1} matches {    -- Manufacturer
 				value matches {
 					DV_TEXT matches {*}
+					DV_IDENTIFIER matches {*}
 				}
 			}
 			ELEMENT[at0150] occurrences matches {0..*} matches {    -- Batch ID
