@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "da13e90e792f4afa7a96412624382c93",
+      "MD5-CAM-1.0.1" : "64fb59ba20acb043121af293e1ccf3d1",
       "PARENT:MD5-CAM-1.0.1" : "AA0BE8C0835250EE579F834B51A6633C",
-      "sem_ver" : "1.0.0-alpha.4",
+      "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
     },
     "details" : {
@@ -642,11 +642,11 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
-          "occurrences" : "1..*",
-          "nodeId" : "at0176.1",
+          "occurrences" : "0..1",
+          "nodeId" : "at0176.2",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "EHDS Dosaging",
+          "archetypeRef" : "Therapeutic direction",
           "referenceType" : "templateId"
         } ]
       } ],
