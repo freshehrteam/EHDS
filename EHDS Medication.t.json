@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f4a3d3281ad7e8e5ce2f6df2daf4fbab",
+      "MD5-CAM-1.0.1" : "ac24ac893bfcf6c6a013d9258abc8ff6",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.8",
+      "sem_ver" : "1.0.0-alpha.9",
       "build_uid" : ""
     },
     "details" : {
@@ -1230,7 +1230,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0127.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -1248,15 +1247,10 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.2" ],
+                  "constraint" : [ "ac0.7" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -1277,114 +1271,114 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "nb" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "pt" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "nl" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "sv" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "ca" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         },
         "es" : {
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
           "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : ""
           }
         }
@@ -1411,6 +1405,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
           "members" : [ "at0143", "at0146", "at0144", "at0145", "at0001" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0080", "at0083", "at0084" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0080", "at0084" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0080", "at0084" ]
         }
       }
     },
@@ -1540,7 +1549,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EE0C097D86C864115F3C4480B21599C4"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung der Menge eines Arzneimittels, eines Impfstoffs oder eines anderen therapeutischen Mittels, das dem Patienten im Rahmen einer Zulassung, Abgabe oder Verabreichung zur Verfügung gestellt oder verabreicht wurde, und zwar sowohl im Rahmen der ursprünglichen Arzneimittelverschreibung als auch in einem Folgevorgang.",
+          "keywords" : [ ],
+          "use" : "Soll zur Erfassung der Menge eines Arzneimittels, eines Impfstoffs oder eines anderen therapeutischen Mittels, das dem Patienten im Rahmen einer Zulassung, Abgabe oder Verabreichung zur Verfügung gestellt oder verabreicht wurde, und zwar sowohl im Rahmen der ursprünglichen Arzneimittelverschreibung als auch in einem Folgevorgang, verwendet werden.",
+          "misuse" : "Dieser Archetyp sollte nicht dazu verwendet werden, die ursprüngliche Dosismenge als Teil einer Dosisanweisung oder der Wirkstärke eines Präparats zu erfassen. Diese werden als Teil der INSTRUCTION Verordnung von Arzneimitteln oder des CLUSTERs Arzneimittel erfasst.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere mengden legemiddel, vaksine, eller annen terapeutisk vare som skal leveres eller utleveres til pasienten, som del av en autorisering, utlevering eller administrering, både i legemiddelforordningen og i en påfølgende legemiddelhandling.",
+          "keywords" : [ ],
+          "use" : "Brukes til å registrere mengden legemiddel, vaksine, eller annen terapeutisk vare som skal leveres eller utleveres til pasienten, som del av en autorisering, utlevering eller administrering, både i legemiddelforordningen og i en påfølgende legemiddelhandling.",
+          "misuse" : "Brukes ikke for å registre en dose eller styrke som del av en anvisning. Disse registreres som en del av arketypene INSTRUCTION.medication_order eller CLUSTER.medication_substance.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "*To record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action. (en)",
+          "keywords" : [ "Suprimento de medicamentos" ],
+          "use" : "*Use to record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action. (en)",
+          "misuse" : "Este arquétipo não deve ser usado para registrar a quantidade da dose, concentração, forma farmacêutica de uma preparação de medicamento. Estes são registrados como parte da INSTRUCTION de medicamentos, ou CLUSTER de Substâncias Medicamentosas.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action.",
+          "keywords" : [ ],
+          "use" : "Use to record the amount of a medication, vaccine or other therapeutic item to be supplied or supplied to the patient, as part of authorisation, dispensing or administration, both in the context of the original medication order and in a subsequent action.",
+          "misuse" : "This archetype should not be used to record the original dose amount as part of a dose direction or the strength of a preparation. These are recorded as part of the Medication Order INSTRUCTION, or Medication Substance CLUSTER.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
