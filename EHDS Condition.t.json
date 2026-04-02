@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "48a1910b4f3cbaeaf7da05cba67cf911",
+      "MD5-CAM-1.0.1" : "5ac8ca15edd9eb0816de3324edb3c377",
       "PARENT:MD5-CAM-1.0.1" : "23814F45898EDABAB347AF0E329C95B5",
-      "sem_ver" : "1.0.0-alpha.4",
+      "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
     },
     "details" : {
@@ -2903,7 +2903,7 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "" : {
+          "/items[at0001]" : {
             "mapTargetName" : "externalResource",
             "mapTargetFhirPath" : "EHDSCondition.externalResource",
             "mapTargetDefinition" : "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines.",
