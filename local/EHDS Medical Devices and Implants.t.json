@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1104b557498cd47f74e550b25bf573ae",
+      "MD5-CAM-1.0.1" : "44d7fa70813a8ef19a1806ae5743d3c5",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.16",
+      "sem_ver" : "1.0.0-alpha.17",
       "build_uid" : ""
     },
     "details" : {
@@ -467,7 +467,7 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/data[at0001]/items[at0005]" : {
+          "/data[at0001]/items[at0005.1]" : {
             "mapTargetName" : "emptyReason",
             "mapTargetFhirPath" : "EHDSPatientSummary.medicalDevicesAndImplants.emptyReason",
             "mapTargetDefinition" : "Reason for absence of data",
@@ -518,6 +518,13 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0005.1",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
