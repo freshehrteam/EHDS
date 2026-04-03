@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "ac24ac893bfcf6c6a013d9258abc8ff6",
+      "MD5-CAM-1.0.1" : "cc61599df7f019349b005e70da05080f",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.9",
+      "sem_ver" : "1.0.0-alpha.10",
       "build_uid" : ""
     },
     "details" : {
@@ -152,8 +152,8 @@
           "mapTargetCardinality" : "0..1"
         },
         "/items[at0132.1]" : {
-          "mapTargetName" : "identifyingCode[x]",
-          "mapTargetFhirPath" : "EHDSMedication.identifyingCode[x]",
+          "mapTargetName" : "identifyingCode.identifyingCodeCodeableConcept",
+          "mapTargetFhirPath" : "EHDSMedication.identifyingCode.identifyingCodeCodeableConcept",
           "mapTargetDefinition" : "Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.",
           "mapTargetCardinality" : "0..*"
         },
@@ -1676,8 +1676,8 @@
                     "lower" : 1,
                     "lowerIncluded" : true,
                     "upperIncluded" : false,
-                    "upperUnbounded" : true,
-                    "lowerUnbounded" : false
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
                   } ]
                 } ]
               } ],
@@ -1714,8 +1714,8 @@
                     "lower" : "P0D",
                     "lowerIncluded" : true,
                     "upperIncluded" : false,
-                    "upperUnbounded" : true,
-                    "lowerUnbounded" : false
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
                   } ]
                 } ]
               } ],
