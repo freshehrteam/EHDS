@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9fb93e4b9d26aa9de39e72b155fc835d",
+      "MD5-CAM-1.0.1" : "8d74c9bccd7a63e2849ac866e4f2b2f1",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.11",
+      "sem_ver" : "1.0.0-alpha.12",
       "build_uid" : ""
     },
     "details" : {
@@ -1104,6 +1104,12 @@
             "mapTargetFhirPath" : "EHDSMedication.item.ingredient.strengthInfo.strength",
             "mapTargetDefinition" : "Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet",
             "mapTargetCardinality" : "1..1"
+          },
+          "/items[at0127.1]" : {
+            "mapTargetName" : "item.ingredient.isActive",
+            "mapTargetFhirPath" : "EHDSMedication.item.ingredient.isActive",
+            "mapTargetDefinition" : "Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.",
+            "mapTargetCardinality" : "0..1"
           }
         }
       }
