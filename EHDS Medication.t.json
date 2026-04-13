@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "942e299375b8a6c43989d59efe671d46",
+      "MD5-CAM-1.0.1" : "4252f6ca660fc3dfb824099ea86d1c2d",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.13",
+      "sem_ver" : "1.0.0-alpha.14",
       "build_uid" : ""
     },
     "details" : {
@@ -625,9 +625,6 @@
             "mapTargetDefinition" : "Dose form",
             "mapTargetCardinality" : "0..1"
           },
-          "/items[at0152.1]" : {
-            "mapTargetName" : "EHDSMedication.item.ingredient.strengthInfo.strength"
-          },
           "/items[at0115.1]" : {
             "mapTargetName" : "EHDSMedication.item.ingredient.strengthInfo.strength"
           },
@@ -710,6 +707,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..0",
           "nodeId" : "at0152.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -1103,16 +1101,28 @@
             "mapTargetDefinition" : "Substance",
             "mapTargetCardinality" : "1..1"
           },
-          "/items[at0115.1]" : {
+          "/items[at0127.1]" : {
+            "mapTargetName" : "item.ingredient.isActive",
+            "mapTargetFhirPath" : "EHDSMedication.item.ingredient.isActive",
+            "mapTargetDefinition" : "Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0152]/items[at0153]" : {
             "mapTargetName" : "item.ingredient.strengthInfo.strength",
             "mapTargetFhirPath" : "EHDSMedication.item.ingredient.strengthInfo.strength",
             "mapTargetDefinition" : "Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet",
             "mapTargetCardinality" : "1..1"
           },
-          "/items[at0127.1]" : {
-            "mapTargetName" : "item.ingredient.isActive",
-            "mapTargetFhirPath" : "EHDSMedication.item.ingredient.isActive",
-            "mapTargetDefinition" : "Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.",
+          "/items[at0152]/items[at0157]" : {
+            "mapTargetName" : "item.ingredient.strengthInfo.strength",
+            "mapTargetFhirPath" : "EHDSMedication.item.ingredient.strengthInfo.strength",
+            "mapTargetDefinition" : "Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet",
+            "mapTargetCardinality" : "1..1"
+          },
+          "/items[at0152]" : {
+            "mapTargetName" : "item.ingredient.strengthInfo",
+            "mapTargetFhirPath" : "EHDSMedication.item.ingredient.strengthInfo",
+            "mapTargetDefinition" : "Strength of the product - amount of substance per unit",
             "mapTargetCardinality" : "0..1"
           }
         }
@@ -1182,7 +1192,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "1..1",
+          "occurrences" : "0..0",
           "nodeId" : "at0115.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
