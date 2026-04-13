@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8d74c9bccd7a63e2849ac866e4f2b2f1",
+      "MD5-CAM-1.0.1" : "942e299375b8a6c43989d59efe671d46",
       "PARENT:MD5-CAM-1.0.1" : "527cfabc9bf9e92379a7ae31244dcd2a",
-      "sem_ver" : "1.0.0-alpha.12",
+      "sem_ver" : "1.0.0-alpha.13",
       "build_uid" : ""
     },
     "details" : {
@@ -637,6 +637,12 @@
             "mapTargetDefinition" : "Number of such manufactured items in this product (5 vials)",
             "mapTargetCardinality" : "0..1",
             "mapTargetBindings" : "UCUM for units of measure. EDQM Standard Terms for units of presentation."
+          },
+          "/items[at0148.1]" : {
+            "mapTargetName" : "item.containedQuantity",
+            "mapTargetFhirPath" : "EHDSMedication.item.containedQuantity",
+            "mapTargetDefinition" : "Manufactured item quantity for liquids (3ml / 1 vial)",
+            "mapTargetCardinality" : "0..1"
           }
         }
       }
@@ -704,7 +710,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..0",
           "nodeId" : "at0152.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -759,7 +764,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0148.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
