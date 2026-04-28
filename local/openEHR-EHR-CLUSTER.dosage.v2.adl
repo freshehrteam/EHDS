@@ -170,21 +170,6 @@ In the context of an ACTION archetype insert this archetype directly into the 'A
 
 Specific administration start/stop times should be specified within a contained CLUSTER 'Timing - daily' archetype.">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"Registrar la combinació d’una quantitat de medicació i el moment d’administració en un mateix dia, com a part d’una prescripció o gestió de medicació o per a altres elements terapèutics/prescriptibles apropiats.">
-			keywords = <"medicació","encàrrec","prescriure","teràpia","substància","medicament","terapèutic","producte terapèutic","fàrmac","producte","posologia","tractament","fluid","nutrició","temporització","administració","dosi">
-			use = <"Utilitzar per a registrar la combinació d’una quantitat de medicació i el moment d’administració en un mateix dia, com a part d’una prescripció o gestió de medicació o per a altres elements terapèutics/prescriptibles apropiats.
-La pauta horària d’un únic dia pot ser tan simple com una sola hora d’administració o diverses hores d’administració amb diversos nivells de complexitat.
-
-Les dades de temporització que no corresponguin a un únic dia; per exemple, temporitzacions setmanals o mensuals, estan contingudes en l’arquetip de tipus CLUSTER «Temporització – no diària», que es troba dins de l’arquetip de tipus CLUSTER «Instruccions terapèutiques».
-
-En el context d’una INSTRUCTION terapèutica, aquest arquetip es pot inserir al SLOT «Instruccions estructurals de dosi i temporització» dins del CLUSTER «Instruccions terapèutiques» per a registrar les dades de dosi i temporalització de les pautes d’administracions úniques previstes d’un element terapèutic.
-
-En el context d’un arquetip de tipus ACTION, aquest arquetip s’ha d’inserir directament al SLOT «Quantitat» per a registrar la dosi i el moment d’una administració concreta d’un element terapèutic.
-
-Els moments específics d’inici i de finalització s’han d’especificar dins d’un arquetip «Temporització – diària» de tipus CLUSTER.">
-		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Registrar la combinación de una cantidad de medicación y el momento de administración en un mismo día, como parte de una prescripción o gestión de medicación, o para otros elementos terapéuticos/prescribibles apropiados.">
@@ -201,6 +186,21 @@ En el contexto de un arquetipo de tipo ACTION, inserte este arquetipo directamen
 
 Las horas específicas de inicio y finalización de la administración deben especificarse dentro de un arquetipo CLUSTER \"Timing - diario\".
 ">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Registrar la combinació d’una quantitat de medicació i el moment d’administració en un mateix dia, com a part d’una prescripció o gestió de medicació o per a altres elements terapèutics/prescriptibles apropiats.">
+			keywords = <"medicació","encàrrec","prescriure","teràpia","substància","medicament","terapèutic","producte terapèutic","fàrmac","producte","posologia","tractament","fluid","nutrició","temporització","administració","dosi">
+			use = <"Utilitzar per a registrar la combinació d’una quantitat de medicació i el moment d’administració en un mateix dia, com a part d’una prescripció o gestió de medicació o per a altres elements terapèutics/prescriptibles apropiats.
+La pauta horària d’un únic dia pot ser tan simple com una sola hora d’administració o diverses hores d’administració amb diversos nivells de complexitat.
+
+Les dades de temporització que no corresponguin a un únic dia; per exemple, temporitzacions setmanals o mensuals, estan contingudes en l’arquetip de tipus CLUSTER «Temporització – no diària», que es troba dins de l’arquetip de tipus CLUSTER «Instruccions terapèutiques».
+
+En el context d’una INSTRUCTION terapèutica, aquest arquetip es pot inserir al SLOT «Instruccions estructurals de dosi i temporització» dins del CLUSTER «Instruccions terapèutiques» per a registrar les dades de dosi i temporalització de les pautes d’administracions úniques previstes d’un element terapèutic.
+
+En el context d’un arquetip de tipus ACTION, aquest arquetip s’ha d’inserir directament al SLOT «Quantitat» per a registrar la dosi i el moment d’una administració concreta d’un element terapèutic.
+
+Els moments específics d’inici i de finalització s’han d’especificar dins d’un arquetip «Temporització – diària» de tipus CLUSTER.">
 		>
 	>
 	other_details = <
