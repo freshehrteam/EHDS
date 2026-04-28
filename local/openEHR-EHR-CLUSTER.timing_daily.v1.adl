@@ -81,11 +81,6 @@ Arketypen er laget for å brukes i SLOTet \"Administreringstidspunkt\" i arketyp
 			use = <"Použite pre záznam štruktúrovaných informácií o požadovanom časovom rozpise terapeutickej alebo diagnostickej aktivity v rámci 24h intervalu">
 			misuse = <"Nepoužívajte pre záznam časového rozpisu pre periódy dlhšie ako 24h. V takom prípade použite CLUSTER.timing_repetition archetyp">
 		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*To provide structured information on time schedules within a single day that is suitable for computation and display for human interpretation.(en)">
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record structured information about the intended timing of a therapeutic or diagnostic activity within any 24 hour period.">
@@ -95,6 +90,11 @@ Arketypen er laget for å brukes i SLOTet \"Administreringstidspunkt\" i arketyp
 
 This archetype is designed to be used within the 'Timing' SLOT within the CLUSTER.dosage archetype, but can also be used in other CLUSTER and ENTRY class archetypes where clinically appropriate.">
 			misuse = <"Not to be used for recording timing details over periods longer than a single 24 hour period. Use the CLUSTER.timing_repetition archetype for this purpose.">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To provide structured information on time schedules within a single day that is suitable for computation and display for human interpretation.(en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
