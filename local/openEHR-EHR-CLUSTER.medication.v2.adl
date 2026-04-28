@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=b222a76b-6f91-4e78-b669-0d776747a789)
+﻿archetype (adl_version=1.4; uid=b222a76b-6f91-4e78-b669-0d776747a789)
 	openEHR-EHR-CLUSTER.medication.v2
 
 concept
-	[at0000]
-
+	[at0000]	-- Medication details
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -18,9 +17,9 @@ language
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			author = <
-				["name"] = <"Sofia Janstad, Jörgen Kuylenstierna">
-				["organisation"] = <"SLL, eWeave AB">
-				["email"] = <"sofia.lang-janstad@sll.se, jorgen.kuylenstierna@solvikshalsan.se">
+				["name"] = <"Sofia Janstad, Jörgen Kuylenstierna, Åsa Skagerhult, Linda Aulin Lundeqvist, Samira Nikman, Manna Vosta, Rikard Lövström">
+				["organisation"] = <"SLL, eWeave AB, Västra Götalandsregionen, Karolinska universitetssjukhuset, Karolinska University Hospital">
+				["email"] = <"sofia.lang-janstad@sll.se, jorgen.kuylenstierna@solvikshalsan.se, asa.skagerhult@vgregion.se, linda.aulin-lundeqvist@regionstockholm.se, samira.nikman@regionstockholm.se, rikard.lovstrom@regionstockholm.se, manna.vosta@regionstockholm.se">
 			>
 		>
 		["nb"] = <
@@ -66,27 +65,24 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2018-06-07">
 		["name"] = <"Silje Ljosland Bakke">
 		["organisation"] = <"Nasjonal IKT HF">
 		["email"] = <"silje.ljosland.bakke@nasjonalikt.no">
+		["date"] = <"2018-06-07">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","John Bennett, NEHTA, Australia","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Sharmila Biswas, Australia","Laila Bruun, Oslo universitetssykehus HF, Norway","Stephen Chu, NEHTA, Australia (Editor)","Matthew Cordell, NEHTA, Australia","Duncan Cripps, University Hospitals Plmyouth NHS Trust, United Kingdom","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Gail Easterbrook, Flinders Medical Centre, Australia","Stig Erik Hegrestad, Helse Førde, Norway","David Evans, Queensland Health, Australia","Sarah Gaunt, NEHTA, Australia","Heather Grain, Llewelyn Grain Informatics, Australia","Trina Gregory, cpc, Australia","Sam Heard, Ocean Health Systems, Australia","Hilde Hollås, DIPS AS, Norway","Roar Holm, Helse Vest IKT A/S, Norway","Alfred Honore, Haukeland, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Lars Ivar Mehlum, Helse Bergen HF, Norway","Patrícia Ivo, Prefeitura Municipal de Fortaleza, Brazil","Tom Jarl Jakobsen, Helse Bergen, Norway","Mary Kelaher, NEHTA, Australia","Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway","Harmony Kosola, Alberta Health Services, Canada","Robert L'egan, NEHTA, Australia","Mitja Lapajne, Marand, Slovenia","Anette Larsson, Tieto Sweden AB, Sweden","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Mark Luciani, Bath and North East Somerset, Swindon and Wiltshire Clinical Commisioning Group, United Kingdom","Colin Macfarlane, Elsevier, United Kingdom","Siv Marie Lien, DIPS ASA, Norway","James McClay, University of Nebraska Medical Center, United States","Susan McIndoe, Royal District Nursing Service, Australia","David McKillop, NEHTA, Australia","Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Chris Mitchell, RACGP, Australia","Stewart Morrison, NEHTA, Australia","Andrej Orel, Marand d.o.o., Slovenia","doug pankoski, Alberta Health Services, Canada","Chris Pearce, Melbourne East GP Network, Australia","Vladimir Pizzo, Clínica Parente Pizzo, Finland","Camilla Preeston, Royal Australian College of General Practitioners, Australia","Margaret Prichard, NEHTA, Australia","Cathy Richardson, NEHTA, Australia","Robyn Richards, NEHTA - Clinical Terminology, Australia","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Martha Schei Hynne, The Norwegian Medicines Agency, Norway","Jason Scott, Plymouth Hospitals NHS Trust, United Kingdom","Anoop Shah, University College London, United Kingdom","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Trine Strand, Oslo Universitetssykehus (OUS), Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden","John Taylor, NEHTA, Australia","Rowan Thomas, St. Vincent's Hospital Melbourne, Australia","Richard Townley-O'Neill, NEHTA, Australia (Editor)","Guri Tømmervåg, DIPS AS, Norway","Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Pelle Viana Lindén, Capio, Sweden","Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Darstellung von Details eines Arzneimittels oder einer Komponente eines Arzneimittels, einschließlich der Wirkstärke, der Darreichungsform und den Details über bestimmte Inhaltsstoffe.">
-			keywords = <"Arzneimittel","Medikament","Verordnung","Verschreibung","Rezept","ein Rezept ausstellen","Therapie","Substanz","Stoff","Arznei","Therapeutikum","Wirkstoff","Heilmittel","ad-hoc","ad hoc","Rezeptur","Zusammensetzung","Medizin","Pharmakon">
 			use = <"Zur Darstellung von Angaben zu einem Arzneimittel oder einer Arzneimittelkomponente, einschließlich der Wirkstärke, der Darreichungsform und den Angaben über spezielle Inhaltsstoffe.
 
 Dieser Archetyp soll für die Darstellung von Angaben zu einem Arzneimittel oder einer Arzneimittelkomponente verwendet werden. Dabei sollen vor allem die Darreichungsform und die Inhaltsstoffe detailliert beschrieben werden, z.B. zu einer Infusion oder einer Ad-hoc-Mixtur oder wenn es zu einem Arzneimittel keine Terminologie zur Verfügung steht. Im Rahmen einer Verordnung oder Abgabe eines Arzneimittels kann dieser Archetyp in den SLOT \"Arzneimitteldetails\" innerhalb des INSTRUCTION.medication_order Archetyps eingebettet werden. Für die Darstellung einer gegenwärtigen Verabreichung, Abgabe oder Anwendung eines Arzneimittels muss dieser Archetyp innerhalb des SLOTs \"Arzneimitteldetails\" in den Archetyp ACTION.medication eingefügt werden.
 
 Dieser Archetyp kann überflüssig sein, wenn die Verordnung eines verschreibungsfähigen Arzneimittels eine Terminologie zur Identifizierung des Arzneimittelproduktes verwendet. In diesem Fall kann der Marken- oder Produktname Informationen über die Darreichungsform und die Wirkstärke der Stoffe beinhalten.
 ">
+			keywords = <"Arzneimittel", "Medikament", "Verordnung", "Verschreibung", "Rezept", "ein Rezept ausstellen", "Therapie", "Substanz", "Stoff", "Arznei", "Therapeutikum", "Wirkstoff", "Heilmittel", "ad-hoc", "ad hoc", "Rezeptur", "Zusammensetzung", "Medizin", "Pharmakon">
 			misuse = <"Nicht für die Kontrolle des Apothekenbestands oder zur Verwaltung von Arzneimittellisten verwenden.
 
 Nicht zur Darstellung einer beabsichtigten oder verabreichten Dosis eines Arzneimittels einsetzen. Für diesen Zweck müssen die Archetypen INSTRUCTION.medication_order oder CLUSTER.dosage verwendet werden.
@@ -95,71 +91,100 @@ Darf nicht allein zum Ausfüllen einer Medikamentenliste verwendet werden. Verwe
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
-			purpose = <"För att registrera information om ett läkemedel eller en läkemedelskomponent, inklusive styrka, beredning och detaljer om specifika beståndsdelar.">
-			keywords = <"medicinering","beställning","terapi","substans","drog","terapeutisk","terapeutisk framgång","situationsanpassad","apoteks tillverkad produkt","läkemedelsberedning","läkemedel">
-			use = <"Används för att registrera detaljer om ett läkemedel eller en komponent i ett läkemedel, inklusive styrka, beredning och detaljer om specifika beståndsdelar.
+			purpose = <"Att registrera detaljer om en läkemedelsprodukt eller ett läkemedels innehållsämne, inklusive styrka, beredning och detaljer för specifika beståndsdelar.">
+			use = <"Används för att registrera detaljer om en läkemedelsprodukt eller ett läkemedels innehållsämne, inkluderande styrka, beredning och detaljer för specifika beståndsdelar.
 
-Denna arketyp är avsedd att användas för att registrera detaljer om ett läkemedel eller en komponent i ett läkemedel där beredningen och enskilda ingredienser i läkemedlet behöver specificeras mer, till exempel för infusioner och situationsanpassade blandningar, eller där det inte finns någon läkemedelsterminologi tillgänglig. I samband med en beställning för administrering eller dispensering av ett läkemedel, kan denna arketyp kapslas i in i fältet SLOT\" Medicin detaljer\" som finns i arketypen INSTRUCTION.medication_order. För att kunna registrera den faktiska administreringen eller dispenseringen av ett läkemedel, kan denna arketyp kapslas in i fältet SLOT \"Medicin detaljer\" i arketypen ACTION.medication .
+Denna arketyp ska användas för att registrera detaljer om ett läkemedel eller ett innehållsämne där beredning och enskilda beståndsdelar i läkemedlet behöver specificeras, till exempel vid infusioner, beredningar, extemporeläkemedel, eller om det inte finns medicinsk terminologi för att beskriva läkemedlet eller innehållsämnet. 
 
-Denna arketyp kan vara överflödig i situationer där beställningen av läkemedlet sker via recept där det används en terminologi för att identifiera läkemedelsobjektet. I dessa fall kan varumärket eller produktnamnet identifiera ämnets beredning och styrka. 
-">
-			misuse = <"Får inte användas för lagerkontroll på apotek eller inom läkemedelskataloger.
+Vid ordination eller förskrivning av läkemedel, kan denna arketyp nästlas i SLOT \"Medication details\" i arketypen INSTRUCTION.medication_order. Vid registrering av administreringen eller expedieringen av läkemedel, kan denna arketyp nästlas i SLOT \"Medication details\" i arketypen ACTION.medication.
 
-Får inte användas för att registrera den avsedda eller administrerade dosen av ett läkemedel. Använd då istället antingen arketypen INSTRUCTION.medication_order eller CLUSTER.dosage för detta ändamål.
+Delar av denna arketyp kan vara redundanta om arketypen INSTRUCTION.medication_order använder en terminologi som identifierar läkemedlet. I så fall kan varumärket eller produktnamnet identifiera den aktiva substansens beredning och styrka.">
+			keywords = <"läkemedel", "ordinera", "ordination", "förskriva", "förskrivning", "läkemedelsordination", "läkemedelsförskrivning", "läkemedelsbehandling", "terapi", "substans", "drog", "läkemedel", "behandlingsavsikt", "terapeutisk", "ad-hoc", "adhoc", "ad hoc", "extempore", "extemporeläkemedel", "läkemedelsform", "läkemedelsberedning", "farmaceutisk produkt">
+			misuse = <"Ska inte användas för att kontrollera lager på apotek eller inom läkemedelskataloger.
 
-Får inte användas ensamt för att fylla i en läkemedelslista. Använd då istället en relevant läkemedelsrelaterad ENTRY-arketyp som INSTRUCTION.medication_order eller ACTION.medication för detta ändamål.
-">
-		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.">
-			keywords = <"legemiddel","tilbereding","ordinering","forskrive","terapi","substans","medikament","terapeutisk","medikamenter solgt over disk","vare","magistrell","ex tempore","blanding","virkestoff","hjelpestoff","utblanding","foreskrive","forordne">
-			use = <"Brukes for å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.
+Ska inte användas för att registrera den avsedda eller administrerade dosen av ett läkemedel. Använd i stället någon av arketyperna INSTRUCTION.medication_order eller CLUSTER.dosage.
 
-Denne arketypen er laget for å brukes til å registrere detaljer om et legemiddel eller en komponent av et legemiddel, der formen og detaljer om bestanddelene må oppgis i mer detalj. Eksempler kan være infusjoner og magistrellforskrevne blandinger, eller der det ikke finnes en tilgjengelig legemiddelterminologi. I sammenhenger der et legemiddel skal administreres eller ekspederes skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen INSTRUCTION.medication_order. I sammenhenger der det skal registreres hvilket legemiddel som faktisk ble administrert eller ekspedert skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen ACTION.medication.
-
-Denne arketypen kan være overflødig i situasjoner der en legemiddelordinering via resept bruker terminologi for å spesifisere legemiddelet. I slike tilfeller vil ofte form og styrke være angitt som en del av terminologibegrepet.">
-			misuse = <"Skal ikke brukes innen varelageroversikt for apotek, eller innen legemiddelkataloger.
-
-Skal ikke brukes for å registrere den tilsiktede eller administrerte dosen av et legemiddel. Bruk enten INSTRUCTION.medication_order eller CLUSTER.dosage til dette formålet.
-
-Skal ikke brukes alene for å populere en legemiddelliste. Bruk en relevant legemiddel-relatert ENTRY-arketype som INSTRUCTION.medication_order eller ACTION.medication for dette formålet.">
+Ska inte användas ensamt för att i fylla en läkemedelslista. Använd i stället en relevant läkemedelsrelaterad ENTRY-arketyp, t.ex. INSTRUCTION.medication_order eller ACTION.medication.">
 		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
 			purpose = <"Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.">
-			keywords = <"medicação","ordem","prescrever","terapia","substância","droga","terapêutico","venda livre","ítem terapêutico","Ad hoc","manipulados">
 			use = <"*Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
 
 This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the Preparation details SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
 
 This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance. (en)">
+			keywords = <"medicação", "ordem", "prescrever", "terapia", "substância", "droga", "terapêutico", "venda livre", "ítem terapêutico", "Ad hoc", "manipulados">
 			misuse = <"*Not to be used for pharmacy stock-control or within medication catalogues.
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
 
 Not to be used by itself to populate a medication list. Use a relevant medication-related ENTRY archetype such as INSTRUCTION.medication_order or ACTION.medication for this purpose. (en)">
 		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.">
+			use = <"Brukes for å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.
+
+Denne arketypen er laget for å brukes til å registrere detaljer om et legemiddel eller en komponent av et legemiddel, der formen og detaljer om bestanddelene må oppgis i mer detalj. Eksempler kan være infusjoner og magistrellforskrevne blandinger, eller der det ikke finnes en tilgjengelig legemiddelterminologi. I sammenhenger der et legemiddel skal administreres eller ekspederes skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen INSTRUCTION.medication_order. I sammenhenger der det skal registreres hvilket legemiddel som faktisk ble administrert eller ekspedert skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen ACTION.medication.
+
+Denne arketypen kan være overflødig i situasjoner der en legemiddelordinering via resept bruker terminologi for å spesifisere legemiddelet. I slike tilfeller vil ofte form og styrke være angitt som en del av terminologibegrepet.">
+			keywords = <"legemiddel", "tilbereding", "ordinering", "forskrive", "terapi", "substans", "medikament", "terapeutisk", "medikamenter solgt over disk", "vare", "magistrell", "ex tempore", "blanding", "virkestoff", "hjelpestoff", "utblanding", "foreskrive", "forordne">
+			misuse = <"Skal ikke brukes innen varelageroversikt for apotek, eller innen legemiddelkataloger.
+
+Skal ikke brukes for å registrere den tilsiktede eller administrerte dosen av et legemiddel. Bruk enten INSTRUCTION.medication_order eller CLUSTER.dosage til dette formålet.
+
+Skal ikke brukes alene for å populere en legemiddelliste. Bruk en relevant legemiddel-relatert ENTRY-arketype som INSTRUCTION.medication_order eller ACTION.medication for dette formålet.">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about a medication or component of a medication, including strength, form and details of any specific constituents.">
-			keywords = <"medication","order","prescribe","therapy","substance","drug","therapeutic","therapeutic good","ad-hoc","adhoc","ad hoc","extemporaneous","formulation","medicine">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
 
 This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the 'Medication details' SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
 
 This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance.">
+			keywords = <"medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "ad-hoc", "adhoc", "ad hoc", "extemporaneous", "formulation", "medicine">
 			misuse = <"Not to be used for pharmacy stock-control or within medication catalogues.
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
 
 Not to be used by itself to populate a medication list. Use a relevant medication-related ENTRY archetype such as INSTRUCTION.medication_order or ACTION.medication for this purpose.">
+			copyright = <"© openEHR Foundation">
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"Het vastleggen van gegevens over een medicament of een onderdeel van een medicament, inclusief sterkte, vorm en details van een specifiek bestandsdeel.">
+			use = <"*Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
+
+This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the Preparation details SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
+
+This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance. (en)">
+			keywords = <"medicatie", "recept", "voorschrijven", "behandeling", "substantie", "medicament", "therapeuticum", "therapeutische substantie", "ad-hoc", "adhoc", "ad hoc", "medicijn">
+			misuse = <"*Not to be used for pharmacy stock-control or within medication catalogues.
+
+Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
+
+Not to be used by itself to populate a medication list. Use a relevant medication-related ENTRY archetype such as INSTRUCTION.medication_order or ACTION.medication for this purpose. (en)">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.">
+			use = <"S'utilitza per registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.
+
+Aquest arquetip està pensat per registrar detalls d'un medicament o component d'un medicament quan calgui especificar amb més detall la forma i els components detallats del medicament, per exemple infusions i barreges ad hoc, o quan no es disposi de terminologia de medicaments. En el context d'una ordre d'administració o dispensació d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip INSTRUCTION.medication_order. En el context del registre de l'administració o dispensació real d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip ACTION.medication.
+
+Aquest arquetip pot ser redundant en situacions en què la sol·licitud dun medicament mitjançant recepta faci ús duna terminologia per identificar larticle. En aquest cas, la marca o el nom del producte poden identificar la forma i la concentració de la substància.">
+			keywords = <"medicació", "ordre", "prescriure", "teràpia", "substància", "medicament", "terapèutic", "bé terapèutic", "ad-hoc", "adhoc", "ad hoc", "extemporani", "formulació", "medicina">
+			misuse = <"No s'ha de fer servir per portar el control de l'estoc de farmàcia ni dels catàlegs de medicaments.
+
+No s'ha de fer servir per registrar la dosi prevista o administrada d'un medicament. Per fer-ho, utilitzeu els arquetips INSTRUCTION.medication_order o CLUSTER.dosage.
+
+No s'ha de fer servir per si mateix per emplenar una llista de medicació. Per fer-ho, utilitzeu un arquetip de tipus ENTRY relacionat amb la medicació, com INSTRUCTION.medication_order o ACTION.medication.">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Registrar datos sobre un medicamento o componente de un medicamento, incluida la dosis, la forma y los detalles de cualquier componente específico.">
-			keywords = <"medicación","prescripción","prescribir","terapia","substancia","droga","fármaco","terapéutico","producto terapéutico","ad-hoc","ad hoc","extemporáneo","formulación","medicina">
 			use = <"Usar para registrar detalles sobre un medicamento o componente de un medicamento, incluyendo la dosis, la forma y los detalles de cualquier componente específico.
 
 Este arquetipo está diseñado para registrar datos de un medicamento o de un componente del mismo cuando se necesite especificar con mayor detalle la forma y los componentes del medicamento. Por ejemplo, en el caso de infusiones, mezclas preparadas ad hoc, o cuando no se disponga de una terminología estandarizada de medicamentos.
@@ -169,43 +194,16 @@ En el contexto de una prescripción, administración o dispensación de un medic
 Este arquetipo puede resultar redundante en situaciones donde se solicite un medicamento mediante una prescripción que utiliza una terminología codificada para identificar el medicamento. En estos casos, la marca o el nombre del producto ya pueden implicar la forma farmacéutica y la concentración de la sustancia.
 
 ">
+			keywords = <"medicación", "prescripción", "prescribir", "terapia", "substancia", "droga", "fármaco", "terapéutico", "producto terapéutico", "ad-hoc", "ad hoc", "extemporáneo", "formulación", "medicina">
 			misuse = <"No utilizar para el control del inventario de farmacia ni dentro de los catálogos de medicamentos.
 
 No utilizar para registrar la dosis prevista o administrada de un medicamento. Utilizar los arquetipos INSTRUCTION.medication_order o CLUSTER.dosage para esta finalidad.
 
 No utilizar por sí mismo para rellenar una lista de medicación. Utilizar un arquetipo relevante de tipo ENTRY relacionado con la medicación, como INSTRUCTION.medication_order o ACTION.medication para esta finalidad.">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"Registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.">
-			keywords = <"medicació","ordre","prescriure","teràpia","substància","medicament","terapèutic","bé terapèutic","ad-hoc","adhoc","ad hoc","extemporani","formulació","medicina">
-			use = <"S'utilitza per registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.
-
-Aquest arquetip està pensat per registrar detalls d'un medicament o component d'un medicament quan calgui especificar amb més detall la forma i els components detallats del medicament, per exemple infusions i barreges ad hoc, o quan no es disposi de terminologia de medicaments. En el context d'una ordre d'administració o dispensació d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip INSTRUCTION.medication_order. En el context del registre de l'administració o dispensació real d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip ACTION.medication.
-
-Aquest arquetip pot ser redundant en situacions en què la sol·licitud dun medicament mitjançant recepta faci ús duna terminologia per identificar larticle. En aquest cas, la marca o el nom del producte poden identificar la forma i la concentració de la substància.">
-			misuse = <"No s'ha de fer servir per portar el control de l'estoc de farmàcia ni dels catàlegs de medicaments.
-
-No s'ha de fer servir per registrar la dosi prevista o administrada d'un medicament. Per fer-ho, utilitzeu els arquetips INSTRUCTION.medication_order o CLUSTER.dosage.
-
-No s'ha de fer servir per si mateix per emplenar una llista de medicació. Per fer-ho, utilitzeu un arquetip de tipus ENTRY relacionat amb la medicació, com INSTRUCTION.medication_order o ACTION.medication.">
-		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			purpose = <"Het vastleggen van gegevens over een medicament of een onderdeel van een medicament, inclusief sterkte, vorm en details van een specifiek bestandsdeel.">
-			keywords = <"medicatie","recept","voorschrijven","behandeling","substantie","medicament","therapeuticum","therapeutische substantie","ad-hoc","adhoc","ad hoc","medicijn">
-			use = <"*Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
-
-This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the Preparation details SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
-
-This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance. (en)">
-			misuse = <"*Not to be used for pharmacy stock-control or within medication catalogues.
-
-Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
-
-Not to be used by itself to populate a medication list. Use a relevant medication-related ENTRY archetype such as INSTRUCTION.medication_order or ACTION.medication for this purpose. (en)">
-		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "John Bennett, NEHTA, Australia", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Sharmila Biswas, Australia", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Duncan Cripps, University Hospitals Plmyouth NHS Trust, United Kingdom", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Gail Easterbrook, Flinders Medical Centre, Australia", "Stig Erik Hegrestad, Helse Førde, Norway", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Health Systems, Australia", "Hilde Hollås, DIPS AS, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Alfred Honore, Haukeland, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Patrícia Ivo, Prefeitura Municipal de Fortaleza, Brazil", "Tom Jarl Jakobsen, Helse Bergen, Norway", "Mary Kelaher, NEHTA, Australia", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Harmony Kosola, Alberta Health Services, Canada", "Robert L'egan, NEHTA, Australia", "Mitja Lapajne, Marand, Slovenia", "Anette Larsson, Tieto Sweden AB, Sweden", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Mark Luciani, Bath and North East Somerset, Swindon and Wiltshire Clinical Commisioning Group, United Kingdom", "Colin Macfarlane, Elsevier, United Kingdom", "Siv Marie Lien, DIPS ASA, Norway", "James McClay, University of Nebraska Medical Center, United States", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Andrej Orel, Marand d.o.o., Slovenia", "doug pankoski, Alberta Health Services, Canada", "Chris Pearce, Melbourne East GP Network, Australia", "Vladimir Pizzo, Clínica Parente Pizzo, Finland", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Martha Schei Hynne, The Norwegian Medicines Agency, Norway", "Jason Scott, Plymouth Hospitals NHS Trust, United Kingdom", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden", "John Taylor, NEHTA, Australia", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Guri Tømmervåg, DIPS AS, Norway", "Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Pelle Viana Lindén, Capio, Sweden", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -223,9 +221,9 @@ FHIR Resource Medication, HL7 [Internet]. Available at: https://www.hl7.org/fhir
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"527cfabc9bf9e92379a7ae31244dcd2a">
-		["build_uid"] = <"61159117-6bd8-4837-80d9-e5dc9830aff7">
-		["revision"] = <"2.0.3">
+		["MD5-CAM-1.0.1"] = <"E0717A8949D32C0FFFC8339CDFC9A7C9">
+		["build_uid"] = <"97bf3c47-fbeb-4560-a260-a520d975ea5a">
+		["revision"] = <"2.0.4">
 	>
 
 definition
@@ -329,6 +327,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -922,121 +921,118 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"Medicin detaljer">
-					description = <"Detaljer om ett läkemedel eller en läkemedelskomponent, inkluderat styrka, beredning och uppgifter om eventuella specifika beståndsdelar.">
+					text = <"Läkemedelsdetaljer">
+					description = <"Detaljer om ett läkemedel eller ett innehållsämne, inkluderat styrka, beredning och uppgifter om eventuella specifika beståndsdelar.">
 				>
 				["at0001"] = <
-					text = <"Kombinationsprodukt">
-					description = <"Läkemedlet eller läkemedelskomponenten består av ett antal separata produkter som förpackats av tillverkaren, till exempel Enalapril comp.">
+					text = <"Kombinationsförpackning">
+					description = <"Läkemedlet består av ett antal separata produkter som förpackats av tillverkaren, exempelvis Canesten Combi.">
 				>
 				["at0003"] = <
 					text = <"Utgångsdatum">
-					description = <"Utgångsdatum och/eller tidpunkt för ett läkemedel eller läkemedelskomponent, som angetts av en tillverkare eller vid en individuell beredning av en blandning.">
-					comment = <"Annan form av utgångsdatum, till exempel tid från produktion eller beroende på lagringsmiljön, kan infogas med en specifik CLUSTER arketyp i SLOT \"Substans detaljer\" eller läggas till som en kommentar i fältet \" Beskrivning\".
-Till exempel: '2017-05-23'.">
+					description = <"Utgångsdatum eller -tidpunkt för läkemedlet eller innehållsämnet, såsom angivet av producenten eller vid en individuell beredning av en blandning.">
+					comment = <"För att ange annan form av utgångsdatum, till exempel tid från produktion eller beroende på lagringsmiljö, använd en specifik CLUSTER-arketyp i SLOT Substance Details eller som del i SLOT Description. Exempelvis \"2025-05-23\".">
 				>
 				["at0071"] = <
 					text = <"Beredning">
-					description = <"Beredningsformen eller en beskrivning av ett läkemedel eller läkemedelskomponent.">
-					comment = <"Till exempel \"tablett\", \"kapsel\", \"infusionsvätska\" eller \"inhalationspulver\". 
-Kodning av beredningstypen med en terminologi är att föredra, när det är möjligt. Läkemedelskataloger kan skilja mellan den direkt administrerbara beredningen \"lösning för injektion\" och produktberedningen \"pulver för injektionsvätska\", som båda är avsedda att injiceras som en lösning. Den beredningsform som skall dokumenteras är beroende på sammanhanget vid användningen. Den direkt administrerbara beredningsformen kommer sannolikt att användas i de flesta fall.">
+					description = <"Beredningsformen, eller en beskrivning av läkemedlet eller innehållsämnet.">
+					comment = <"Exempelvis \"tablett\", \"kapsel\", \"kräm\", \"infusionsvätska\" eller \"inhalationspulver\". 
+Koda om möjligt beredningstypen med en terminologi. Läkemedelskataloger kan skilja mellan den direkt administrerbara beredningen \"lösning för injektion\" och produktberedningen \"pulver för injektionsvätska\", som båda är avsedda att injiceras som en lösning. Den beredningsform som registreras beror på det exakta sammanhanget vid användning. I de flesta fall används sannolikt den direkt administrerbara beredningsformen.">
 				>
 				["at0080"] = <
 					text = <"Terapeutisk">
-					description = <"Beståndsdel som ensamt eller i kombination med en eller flera andra ingredienser, bedöms uppfylla läkemedelsproduktens avsedda effekt.">
+					description = <"Beståndsdel som ensam eller i kombination med en eller flera andra beståndsdelar bedöms uppfylla läkemedlets avsedda verkan.">
 				>
 				["at0083"] = <
-					text = <"Tillägg">
-					description = <"Beståndsdel vars primära funktion är att modifiera effekten hos en aktiv beståndsdel. En tillagd beståndsdel kan i sig själv vara terapeutiskt aktiv eller inte.">
+					text = <"Adjuvant">
+					description = <"Beståndsdel vars primära funktion är att modifiera effekten hos en aktiv beståndsdel. En adjuvant beståndsdel kan antingen vara terapeutiskt verksam eller inte.">
 				>
 				["at0084"] = <
 					text = <"Hjälpämne">
-					description = <"Beståndsdel som är overksamt i förhållande till läkemedelsproduktens avsedda effekt.">
+					description = <"Beståndsdel som är overksam i förhållande till läkemedlets avsedda verkan.">
 				>
 				["at0115"] = <
 					text = <"Styrka (koncentration)">
-					description = <"Styrkan hos läkemedlet eller läkemedelskomponenten, angivet som koncentration.">
-					comment = <"Detta fält används för flytande eller halvfasta läkemedel, eller läkemedel avsedda för att spädas i en vätska före administrering. Till exempel: \"10 mg/ml\", \"20 mg/g\", \"5 %\", \"10 000 SQ-U/ml\". Om klustret \"Styrka (beskrivning)\" används, blir detta element överflödigt.
-">
+					description = <"Styrkan hos läkemedlet eller innehållsämnet, angivet som koncentration.">
+					comment = <"Detta datafält används för flytande eller halvfasta läkemedel, eller läkemedel som ska lösas upp i en vätska innan administrering. Exempelvis \"10 mg/ml\", \"20 mg/g\", \"5 %\", \"10 000 SQ-U/ml\". Om klustret \"Styrka (beskrivning)\" används, blir detta datafält överflödigt.">
 				>
 				["at0127"] = <
 					text = <"Verkningssätt">
-					description = <"Läkemedlets eller läkemedelskomponentens verkningssätt i en blandning.">
+					description = <"Verkningssättet för läkemedlet eller innehållsämnet i en blandning.">
 				>
 				["at0132"] = <
 					text = <"Namn">
-					description = <"Namnet på läkemedlet eller läkemedelskomponenten.">
-					comment = <"Till exempel \"Zinacef 750 mg pulver\" eller \"cefuroxim\". Detta fält bör om möjligt kodas, med exempelvis Nationellt produktregister för läkemedel, NPL, RxNorm, DM + D, Australian Medicines Terminology eller FEST (anm. i Sverige används ATC-koder eller NSL-id), Användningen av detta fält kommer att variera beroende på sammanhanget. Det kan utelämnas om läkemedlets namn registreras i den övergripande INSTRUCTION eller ACTION arketypen. Denna arketyp behöver endast användas för att registrera att beredningen måste vara eller har varit i \"flytande\" form.">
+					description = <"Namnet på läkemedlet eller innehållsämnet.">
+					comment = <"Till exempel: \"Zinacef 750 mg pulver\" eller \"cefuroxim\". Det här datafältet bör om möjligt kodas, exempelvis med RxNorm, DM+D, Australian Medicines Terminology eller FEST (anm. i Sverige används ATC-koder, NSL-id eller kod från nationella substansregistret). Användningen av detta fält varierar beroende på sammanhang. Det kan utelämnas om läkemedlets namn registreras i föräldraarketypen (INSTRUCTION eller ACTION). Arketypen används endast för att registrera att beredningen måste vara eller har varit i \"flytande\" form.">
 				>
 				["at0133"] = <
 					text = <"Beskrivning">
-					description = <"Beskrivning av läkemedlet eller läkemedelskomponenten i de fall som det krävs ytterligare information, som inte kan täckas med hjälp av de strukturerade datafälten.">
+					description = <"Beskrivning av läkemedlet eller innehållsämnet där det inte är möjligt att beskriva detta fullt ut med hjälp av de strukturerade datafälten.">
 				>
 				["at0138"] = <
 					text = <"Beståndsdel">
-					description = <"Detaljer om en ingrediens eller produkt som används för att göra en blandad förpackning, beredning eller infusion.">
-					comment = <"Denna SLOT är avsedd att användas för att lägga till detaljer om beståndsdelar i ett läkemedel eller läkemedelskomponent, med hjälp av infogade instanser av denna arketyp. Detta krävs inte normalfallet utan endast när en blandning skall beskrivas.">
+					description = <"Detaljer om en beståndsdel eller produkt som används för att göra en blandad förpackning, beredning eller infusion.">
+					comment = <"Använd denna SLOT för att lägga till detaljer om beståndsdelar i läkemedlet eller innehållsämnet med hjälp av nästlade instanser av denna arketyp. Detta krävs normalt endast när en blandning beskrivs.">
 				>
 				["at0139"] = <
 					text = <"Mängd">
-					description = <"Mängden av ett läkemedel eller läkemedelskomponent.">
-					comment = <"Till exempel \"1 ml\", \"1.5 mg\", \"1000 ml\".">
+					description = <"Mängden av läkemedlet eller innehållsämnet.">
+					comment = <"Exempelvis \"1 ml\", \"1,5 mg\", \"1000 ml\".">
 				>
 				["at0141"] = <
 					text = <"Strukturerade detaljer">
-					description = <"Ytterligare information om läkemedlet eller läkemedelskomponenten.">
-					comment = <"Till exempel detaljerad information om läkemedelsklass eller planerade administreringsvägar, eller ytterligare information om hållbarheten.
-">
+					description = <"Ytterligare information om läkemedlet eller innehållsämnet.">
+					comment = <"Exempelvis detaljerad information om läkemedelsklass eller avsedda administreringsvägar, eller ytterligare information om hållbarheten.">
 				>
 				["at0142"] = <
 					text = <"Kategori">
-					description = <"Kategorin av läkemedlet eller läkemedelskomponenten med avseende på tillverkning eller beredning, och antalet ingredienser.">
-					comment = <"Till exempel: \"Paracetamol/codeine\" är en produkt med flera ingredienser, medan \"Morfin 60 mg + Haloperidol 2 mg + Midazolam 5 mg\" är en situationsanpassad blandning vars sammansättning är fullständigt specificerad i beställningen.">
+					description = <"Kategorin av läkemedel eller innehållsämne, med avseende på tillverkning eller beredning samt antalet beståndsdelar.">
+					comment = <"Exempelvis är \"paracetamol/kodein\" ett kombinationsläkemedel medan \"morfin 60 mg + haloperidol 2 mg + midazolam 5 mg\" är en situationsanpassad blandning vars sammansättning är fullständigt specificerad i ordinationen.">
 				>
 				["at0143"] = <
 					text = <"Situationsanpassad blandning">
-					description = <"Läkemedlet eller läkemedelskomponenten består av en blandning av ingredienser som anges i beställningen. Dessa bereds vanligtvis av apotek eller avdelningspersonal för att anpassas till enskilda patienter">
+					description = <"Läkemedlet eller innehållsämnet består av en blandning av beståndsdelar som anges i ordinationen. Dessa bereds vanligtvis av apotek eller avdelningspersonal för att anpassas till enskilda patienter.">
 				>
 				["at0144"] = <
-					text = <"Flerkomponent produkt">
-					description = <"Läkemedlet eller läkemedelskomponenten består av ett antal aktiva ingredienser som i förväg kombineras till en enda beredningsform som en tablett eller pulver av tillverkaren, till exempel Paracetamol / kodein.">
+					text = <"Kombinationsläkemedel">
+					description = <"Läkemedlet eller innehållsämnet består av ett antal aktiva substanser som är förblandade till en enda beredningsform av tillverkaren, såsom en tablett, en kräm eller pulver, exempelvis paracetamol/kodein.">
 				>
 				["at0145"] = <
-					text = <"Singelsubstans produkt">
-					description = <"Läkemedlet eller läkemedelskomponenten är en tillverkad produkt som innehåller en enda aktiv beståndsdel.">
+					text = <"Singelsubstansprodukt">
+					description = <"Läkemedlet eller innehållsämnet är en tillverkad produkt som innehåller en enda aktiv substans.">
 				>
 				["at0146"] = <
 					text = <"Beståndsdel">
-					description = <"Läkemedlet eller läkemedelskomponenten är en enskild beståndsdel i läkemedlet. Denna term används när arketypen är inkapslad i en överliggande instans av sig själv, för att beskriva de enskilda beståndsdelarna i ett läkemedel.">
+					description = <"Läkemedlet eller innehållsämnet är en enskild beståndsdel i läkemedlet. Denna term används när arketypen är nästlad i en föräldrainstans av sig själv för att beskriva de enskilda beståndsdelarna i ett läkemedel.">
 				>
 				["at0148"] = <
 					text = <"Alternativ mängd">
-					description = <"En alternativt sätt att beskriva mängden av läkemedlet eller läkemedelskomponenten.">
-					comment = <"Till exempel för ett läkemedel med styrkan \"5 mg/ml\" är mängden \"1 ml\", men värdet som skall registreras i detta fält är '5 mg'.">
+					description = <"En likvärdigt sätt att beskriva mängden av läkemedlet eller innehållsämnet.">
+					comment = <"För ett läkemedel med exempelvis styrkan \"5 mg/ml\" där mängden är \"1 ml\" blir värdet som registreras i detta fält \"5 mg\".">
 				>
 				["at0150"] = <
-					text = <"Batch ID">
+					text = <"Batch-ID">
 					description = <"Den identifierare som tillverkaren tilldelat batchen under produktionen.">
 				>
 				["at0151"] = <
 					text = <"Tillverkare">
-					description = <"Tillverkaren av läkemedlet eller läkemedelskomponenten.">
-					comment = <"Till exempel: \"Abbott\".">
+					description = <"Tillverkaren av läkemedlet eller innehållsämnet.">
+					comment = <"Exempelvis \"Abbott\".">
 				>
 				["at0152"] = <
 					text = <"Styrka (beskrivning)">
-					description = <"Styrkan hos läkemedlet eller läkemedelskomponenten, uttryckt som ett förhållande.">
-					comment = <"I vissa fall, som för flytande eller halvfasta läkemedel, anges i nämnaren en beskrivning av ett styrkeförhållande, en fysisk mängd, till exempel 2 mg/5 ml. Ibland återspeglar nämnaren också den faktiska volymen av komponenten till 5 ml i det tidigare exemplet. I detta fall skulle \"Styrka (koncentration)\" vara 0,4 mg/ml. I andra fall, där styrkan involverar en nämnare som inte är en fysisk storhet, till exempel 4 mg/tablett, uttrycks nämnaren som ett enhetligt värde \"1\" med enheten \"tablett\". Detta tillvägagångssätt valdes för att överensstämma med den metod som antagits av ISO IDMP-standarden för läkemedelskataloger. Om fältet \"Styrka (koncentration)\" används blir detta kluster överflödigt.">
+					description = <"Styrkan hos läkemedlet eller innehållsämnet, uttryckt som en fraktion.">
+					comment = <"I vissa fall, som vid flytande eller halvfasta läkemedel, är nämnaren i styrkefraktionen en fysisk kvantitet, till exempel \"2 mg/5 ml\". Ibland representerar nämnaren också den faktiska volymen av innehållsämnet (5 ml i exemplet ovan). I detta fall skulle \"Styrka (koncentration)\" vara \"0,4 mg/ml\". I andra fall då styrkan innefattar en nämnare som inte är en fysisk storhet, till exempel \"4 mg/tablett\", så är nämnaren uttryckt som enhetsvärdet \"1\" med värdet \"tablett\". Denna representation används för att överensstämma med den metod som antagits av ISO-IDMP-standarden för läkemedelskataloger. Om datafältet \"Styrka (koncentration)\" används blir detta kluster överflödigt.">
 				>
 				["at0153"] = <
 					text = <"Styrka i täljare">
-					description = <"Täljaren vid en beskrivning av styrkeförhållandet">
-					comment = <"Till exempel när styrkan anges som \"300 µg/0,3 ml\" är uppgiften om styrkan i täljaren \"300 ug\". För en angiven styrka på \"100 mg/tablett\" är uppgiften om styrkan \"100 mg\".">
+					description = <"Täljaren i styrkefraktionen.">
+					comment = <"För en styrkeangivelse på exempelvis \"300 µg/0,3 ml\" är täljaren i styrkefraktionen \"300 µg\". För en styrkeangivelse på \"100 mg/tablett\" är täljaren i styrkefraktionen \"100 mg\".">
 				>
 				["at0157"] = <
 					text = <"Styrka i nämnare">
-					description = <"Nämnaren vid en beskrivning av styrkeförhållandet.">
-					comment = <"Till exempel när styrkan anges som \"300 µg/0,3 ml\" är uppgiften om styrkan i nämnaren \"0,3 ml\". För en angiven styrka på \"100 mg/tablett\" är uppgiften om styrkan \"1 tablett\".">
+					description = <"Nämnaren i styrkefraktionen.">
+					comment = <"För en styrkeangivelse på exempelvis \"300 µg/0,3 ml\" är nämnaren i styrkefraktionen \"0,3 ml\". För en styrkeangivelse på \"100 mg/tablett\" är nämnaren i styrkefraktionen \"1 tablett\".">
 				>
 			>
 		>
