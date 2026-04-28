@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.4; uid=b222a76b-6f91-4e78-b669-0d776747a789)
+archetype (adl_version=1.4; uid=b222a76b-6f91-4e78-b669-0d776747a789)
 	openEHR-EHR-CLUSTER.medication.v2
 
 concept
-	[at0000]	-- Medication details
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -65,24 +66,27 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
+		["date"] = <"2018-06-07">
 		["name"] = <"Silje Ljosland Bakke">
 		["organisation"] = <"Nasjonal IKT HF">
 		["email"] = <"silje.ljosland.bakke@nasjonalikt.no">
-		["date"] = <"2018-06-07">
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","John Bennett, NEHTA, Australia","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Sharmila Biswas, Australia","Laila Bruun, Oslo universitetssykehus HF, Norway","Stephen Chu, NEHTA, Australia (Editor)","Matthew Cordell, NEHTA, Australia","Duncan Cripps, University Hospitals Plmyouth NHS Trust, United Kingdom","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Gail Easterbrook, Flinders Medical Centre, Australia","Stig Erik Hegrestad, Helse Førde, Norway","David Evans, Queensland Health, Australia","Sarah Gaunt, NEHTA, Australia","Heather Grain, Llewelyn Grain Informatics, Australia","Trina Gregory, cpc, Australia","Sam Heard, Ocean Health Systems, Australia","Hilde Hollås, DIPS AS, Norway","Roar Holm, Helse Vest IKT A/S, Norway","Alfred Honore, Haukeland, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Lars Ivar Mehlum, Helse Bergen HF, Norway","Patrícia Ivo, Prefeitura Municipal de Fortaleza, Brazil","Tom Jarl Jakobsen, Helse Bergen, Norway","Mary Kelaher, NEHTA, Australia","Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway","Harmony Kosola, Alberta Health Services, Canada","Robert L'egan, NEHTA, Australia","Mitja Lapajne, Marand, Slovenia","Anette Larsson, Tieto Sweden AB, Sweden","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Mark Luciani, Bath and North East Somerset, Swindon and Wiltshire Clinical Commisioning Group, United Kingdom","Colin Macfarlane, Elsevier, United Kingdom","Siv Marie Lien, DIPS ASA, Norway","James McClay, University of Nebraska Medical Center, United States","Susan McIndoe, Royal District Nursing Service, Australia","David McKillop, NEHTA, Australia","Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Chris Mitchell, RACGP, Australia","Stewart Morrison, NEHTA, Australia","Andrej Orel, Marand d.o.o., Slovenia","doug pankoski, Alberta Health Services, Canada","Chris Pearce, Melbourne East GP Network, Australia","Vladimir Pizzo, Clínica Parente Pizzo, Finland","Camilla Preeston, Royal Australian College of General Practitioners, Australia","Margaret Prichard, NEHTA, Australia","Cathy Richardson, NEHTA, Australia","Robyn Richards, NEHTA - Clinical Terminology, Australia","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Martha Schei Hynne, The Norwegian Medicines Agency, Norway","Jason Scott, Plymouth Hospitals NHS Trust, United Kingdom","Anoop Shah, University College London, United Kingdom","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Trine Strand, Oslo Universitetssykehus (OUS), Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden","John Taylor, NEHTA, Australia","Rowan Thomas, St. Vincent's Hospital Melbourne, Australia","Richard Townley-O'Neill, NEHTA, Australia (Editor)","Guri Tømmervåg, DIPS AS, Norway","Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Pelle Viana Lindén, Capio, Sweden","Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Darstellung von Details eines Arzneimittels oder einer Komponente eines Arzneimittels, einschließlich der Wirkstärke, der Darreichungsform und den Details über bestimmte Inhaltsstoffe.">
+			keywords = <"Arzneimittel","Medikament","Verordnung","Verschreibung","Rezept","ein Rezept ausstellen","Therapie","Substanz","Stoff","Arznei","Therapeutikum","Wirkstoff","Heilmittel","ad-hoc","ad hoc","Rezeptur","Zusammensetzung","Medizin","Pharmakon">
 			use = <"Zur Darstellung von Angaben zu einem Arzneimittel oder einer Arzneimittelkomponente, einschließlich der Wirkstärke, der Darreichungsform und den Angaben über spezielle Inhaltsstoffe.
 
 Dieser Archetyp soll für die Darstellung von Angaben zu einem Arzneimittel oder einer Arzneimittelkomponente verwendet werden. Dabei sollen vor allem die Darreichungsform und die Inhaltsstoffe detailliert beschrieben werden, z.B. zu einer Infusion oder einer Ad-hoc-Mixtur oder wenn es zu einem Arzneimittel keine Terminologie zur Verfügung steht. Im Rahmen einer Verordnung oder Abgabe eines Arzneimittels kann dieser Archetyp in den SLOT \"Arzneimitteldetails\" innerhalb des INSTRUCTION.medication_order Archetyps eingebettet werden. Für die Darstellung einer gegenwärtigen Verabreichung, Abgabe oder Anwendung eines Arzneimittels muss dieser Archetyp innerhalb des SLOTs \"Arzneimitteldetails\" in den Archetyp ACTION.medication eingefügt werden.
 
 Dieser Archetyp kann überflüssig sein, wenn die Verordnung eines verschreibungsfähigen Arzneimittels eine Terminologie zur Identifizierung des Arzneimittelproduktes verwendet. In diesem Fall kann der Marken- oder Produktname Informationen über die Darreichungsform und die Wirkstärke der Stoffe beinhalten.
 ">
-			keywords = <"Arzneimittel", "Medikament", "Verordnung", "Verschreibung", "Rezept", "ein Rezept ausstellen", "Therapie", "Substanz", "Stoff", "Arznei", "Therapeutikum", "Wirkstoff", "Heilmittel", "ad-hoc", "ad hoc", "Rezeptur", "Zusammensetzung", "Medizin", "Pharmakon">
 			misuse = <"Nicht für die Kontrolle des Apothekenbestands oder zur Verwaltung von Arzneimittellisten verwenden.
 
 Nicht zur Darstellung einer beabsichtigten oder verabreichten Dosis eines Arzneimittels einsetzen. Für diesen Zweck müssen die Archetypen INSTRUCTION.medication_order oder CLUSTER.dosage verwendet werden.
@@ -92,6 +96,7 @@ Darf nicht allein zum Ausfüllen einer Medikamentenliste verwendet werden. Verwe
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Att registrera detaljer om en läkemedelsprodukt eller ett läkemedels innehållsämne, inklusive styrka, beredning och detaljer för specifika beståndsdelar.">
+			keywords = <"läkemedel","ordinera","ordination","förskriva","förskrivning","läkemedelsordination","läkemedelsförskrivning","läkemedelsbehandling","terapi","substans","drog","läkemedel","behandlingsavsikt","terapeutisk","ad-hoc","adhoc","ad hoc","extempore","extemporeläkemedel","läkemedelsform","läkemedelsberedning","farmaceutisk produkt">
 			use = <"Används för att registrera detaljer om en läkemedelsprodukt eller ett läkemedels innehållsämne, inkluderande styrka, beredning och detaljer för specifika beståndsdelar.
 
 Denna arketyp ska användas för att registrera detaljer om ett läkemedel eller ett innehållsämne där beredning och enskilda beståndsdelar i läkemedlet behöver specificeras, till exempel vid infusioner, beredningar, extemporeläkemedel, eller om det inte finns medicinsk terminologi för att beskriva läkemedlet eller innehållsämnet. 
@@ -99,7 +104,6 @@ Denna arketyp ska användas för att registrera detaljer om ett läkemedel eller
 Vid ordination eller förskrivning av läkemedel, kan denna arketyp nästlas i SLOT \"Medication details\" i arketypen INSTRUCTION.medication_order. Vid registrering av administreringen eller expedieringen av läkemedel, kan denna arketyp nästlas i SLOT \"Medication details\" i arketypen ACTION.medication.
 
 Delar av denna arketyp kan vara redundanta om arketypen INSTRUCTION.medication_order använder en terminologi som identifierar läkemedlet. I så fall kan varumärket eller produktnamnet identifiera den aktiva substansens beredning och styrka.">
-			keywords = <"läkemedel", "ordinera", "ordination", "förskriva", "förskrivning", "läkemedelsordination", "läkemedelsförskrivning", "läkemedelsbehandling", "terapi", "substans", "drog", "läkemedel", "behandlingsavsikt", "terapeutisk", "ad-hoc", "adhoc", "ad hoc", "extempore", "extemporeläkemedel", "läkemedelsform", "läkemedelsberedning", "farmaceutisk produkt">
 			misuse = <"Ska inte användas för att kontrollera lager på apotek eller inom läkemedelskataloger.
 
 Ska inte användas för att registrera den avsedda eller administrerade dosen av ett läkemedel. Använd i stället någon av arketyperna INSTRUCTION.medication_order eller CLUSTER.dosage.
@@ -109,12 +113,12 @@ Ska inte användas ensamt för att i fylla en läkemedelslista. Använd i ställ
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
 			purpose = <"Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.">
+			keywords = <"medicação","ordem","prescrever","terapia","substância","droga","terapêutico","venda livre","ítem terapêutico","Ad hoc","manipulados">
 			use = <"*Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
 
 This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the Preparation details SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
 
 This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance. (en)">
-			keywords = <"medicação", "ordem", "prescrever", "terapia", "substância", "droga", "terapêutico", "venda livre", "ítem terapêutico", "Ad hoc", "manipulados">
 			misuse = <"*Not to be used for pharmacy stock-control or within medication catalogues.
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
@@ -124,12 +128,12 @@ Not to be used by itself to populate a medication list. Use a relevant medicatio
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.">
+			keywords = <"legemiddel","tilbereding","ordinering","forskrive","terapi","substans","medikament","terapeutisk","medikamenter solgt over disk","vare","magistrell","ex tempore","blanding","virkestoff","hjelpestoff","utblanding","foreskrive","forordne">
 			use = <"Brukes for å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.
 
 Denne arketypen er laget for å brukes til å registrere detaljer om et legemiddel eller en komponent av et legemiddel, der formen og detaljer om bestanddelene må oppgis i mer detalj. Eksempler kan være infusjoner og magistrellforskrevne blandinger, eller der det ikke finnes en tilgjengelig legemiddelterminologi. I sammenhenger der et legemiddel skal administreres eller ekspederes skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen INSTRUCTION.medication_order. I sammenhenger der det skal registreres hvilket legemiddel som faktisk ble administrert eller ekspedert skal denne arketypen nøstes i SLOTet Legemiddeldetaljer i arketypen ACTION.medication.
 
 Denne arketypen kan være overflødig i situasjoner der en legemiddelordinering via resept bruker terminologi for å spesifisere legemiddelet. I slike tilfeller vil ofte form og styrke være angitt som en del av terminologibegrepet.">
-			keywords = <"legemiddel", "tilbereding", "ordinering", "forskrive", "terapi", "substans", "medikament", "terapeutisk", "medikamenter solgt over disk", "vare", "magistrell", "ex tempore", "blanding", "virkestoff", "hjelpestoff", "utblanding", "foreskrive", "forordne">
 			misuse = <"Skal ikke brukes innen varelageroversikt for apotek, eller innen legemiddelkataloger.
 
 Skal ikke brukes for å registrere den tilsiktede eller administrerte dosen av et legemiddel. Bruk enten INSTRUCTION.medication_order eller CLUSTER.dosage til dette formålet.
@@ -139,28 +143,28 @@ Skal ikke brukes alene for å populere en legemiddelliste. Bruk en relevant lege
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about a medication or component of a medication, including strength, form and details of any specific constituents.">
+			keywords = <"medication","order","prescribe","therapy","substance","drug","therapeutic","therapeutic good","ad-hoc","adhoc","ad hoc","extemporaneous","formulation","medicine">
+			copyright = <"© openEHR Foundation">
 			use = <"Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
 
 This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the 'Medication details' SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
 
 This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance.">
-			keywords = <"medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "therapeutic good", "ad-hoc", "adhoc", "ad hoc", "extemporaneous", "formulation", "medicine">
 			misuse = <"Not to be used for pharmacy stock-control or within medication catalogues.
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
 
 Not to be used by itself to populate a medication list. Use a relevant medication-related ENTRY archetype such as INSTRUCTION.medication_order or ACTION.medication for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"Het vastleggen van gegevens over een medicament of een onderdeel van een medicament, inclusief sterkte, vorm en details van een specifiek bestandsdeel.">
+			keywords = <"medicatie","recept","voorschrijven","behandeling","substantie","medicament","therapeuticum","therapeutische substantie","ad-hoc","adhoc","ad hoc","medicijn">
 			use = <"*Use to record details about a medication or component of a medication, including strength, form and details of any specific constituents.
 
 This archetype is intended to be used to record details of a medication or component of a medication where the form and detailed ingredients of the medication need to be specified in more detail, for example, infusions and ad hoc mixtures, or where there is no medication terminology available. In the context of an order for administration or dispensing of a medication, nest this archetype within the Preparation details SLOT within the INSTRUCTION.medication_order archetype. In the context of recording the actual administration or dispensing or a medication, nest this archetype within the 'Medication details' SLOT within the ACTION.medication archetype.
 
 This archetype may be redundant in situations where ordering a medication via prescription uses a terminology to identify the medication item. In that case the brand or product name may identify the form and strength of the substance. (en)">
-			keywords = <"medicatie", "recept", "voorschrijven", "behandeling", "substantie", "medicament", "therapeuticum", "therapeutische substantie", "ad-hoc", "adhoc", "ad hoc", "medicijn">
 			misuse = <"*Not to be used for pharmacy stock-control or within medication catalogues.
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.
@@ -170,12 +174,12 @@ Not to be used by itself to populate a medication list. Use a relevant medicatio
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			purpose = <"Registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.">
+			keywords = <"medicació","ordre","prescriure","teràpia","substància","medicament","terapèutic","bé terapèutic","ad-hoc","adhoc","ad hoc","extemporani","formulació","medicina">
 			use = <"S'utilitza per registrar detalls sobre un medicament o un component d'un medicament, inclosa la concentració, la forma i els detalls de qualsevol component específic.
 
 Aquest arquetip està pensat per registrar detalls d'un medicament o component d'un medicament quan calgui especificar amb més detall la forma i els components detallats del medicament, per exemple infusions i barreges ad hoc, o quan no es disposi de terminologia de medicaments. En el context d'una ordre d'administració o dispensació d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip INSTRUCTION.medication_order. En el context del registre de l'administració o dispensació real d'un medicament, anideu aquest arquetip al SLOT \"Detalls del medicament\" dins de l'arquetip ACTION.medication.
 
 Aquest arquetip pot ser redundant en situacions en què la sol·licitud dun medicament mitjançant recepta faci ús duna terminologia per identificar larticle. En aquest cas, la marca o el nom del producte poden identificar la forma i la concentració de la substància.">
-			keywords = <"medicació", "ordre", "prescriure", "teràpia", "substància", "medicament", "terapèutic", "bé terapèutic", "ad-hoc", "adhoc", "ad hoc", "extemporani", "formulació", "medicina">
 			misuse = <"No s'ha de fer servir per portar el control de l'estoc de farmàcia ni dels catàlegs de medicaments.
 
 No s'ha de fer servir per registrar la dosi prevista o administrada d'un medicament. Per fer-ho, utilitzeu els arquetips INSTRUCTION.medication_order o CLUSTER.dosage.
@@ -185,6 +189,7 @@ No s'ha de fer servir per si mateix per emplenar una llista de medicació. Per f
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Registrar datos sobre un medicamento o componente de un medicamento, incluida la dosis, la forma y los detalles de cualquier componente específico.">
+			keywords = <"medicación","prescripción","prescribir","terapia","substancia","droga","fármaco","terapéutico","producto terapéutico","ad-hoc","ad hoc","extemporáneo","formulación","medicina">
 			use = <"Usar para registrar detalles sobre un medicamento o componente de un medicamento, incluyendo la dosis, la forma y los detalles de cualquier componente específico.
 
 Este arquetipo está diseñado para registrar datos de un medicamento o de un componente del mismo cuando se necesite especificar con mayor detalle la forma y los componentes del medicamento. Por ejemplo, en el caso de infusiones, mezclas preparadas ad hoc, o cuando no se disponga de una terminología estandarizada de medicamentos.
@@ -194,7 +199,6 @@ En el contexto de una prescripción, administración o dispensación de un medic
 Este arquetipo puede resultar redundante en situaciones donde se solicite un medicamento mediante una prescripción que utiliza una terminología codificada para identificar el medicamento. En estos casos, la marca o el nombre del producto ya pueden implicar la forma farmacéutica y la concentración de la sustancia.
 
 ">
-			keywords = <"medicación", "prescripción", "prescribir", "terapia", "substancia", "droga", "fármaco", "terapéutico", "producto terapéutico", "ad-hoc", "ad hoc", "extemporáneo", "formulación", "medicina">
 			misuse = <"No utilizar para el control del inventario de farmacia ni dentro de los catálogos de medicamentos.
 
 No utilizar para registrar la dosis prevista o administrada de un medicamento. Utilizar los arquetipos INSTRUCTION.medication_order o CLUSTER.dosage para esta finalidad.
@@ -202,8 +206,6 @@ No utilizar para registrar la dosis prevista o administrada de un medicamento. U
 No utilizar por sí mismo para rellenar una lista de medicación. Utilizar un arquetipo relevante de tipo ENTRY relacionado con la medicación, como INSTRUCTION.medication_order o ACTION.medication para esta finalidad.">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "John Bennett, NEHTA, Australia", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Sharmila Biswas, Australia", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Duncan Cripps, University Hospitals Plmyouth NHS Trust, United Kingdom", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Gail Easterbrook, Flinders Medical Centre, Australia", "Stig Erik Hegrestad, Helse Førde, Norway", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Health Systems, Australia", "Hilde Hollås, DIPS AS, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Alfred Honore, Haukeland, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Patrícia Ivo, Prefeitura Municipal de Fortaleza, Brazil", "Tom Jarl Jakobsen, Helse Bergen, Norway", "Mary Kelaher, NEHTA, Australia", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Harmony Kosola, Alberta Health Services, Canada", "Robert L'egan, NEHTA, Australia", "Mitja Lapajne, Marand, Slovenia", "Anette Larsson, Tieto Sweden AB, Sweden", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Mark Luciani, Bath and North East Somerset, Swindon and Wiltshire Clinical Commisioning Group, United Kingdom", "Colin Macfarlane, Elsevier, United Kingdom", "Siv Marie Lien, DIPS ASA, Norway", "James McClay, University of Nebraska Medical Center, United States", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Andrej Orel, Marand d.o.o., Slovenia", "doug pankoski, Alberta Health Services, Canada", "Chris Pearce, Melbourne East GP Network, Australia", "Vladimir Pizzo, Clínica Parente Pizzo, Finland", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Martha Schei Hynne, The Norwegian Medicines Agency, Norway", "Jason Scott, Plymouth Hospitals NHS Trust, United Kingdom", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden", "John Taylor, NEHTA, Australia", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Guri Tømmervåg, DIPS AS, Norway", "Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Pelle Viana Lindén, Capio, Sweden", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -327,7 +329,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
