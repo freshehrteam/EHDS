@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1f7645573520dab6d869f62b997939a3",
+      "MD5-CAM-1.0.1" : "654601f920df013360521d29852cc379",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -222,6 +222,18 @@
       }
     }
   },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetFhirPath" : "Composition.section:sectionAllergies",
+          "mapTargetDefinition" : "This section documents the relevant allergies or intolerances for that patient, describing the kind of reaction - e.g. rash, anaphylaxis,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available, or if no allergies are known this should be clearly documented in the section.",
+          "mapTargetCardinality" : "1..1"
+        }
+      }
+    }
+  },
   "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
   "differential" : true,
   "archetypeId" : {
@@ -275,7 +287,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "EPS Allergies and Intolerances",
+          "text" : "EPS Allergies",
           "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         }
       },
@@ -473,6 +485,19 @@
           "misuse" : "*Not to be used to record the exclusion of a specific problem/diagnosis, medication, procedure, family history, adverse reaction or other clinical item - use the EVALUATION.exclusion_specific archetype for this purpose.\r\n\r\nNot to be used to record the exclusion of any component of a physical examination - use the CLUSTER.exclusion_exam archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the exclusion of symptoms use the CLUSTER.exclusion_symptom archetype within an appropriate OBSERVATION or CLUSTER archetype.\r\n\r\nNot to be used to record the absence of information - use the EVALUATION.absense archetype for this purpose.(en)",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0002.1]" : {
+            "mapTargetName" : "sectionAllergies.emptyReason",
+            "mapTargetFhirPath" : "Composition.section:sectionAllergies.emptyReason",
+            "mapTargetDefinition" : "If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
@@ -789,6 +814,19 @@
           "misuse" : "No debe utilizarse para registrar la presencia de reacciones adversas, uso de medicación, procedimientos, problemas o diagnósticos - utilice arquetipos específicos para este fin.\r\n\r\nNo debe utilizarse para registrar la exclusión de reacciones adversas, uso de medicación, procedimientos, problemas o diagnósticos - utilice especializaciones específicas del arquetipo EVALUATION.exclusion para este fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0005.1]" : {
+            "mapTargetName" : "sectionAllergies.emptyReason",
+            "mapTargetFhirPath" : "Composition.section:sectionAllergies.emptyReason",
+            "mapTargetDefinition" : "If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
