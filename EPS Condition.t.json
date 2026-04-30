@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5a766f61cd595c13122f7bcd069a5b4a",
+      "MD5-CAM-1.0.1" : "4b4cb466e4286008a2a6b582e80ea16f",
       "PARENT:MD5-CAM-1.0.1" : "23814F45898EDABAB347AF0E329C95B5",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -249,6 +249,19 @@
           "mapTargetFhirPath" : "Condition.abatement[x]:abatementDateTime",
           "mapTargetDefinition" : "The date or estimated date that the condition resolved or went into remission. A ‘vague’ date, such as only the year or the month and the year, is permitted",
           "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0073]" : {
+          "mapTargetName" : "verificationStatus",
+          "mapTargetFhirPath" : "Condition.verificationStatus",
+          "mapTargetDefinition" : "The verification status to support the clinical status of the condition.",
+          "mapTargetBindings" : "The codes SHALL be taken from ConditionVerificationStatus (required to http://hl7.org/fhir/ValueSet/condition-ver-status)",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0069.1]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "Condition.note",
+          "mapTargetDefinition" : "Comment by the one who determined or updated the Problem.",
+          "mapTargetCardinality" : "0..*"
         }
       }
     }
