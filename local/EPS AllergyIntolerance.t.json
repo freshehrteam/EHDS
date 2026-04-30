@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "515f66340633587cb38b6bf75b66b699",
-      "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9"
+      "MD5-CAM-1.0.1" : "8cd129e173790514c584aa1d32ccff8b",
+      "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -126,10 +128,17 @@
     "documentation" : {
       "en" : {
         "" : {
-          "mapTargetName" : "sectionAllergies.entry:allergyOrIntolerance",
-          "mapTargetFhirPath" : "Composition.section:sectionAllergies.entry:allergyOrIntolerance",
-          "mapTargetDefinition" : "It lists the relevant allergies or intolerances for that patient, describing the kind of reaction - e.g. rash, anaphylaxis,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available, or if no allergies are known this should be clearly documented in the section.",
+          "mapTargetName" : "AllergyIntolerance",
+          "mapTargetFhirPath" : "AllergyIntolerance",
+          "mapTargetDefinition" : "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.",
           "mapTargetCardinality" : "0..*"
+        },
+        "/data[at0001]/items[at0002.1]" : {
+          "mapTargetName" : "code",
+          "mapTargetFhirPath" : "AllergyIntolerance.code",
+          "mapTargetDefinition" : "Code for an allergy or intolerance statement (either a positive or a negated/excluded statement). This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., \"Latex\"), an allergy or intolerance condition (e.g., \"Latex allergy\"), or a negated/excluded code for a specific substance or class (e.g., \"No latex allergy\") or a general or categorical negated statement (e.g., \"No known allergy\", \"No known drug allergies\"). Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'. If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substance.",
+          "mapTargetBindings" : "The codes SHOULD be taken from Allergies & Intolerances - IPS (preferred to http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips) Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy.",
+          "mapTargetCardinality" : "1..1"
         }
       },
       "pt-br" : {
