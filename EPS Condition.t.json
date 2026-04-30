@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "3a29a2d691698fb54f97a1156ee58f60",
-      "PARENT:MD5-CAM-1.0.1" : "23814F45898EDABAB347AF0E329C95B5"
+      "MD5-CAM-1.0.1" : "1ae3d9da20962034ccfc4074b58e2e15",
+      "PARENT:MD5-CAM-1.0.1" : "23814F45898EDABAB347AF0E329C95B5",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -202,6 +204,46 @@
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetName" : "Condition",
+          "mapTargetFhirPath" : "Condition",
+          "mapTargetDefinition" : "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/data[at0001]/items[at0002.1]" : {
+          "mapTargetName" : "code",
+          "mapTargetFhirPath" : "Condition.code",
+          "mapTargetDefinition" : "The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems.",
+          "mapTargetBindings" : "The codes SHOULD be taken from Problems - IPS . (preferred to http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips) Valueset to describe the actual problem experienced by the patient",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/data[at0001]/items[at0012.1]" : {
+          "mapTargetName" : "bodySite",
+          "mapTargetFhirPath" : "Condition.bodySite",
+          "mapTargetDefinition" : "The anatomical location where this condition manifests itself.",
+          "mapTargetBindings" : "The codes SHOULD be taken from SNOMEDCTBodyStructures (preferred to http://hl7.org/fhir/ValueSet/body-site)",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/data[at0001]/items[at0077]" : {
+          "mapTargetName" : "onset[x]:onsetDateTime",
+          "mapTargetFhirPath" : "Condition.onset[x]:onsetDateTime",
+          "mapTargetDefinition" : "Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0005]" : {
+          "mapTargetName" : "severity",
+          "mapTargetFhirPath" : "Condition.severity",
+          "mapTargetDefinition" : "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+          "mapTargetBindings" : "The codes SHOULD be taken from Condition/DiagnosisSeverity (preferred to http://hl7.org/fhir/ValueSet/condition-severity)",
+          "mapTargetCardinality" : "0..1"
+        }
       }
     }
   },
