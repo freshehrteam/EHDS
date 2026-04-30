@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1ae3d9da20962034ccfc4074b58e2e15",
+      "MD5-CAM-1.0.1" : "5a766f61cd595c13122f7bcd069a5b4a",
       "PARENT:MD5-CAM-1.0.1" : "23814F45898EDABAB347AF0E329C95B5",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -242,6 +242,12 @@
           "mapTargetFhirPath" : "Condition.severity",
           "mapTargetDefinition" : "A subjective assessment of the severity of the condition as evaluated by the clinician.",
           "mapTargetBindings" : "The codes SHOULD be taken from Condition/DiagnosisSeverity (preferred to http://hl7.org/fhir/ValueSet/condition-severity)",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0030.1]" : {
+          "mapTargetName" : "abatement[x]:abatementDateTime",
+          "mapTargetFhirPath" : "Condition.abatement[x]:abatementDateTime",
+          "mapTargetDefinition" : "The date or estimated date that the condition resolved or went into remission. A ‘vague’ date, such as only the year or the month and the year, is permitted",
           "mapTargetCardinality" : "0..1"
         }
       }
@@ -639,6 +645,33 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "stage",
+            "mapTargetFhirPath" : "Condition.stage",
+            "mapTargetDefinition" : "Clinical stage or grade of a condition. May include formal severity assessments.",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/items[at0003]" : {
+            "mapTargetName" : "stage.type",
+            "mapTargetFhirPath" : "Condition.stage.type",
+            "mapTargetDefinition" : "The kind of staging, such as pathological or clinical staging.",
+            "mapTargetBindings" : "For example codes, see ConditionStageType (example to http://hl7.org/fhir/ValueSet/condition-stage-type|4.0.1) Codes describing the kind of condition staging (e.g. clinical or pathological).",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0005.1]" : {
+            "mapTargetName" : "stage.summary",
+            "mapTargetFhirPath" : "Condition.stage.summary",
+            "mapTargetDefinition" : "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
+            "mapTargetBindings" : "For example codes, see ConditionStage (example to http://hl7.org/fhir/ValueSet/condition-stage|4.0.1) Codes describing condition stages (e.g. Cancer stages).",
+            "mapTargetCardinality" : "0..1"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
     "differential" : true,
     "archetypeId" : {
@@ -873,6 +906,26 @@
           "copyright" : "© openEHR Foundation, openEHR Norway",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "evidence",
+            "mapTargetFhirPath" : "Condition.evidence",
+            "mapTargetDefinition" : "Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/items[at0005.1]" : {
+            "mapTargetName" : "evidence.code",
+            "mapTargetFhirPath" : "Condition.evidence.code",
+            "mapTargetDefinition" : "A manifestation or symptom that led to the recording of this condition.",
+            "mapTargetBindings" : "For example codes, see ManifestationAndSymptomCodes (example to http://hl7.org/fhir/ValueSet/manifestation-or-symptom|4.0.1) Codes that describe the manifestation or symptoms of a condition.",
+            "mapTargetCardinality" : "0..*"
+          }
         }
       }
     },
@@ -1249,6 +1302,41 @@
           "misuse" : "No debe utilizarse para representar un diagnóstico diferencial - utilice el arquetipo EVALUATION.differential_diagnosis para este fin.\r\n\r\nNo debe utilizarse para representar la certeza diagnóstica - utilice el elemento de datos \"Certeza diagnóstica\" dentro del arquetipo EVALUATION.problem_diagnosis.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0003]" : {
+            "mapTargetName" : "clinicalStatus",
+            "mapTargetFhirPath" : "Condition.clinicalStatus",
+            "mapTargetDefinition" : "The problem status describes the condition of the problem:  Active problems are problems of which the patient experiences symptoms or for which evidence exists.  If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.  Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.",
+            "mapTargetBindings" : "The codes SHALL be taken from ConditionClinicalStatusCodes (required to http://hl7.org/fhir/ValueSet/condition-clinical)",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0083.1]" : {
+            "mapTargetName" : "clinicalStatus",
+            "mapTargetFhirPath" : "Condition.clinicalStatus",
+            "mapTargetDefinition" : "The problem status describes the condition of the problem:  Active problems are problems of which the patient experiences symptoms or for which evidence exists.  If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.  Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.",
+            "mapTargetBindings" : "The codes SHALL be taken from ConditionClinicalStatusCodes (required to http://hl7.org/fhir/ValueSet/condition-clinical)",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0089.1]" : {
+            "mapTargetName" : "clinicalStatus",
+            "mapTargetFhirPath" : "Condition.clinicalStatus",
+            "mapTargetDefinition" : "The problem status describes the condition of the problem:  Active problems are problems of which the patient experiences symptoms or for which evidence exists.  If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.  Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.",
+            "mapTargetBindings" : "The codes SHALL be taken from ConditionClinicalStatusCodes (required to http://hl7.org/fhir/ValueSet/condition-clinical)",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0071.1]" : {
+            "mapTargetName" : "clinicalStatus",
+            "mapTargetFhirPath" : "Condition.clinicalStatus",
+            "mapTargetDefinition" : "The problem status describes the condition of the problem:  Active problems are problems of which the patient experiences symptoms or for which evidence exists.  If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.  Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.",
+            "mapTargetBindings" : "The codes SHALL be taken from ConditionClinicalStatusCodes (required to http://hl7.org/fhir/ValueSet/condition-clinical)",
+            "mapTargetCardinality" : "0..1"
+          }
         }
       }
     },
