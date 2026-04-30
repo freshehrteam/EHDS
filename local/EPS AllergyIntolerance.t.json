@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8cd129e173790514c584aa1d32ccff8b",
+      "MD5-CAM-1.0.1" : "659ced1b522e4991dc7606e99cc50e51",
       "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -139,6 +139,20 @@
           "mapTargetDefinition" : "Code for an allergy or intolerance statement (either a positive or a negated/excluded statement). This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., \"Latex\"), an allergy or intolerance condition (e.g., \"Latex allergy\"), or a negated/excluded code for a specific substance or class (e.g., \"No latex allergy\") or a general or categorical negated statement (e.g., \"No known allergy\", \"No known drug allergies\"). Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'. If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substance.",
           "mapTargetBindings" : "The codes SHOULD be taken from Allergies & Intolerances - IPS (preferred to http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips) Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy.",
           "mapTargetCardinality" : "1..1"
+        },
+        "/data[at0001]/items[at0130.1]" : {
+          "mapTargetName" : "clinicalStatus",
+          "mapTargetFhirPath" : "AllergyIntolerance.clinicalStatus",
+          "mapTargetDefinition" : "The clinical status of the allergy or intolerance.",
+          "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceClinicalStatusCodes (required to http://hl7.org/fhir/ValueSet/allergyintolerance-clinical|4.0.1) The clinical status of the allergy or intolerance.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0063]" : {
+          "mapTargetName" : "verificationStatus",
+          "mapTargetFhirPath" : "AllergyIntolerance.verificationStatus",
+          "mapTargetDefinition" : "Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).",
+          "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceVerificationStatusCodes (required to http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1) Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
+          "mapTargetCardinality" : "0..1"
         }
       },
       "pt-br" : {
