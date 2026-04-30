@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "659ced1b522e4991dc7606e99cc50e51",
+      "MD5-CAM-1.0.1" : "60e2cf45774e560d59ab8ffb952d2b3c",
       "PARENT:MD5-CAM-1.0.1" : "C8015C0CAA2F425EF80DB7A794F19DB9",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -153,6 +153,44 @@
           "mapTargetDefinition" : "Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).",
           "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceVerificationStatusCodes (required to http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1) Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
           "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0101.1]" : {
+          "mapTargetName" : "criticality",
+          "mapTargetFhirPath" : "AllergyIntolerance.criticality",
+          "mapTargetDefinition" : "Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.",
+          "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceCriticality (required to http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality|4.0.1) Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0120.1]" : {
+          "mapTargetName" : "category",
+          "mapTargetFhirPath" : "AllergyIntolerance.category",
+          "mapTargetDefinition" : "Category of the identified substance.",
+          "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceCategory (required to http://hl7.org/fhir/ValueSet/allergy-intolerance-category|4.0.1) Category of an identified substance associated with allergies or intolerances.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/data[at0001]/items[at0117.1]" : {
+          "mapTargetName" : "lastOccurrence",
+          "mapTargetFhirPath" : "AllergyIntolerance.lastOccurrence",
+          "mapTargetDefinition" : "Represents the date and/or time of the last known occurrence of a reaction event.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0133.1]" : {
+          "mapTargetName" : "onset[x]",
+          "mapTargetFhirPath" : "AllergyIntolerance.onset[x]",
+          "mapTargetDefinition" : "Estimated or actual date, date-time, or age when allergy or intolerance was identified.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0058.1]" : {
+          "mapTargetName" : "type",
+          "mapTargetFhirPath" : "AllergyIntolerance.type",
+          "mapTargetDefinition" : "Identification of the underlying physiological mechanism for the reaction risk.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/data[at0001]/items[at0006]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "AllergyIntolerance.note",
+          "mapTargetDefinition" : "Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.",
+          "mapTargetCardinality" : "0..*"
         }
       },
       "pt-br" : {
@@ -760,6 +798,65 @@
           "misuse" : "No utilizar para registrar eventos adversos, como errores en el proceso clínico, intervenciones o productos. Por ejemplo: uso indebido o dosificación incorrecta o mala administración de un agente o sustancia; errores de etiquetaje; daños o heridas causadas por una operación o procedimiento; sobredosis/envenenamiento, etc. Utilizar un arquetipo específico para esta finalidad.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "mapTargetName" : "reaction",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction",
+            "mapTargetDefinition" : "Details about each adverse reaction event linked to exposure to the identified substance.",
+            "mapTargetCardinality" : "0..*"
+          },
+          "/items[at0001.1]" : {
+            "mapTargetName" : "reaction.substance",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.substance",
+            "mapTargetDefinition" : "Identification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'. If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substance.",
+            "mapTargetBindings" : "For example codes, see eHDSI Allergen No Drug . (example to http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug)",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0006.1]" : {
+            "mapTargetName" : "reaction.manifestation",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.manifestation",
+            "mapTargetDefinition" : "Clinical symptoms and/or signs that are observed or associated with the adverse reaction event.",
+            "mapTargetBindings" : "The codes SHOULD be taken from Allergy Reaction - IPS (preferred to http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips) Type of allergy or intolerance reaction expected to be used in MyHealth@EU",
+            "mapTargetCardinality" : "1..*"
+          },
+          "/items[at0007.1]" : {
+            "mapTargetName" : "reaction.description",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.description",
+            "mapTargetDefinition" : "Text description about the reaction as a whole, including details of the manifestation if required.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0008.1]" : {
+            "mapTargetName" : "reaction.onset",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.onset",
+            "mapTargetDefinition" : "Record of the date and/or time of the onset of the Reaction.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0010.1]" : {
+            "mapTargetName" : "reaction.severity",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.severity",
+            "mapTargetDefinition" : "Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.",
+            "mapTargetBindings" : "The codes SHALL be taken from AllergyIntoleranceSeverity (required to http://hl7.org/fhir/ValueSet/reaction-event-severity|4.0.1) Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0017.1]" : {
+            "mapTargetName" : "reaction.exposureRoute",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.exposureRoute",
+            "mapTargetDefinition" : "Identification of the route by which the subject was exposed to the substance.",
+            "mapTargetBindings" : "For example codes, see SNOMEDCTRouteCodes (example to http://hl7.org/fhir/ValueSet/route-codes|4.0.1) A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
+            "mapTargetCardinality" : "0..1"
+          },
+          "/items[at0024.1]" : {
+            "mapTargetName" : "reaction.note",
+            "mapTargetFhirPath" : "AllergyIntolerance.reaction.note",
+            "mapTargetDefinition" : "Additional text about the adverse reaction event not captured in other fields.",
+            "mapTargetCardinality" : "0..*"
+          }
         }
       }
     },
