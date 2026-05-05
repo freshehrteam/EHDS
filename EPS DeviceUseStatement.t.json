@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "53d00b208a161fa9408def5ea142902b",
+      "MD5-CAM-1.0.1" : "c806a04f2cf02039a0e1230b16beb731",
       "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : ""
@@ -212,12 +212,6 @@
     "conceptCode" : "at0000",
     "termDefinitions" : {
       "en" : {
-        "at0000.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000.1",
-          "text" : "EPS DeviceUseStatement",
-          "description" : "An ongoing and persistent overview about medical devices that have been fitted or implanted."
-        },
         "at0020.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0020.1",
