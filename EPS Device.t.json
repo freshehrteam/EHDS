@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "000a851c6141f0c41281a8a881a36afe",
+      "MD5-CAM-1.0.1" : "224a01fc18ad1529315084f7890359c1",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -166,25 +166,43 @@
         "" : {
           "mapTargetName" : "Device",
           "mapTargetFhirPath" : "Device",
-          "MapTargetDefinition" : "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
+          "mapTargetDefinition" : "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
           "mapTargetCardinality" : "0..*"
         },
         "/items[at0002]" : {
           "mapTargetName" : "text",
           "mapTargetFhirPath" : "Device.text",
-          "MapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+          "mapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
           "mapTargetCardinality" : "0..1"
         },
-        "/items[at0024]" : {
+        "/items[at0021]" : {
+          "mapTargetName" : "udiCarrier.deviceIdentifier",
+          "mapTargetFhirPath" : "Device.udiCarrier.deviceIdentifier",
+          "mapTargetDefinition" : "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0024.1]" : {
           "mapTargetName" : "identifier",
           "mapTargetFhirPath" : "Device.identifier",
           "MapTargetDefinition" : "Unique instance identifiers assigned to a device by manufacturers other organizations or owners.",
           "mapTargetCardinality" : "0..*"
         },
-        "/items[at0021]" : {
-          "mapTargetName" : "udiCarrier.deviceIdentifier",
-          "mapTargetFhirPath" : "Device.udiCarrier.deviceIdentifier",
-          "MapTargetDefinition" : "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.",
+        "/items[at0024.2]" : {
+          "mapTargetName" : "distinctIdentifier",
+          "mapTargetFhirPath" : "Device.distinctIdentifier",
+          "MapTargetDefinition" : "The distinct identification string as required by regulation for a human cell, tissue, or cellular and tissue-based product.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0004]" : {
+          "mapTargetName" : "manufacturer",
+          "mapTargetFhirPath" : "Device.manufacturer",
+          "mapTargetDefinition" : "A name of the manufacturer.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0005]" : {
+          "mapTargetName" : "manufactureDate",
+          "mapTargetFhirPath" : "Device.manufactureDate",
+          "mapTargetDefinition" : "The date and time when the device was manufactured.",
           "mapTargetCardinality" : "0..1"
         }
       }
@@ -200,24 +218,128 @@
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "CLUSTER",
     "nodeId" : "at0000.1",
-    "attributes" : [ ],
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0024.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0024.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
     "attributeTuples" : [ ]
   },
   "terminology" : {
     "@type" : "ARCHETYPE_TERMINOLOGY",
     "conceptCode" : "at0000",
     "termDefinitions" : {
-      "ar-sy" : { },
-      "en" : { },
-      "es-ar" : { },
-      "pt-br" : { },
-      "nb" : { },
-      "de" : { },
-      "sv" : { },
-      "nl" : { },
-      "fr" : { },
-      "ca" : { },
-      "es" : { }
+      "ar-sy" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "*Other identifier(en) (2)",
+          "description" : "*Unspecified identifier, which can be further specified in a template or at run time.(en)",
+          "comment" : "*Coding of the name of the identifier with a coding system is desirable, if available.(en)"
+        }
+      },
+      "en" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.2",
+          "text" : "Distinct identifier",
+          "description" : "Unspecified identifier, which can be further specified in a template or at run time.",
+          "comment" : "Coding of the name of the identifier with a coding system is desirable, if available."
+        }
+      },
+      "es-ar" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "*Other identifier(en) (2)",
+          "description" : "*Unspecified identifier, which can be further specified in a template or at run time.(en)",
+          "comment" : "*Coding of the name of the identifier with a coding system is desirable, if available.(en)"
+        }
+      },
+      "pt-br" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Outros identificadores (2)",
+          "description" : "Identificador não especificado, que pode ainda ser especificado em um modelo ou em tempo de execução.",
+          "comment" : "Utilização da codificação com nome do identificador por um sistema de codificação é desejável, se disponível."
+        }
+      },
+      "nb" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Øvrig identifikator (2)",
+          "description" : "Øvrig identifikator som kan defineres mer eksplisitt i en templat eller i en applikasjon.",
+          "comment" : "Koding av navnet på identifikatoren er ønskelig om mulig."
+        }
+      },
+      "de" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Weitere ID (2)",
+          "description" : "Nicht spezifizierter Bezeichner, der in einer Vorlage oder zur Laufzeit weiter spezifiziert werden kann.",
+          "comment" : "Sofern verfügbar, ist die Kodierung des Namens des Identifikators mit einem Kodierungssystem wünschenswert."
+        }
+      },
+      "sv" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Annan identifierare (2)",
+          "description" : "Ospecificerad identifierare, som kan specificeras ytterligare i en template eller kan genereras automatiskt av vissa IT-system.",
+          "comment" : "Kodning av namnet på identifieraren med ett kodverk är önskvärt, om det finns för området."
+        }
+      },
+      "nl" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Ander identificatie (2)",
+          "description" : "Niet-gespecificeerde identifier, die verder kan worden gespecificeerd in een sjabloon of tijdens runtime.",
+          "comment" : "Codering van de naam van de identifier met een coderingssysteem is wenselijk, indien aanwezig."
+        }
+      },
+      "fr" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Autre identificateur (2)",
+          "description" : "Identifiant non spécifié, qui peut être précisé dans un modèle ou au moment de l'exécution.",
+          "comment" : "Il est souhaitable de coder le nom de l'identifiant à l'aide d'un système de codage, s'il est disponible."
+        }
+      },
+      "ca" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Altre identificador (2)",
+          "description" : "Identificador no especificat, el qual es pot especificar amb més detall en una plantilla o en temps d’execució.",
+          "comment" : "Programar el nom de l’identificador amb un sistema de codificació si així es vol i si és possible."
+        }
+      },
+      "es" : {
+        "at0024.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024.1",
+          "text" : "Otro identificador (2)",
+          "description" : "Identificador no especificado, el cual puede ser especificado con más detalle en una plantilla o en tiempo de ejecución.",
+          "comment" : "Preferentemente, codificar el nombre del identificador con un sistema de codificación, cuando sea posible."
+        }
+      }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
