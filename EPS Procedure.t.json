@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "b3915e128f61734c78a08f893b0d39a9",
+      "MD5-CAM-1.0.1" : "2df5b798edba41324cf12be370e4434f",
       "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : ""
     },
     "details" : {
@@ -193,6 +193,26 @@
           "mapTargetDefinition" : "A code that classifies the procedure for searching, sorting and display purposes (e.g. \"Surgical Procedure\").",
           "mapTargetBindings" : "For example codes, see ProcedureCategoryCodes(SNOMEDCT) (example to http://hl7.org/fhir/ValueSet/procedure-category|4.0.1) A code that classifies a procedure for searching, sorting and display purposes.",
           "mapTargetCardinality" : "0..1"
+        },
+        "/description[at0001]/items[at0002]" : {
+          "mapTargetName" : "code",
+          "mapTargetFhirPath" : "Procedure.code",
+          "mapTargetDefinition" : "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\".",
+          "mapTargetBindings" : "The codes SHOULD be taken from Procedures - IPS (preferred to http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips)",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/description[at0001]/items[at0060.1]" : {
+          "mapTargetName" : "performed[x]:performedDateTime",
+          "mapTargetFhirPath" : "Procedure.performed[x]:performedDateTime",
+          "mapTargetDefinition" : "Estimated or actual date, date-time, period, or age when the procedure was performed. Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/description[at0001]/items[at0070]" : {
+          "mapTargetName" : "reasonCode",
+          "mapTargetFhirPath" : "Procedure.reasonCode",
+          "mapTargetDefinition" : "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
+          "mapTargetBindings" : "For example codes, see ProcedureReasonCodes (example to http://hl7.org/fhir/ValueSet/procedure-reason|4.0.1) A code that identifies the reason a procedure is required.",
+          "mapTargetCardinality" : "0..*"
         }
       }
     }
@@ -805,9 +825,17 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0060.1",
-            "attributes" : [ ],
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DATE_TIME",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_COMPLEX_OBJECT",
@@ -1027,18 +1055,6 @@
           "code" : "at0068.1",
           "text" : "In progress",
           "description" : "The procedure, or subprocedure in a multicomponent procedure, has been commenced."
-        },
-        "at0041.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0041.1",
-          "text" : "Stopped",
-          "description" : "The procedure has been aborted."
-        },
-        "at0043.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0043.1",
-          "text" : "Completed",
-          "description" : "The procedure has been performed and all associated clinical activities completed."
         }
       },
       "ar-sy" : {
