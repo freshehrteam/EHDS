@@ -12,6 +12,10 @@ spec:
   fhirConfig:
     structureDefinition: http://hl7.org/fhir/StructureDefinition/AllergyIntolerance
 
+terminology:
+  type: "local"
+  conceptmap: "http://hl7.org/fhir/ConceptMap/eps-adverse-reaction-risk-fhirconnect"
+
 mappings:
   # EPSAllergyIntolerance.agentOrAllergen
   - name: "substance"
@@ -22,296 +26,45 @@ mappings:
   # EPSAllergyIntolerance.status — active/inactive clinical status
   - name: "clinicalStatus"
     with:
-      fhir: "$resource.clinicalStatus.coding"
+      fhir: "$resource.clinicalStatus"
       openehr: "$archetype/data[at0001]/items[at0130]"
-    manual:
-      - name: "active"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0131"
-          - path: "value"
-            value: "Active"
-        fhirCondition:
-          targetRoot: "$fhirRoot"
-          targetAttribute: "code"
-          operator: "one of"
-          criteria: "active"
-        fhir:
-          - path: "code"
-            value: "active"
-          - path: "system"
-            value: "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
-          - path: "display"
-            value: "Active"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0130]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0131"
-
-      - name: "inactive"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0132"
-          - path: "value"
-            value: "Inactive"
-        fhirCondition:
-          targetRoot: "$fhirRoot"
-          targetAttribute: "code"
-          operator: "one of"
-          criteria: "inactive"
-        fhir:
-          - path: "code"
-            value: "inactive"
-          - path: "system"
-            value: "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
-          - path: "display"
-            value: "Inactive"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0130]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0132"
 
   # EPSAllergyIntolerance.certainty — verification status
-  - name: "certainty"
+  - name: "verificationStatus"
     with:
-      fhir: "$resource.verificationStatus.coding"
+      fhir: "$resource.verificationStatus"
       openehr: "$archetype/data[at0001]/items[at0063]"
-    manual:
-
-      - name: "confirmed"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0065"
-          - path: "value"
-            value: "Confirmed"
-        fhirCondition:
-          targetRoot: "$fhirRoot"
-          targetAttribute: "code"
-          operator: "one of"
-          criteria: "confirmed"
-        fhir:
-          - path: "code"
-            value: "confirmed"
-          - path: "system"
-            value: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-          - path: "display"
-            value: "Confirmed"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0063]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0065"
-
-      - name: "unconfirmed"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0064"
-          - path: "value"
-            value: "Unconfirmed"
-        fhirCondition:
-          targetRoot: "$fhirRoot"
-          targetAttribute: "code"
-          operator: "one of"
-          criteria: "unconfirmed"
-        fhir:
-          - path: "code"
-            value: "unconfirmed"
-          - path: "system"
-            value: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-          - path: "display"
-            value: "Unconfirmed"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0063]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0064"
-
-      - name: "refuted"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0066"
-          - path: "value"
-            value: "Refuted"
-        fhirCondition:
-          targetRoot: "$fhirRoot"
-          targetAttribute: "code"
-          operator: "one of"
-          criteria: "refuted"
-        fhir:
-          - path: "code"
-            value: "refuted"
-          - path: "system"
-            value: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-          - path: "display"
-            value: "Refuted"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0063]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0066"
-
 
   # EPSAllergyIntolerance.criticality
   - name: "criticality"
     with:
       fhir: "$resource.criticality"
       openehr: "$archetype/data[at0001]/items[at0101]"
-    manual:
-      - name: "low"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0102"
-          - path: "value"
-            value: "Low"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "criticality"
-          operator: "one of"
-          criteria: "low"
-        fhir:
-          - path: "$fhirRoot"
-            value: "low"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0101]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0102"
-
-      - name: "high"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0103"
-          - path: "value"
-            value: "High"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "criticality"
-          operator: "one of"
-          criteria: "high"
-        fhir:
-          - path: "$fhirRoot"
-            value: "high"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0101]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0103"
-
-      - name: "indeterminate"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0124"
-          - path: "value"
-            value: "Indeterminate"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "criticality"
-          operator: "one of"
-          criteria: "unable-to-assess"
-        fhir:
-          - path: "$fhirRoot"
-            value: "unable-to-assess"
-        openehrCondition:
-          targetRoot: "$archetype/data[at0001]/items[at0101]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0124"
 
   # EPSAllergyIntolerance.category
   - name: "category"
     with:
       fhir: "$resource.category"
       openehr: "$archetype/data[at0001]/items[at0120]"
-    manual:
-      - name: "food"
-        openehr:
-          - path: "$openehrRoot"
-            value: "Food"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "category"
-          operator: "one of"
-          criteria: "food"
-        fhir:
-          - path: "$fhirRoot"
-            value: "food"
-        openehrCondition:
-          targetRoot: "$archetype"
-          targetAttribute: "data[at0001]/items[at0120]"
-          operator: "one of"
-          criteria: "Food"
-
-      - name: "medication"
-        openehr:
-          - path: "$openehrRoot"
-            value: "Medication"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "category"
-          operator: "one of"
-          criteria: "medication"
-        fhir:
-          - path: "$fhirRoot"
-            value: "medication"
-        openehrCondition:
-          targetRoot: "$archetype"
-          targetAttribute: "data[at0001]/items[at0120]"
-          operator: "one of"
-          criteria: "Medication"
-
-      - name: "environment"
-        openehr:
-          - path: "$openehrRoot"
-            value: "Environment"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "category"
-          operator: "one of"
-          criteria: "environment"
-        fhir:
-          - path: "$fhirRoot"
-            value: "environment"
-        openehrCondition:
-          targetRoot: "$archetype"
-          targetAttribute: "data[at0001]/items[at0120]"
-          operator: "one of"
-          criteria: "Environment"
-
-      - name: "biologic"
-        openehr:
-          - path: "$openehrRoot"
-            value: "Biologic"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "category"
-          operator: "one of"
-          criteria: "biologic"
-        fhir:
-          - path: "$fhirRoot"
-            value: "biologic"
-        openehrCondition:
-          targetRoot: "$archetype"
-          targetAttribute: "data[at0001]/items[at0120]"
-          operator: "one of"
-          criteria: "Biologic"
+    terminology:
+      type: "inline"
+      mappings:
+        - openehr:
+            code: "Food"
+          fhir:
+            code: "food"
+        - openehr:
+            code: "Medication"
+          fhir:
+            code: "medication"
+        - openehr:
+            code: "Environment"
+          fhir:
+            code: "environment"
+        - openehr:
+            code: "Biologic"
+          fhir:
+            code: "biologic"
 
   # EPSAllergyIntolerance.onsetDate — onset of first reaction
   - name: "onsetDateTime"
@@ -330,6 +83,17 @@ mappings:
     with:
       fhir: "$resource.type"
       openehr: "$archetype/data[at0001]/items[at0058]"
+    terminology:
+      type: "inline"
+      mappings:
+        - openehr:
+            code: "Allergy"
+          fhir:
+            code: "allergy"
+        - openehr:
+            code: "Intolerance"
+          fhir:
+            code: "intolerance"
 
   # EPSAllergyIntolerance.note.text — comment/narrative
   - name: "description"

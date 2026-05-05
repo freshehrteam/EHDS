@@ -1,0 +1,40 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ehds-procedure-fhirconnect",
+  "url": "http://hl7.org/fhir/ConceptMap/ehds-procedure-fhirconnect",
+  "description": "EHDS Procedure Mappings (ISM transition / status)",
+  "group": [
+    {
+      "source": "openehr",
+      "target": "http://hl7.org/fhir/ValueSet/event-status",
+      "element": [
+        {
+          "code": "532",
+          "target": [
+            {
+              "code": "completed",
+              "display": "Completed",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.org/fhir/ValueSet/event-status",
+      "target": "openehr",
+      "element": [
+        {
+          "code": "completed",
+          "target": [
+            {
+              "code": "532",
+              "display": "Completed",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
