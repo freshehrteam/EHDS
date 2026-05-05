@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "08da331f7243274f0c0ea22867e11b8e",
-      "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E"
+      "MD5-CAM-1.0.1" : "53d00b208a161fa9408def5ea142902b",
+      "PARENT:MD5-CAM-1.0.1" : "A4B07F5C96E527E2834C1225877B312E",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -65,7 +67,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-EVALUATION.deviceuse statement.v0"
+    "value" : "openEHR-EHR-EVALUATION.deviceuse_statement.v0"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -213,7 +215,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Device use statement",
+          "text" : "EPS DeviceUseStatement",
           "description" : "An ongoing and persistent overview about medical devices that have been fitted or implanted."
         },
         "at0020.1" : {
@@ -246,7 +248,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "c5598d2a-faee-3a2a-b684-a7395ad8fd8c",
+  "buildUid" : "e19bd23e-013b-34b1-af70-21255f2b0727",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
