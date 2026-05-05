@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "224a01fc18ad1529315084f7890359c1",
+      "MD5-CAM-1.0.1" : "602ea749c896a3c678063855cf39b1bd",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -204,6 +204,55 @@
           "mapTargetFhirPath" : "Device.manufactureDate",
           "mapTargetDefinition" : "The date and time when the device was manufactured.",
           "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0007]" : {
+          "mapTargetName" : "expirationDate",
+          "mapTargetFhirPath" : "Device.expirationDate",
+          "mapTargetDefinition" : "The date and time beyond which this device is no longer valid or should not be used (if applicable).",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0006]" : {
+          "mapTargetName" : "lotNumber",
+          "mapTargetFhirPath" : "Device.lotNumber",
+          "mapTargetDefinition" : "Lot number assigned by the manufacturer.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0020]" : {
+          "mapTargetName" : "serialNumber",
+          "mapTargetFhirPath" : "Device.serialNumber",
+          "mapTargetDefinition" : "The serial number assigned by the organization when the device was manufactured.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0001]" : {
+          "mapTargetName" : "deviceName.name",
+          "mapTargetFhirPath" : "Device.deviceName.name",
+          "mapTargetDefinition" : "The name of the device.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/items[at0023]" : {
+          "mapTargetName" : "modelNumber",
+          "mapTargetFhirPath" : "Device.modelNumber",
+          "mapTargetDefinition" : "The model number for the device.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0003]" : {
+          "mapTargetName" : "type",
+          "mapTargetFhirPath" : "Device.type",
+          "mapTargetDefinition" : "The kind or type of device.",
+          "mapTargetBindings" : "The codes SHOULD be taken from Medical Devices - IPS (preferred to http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips)",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0025]" : {
+          "mapTargetName" : "version.value",
+          "mapTargetFhirPath" : "Device.version.value",
+          "mapTargetDefinition" : "The version text.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/items[at0008]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "Device.note",
+          "mapTargetDefinition" : "Descriptive information, usage information or implantation information that is not captured in an existing element.",
+          "mapTargetCardinality" : "0..*"
         }
       }
     }
@@ -222,6 +271,13 @@
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "items",
       "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0022.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "nodeId" : "at0024.1",
