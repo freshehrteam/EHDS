@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2df5b798edba41324cf12be370e4434f",
+      "MD5-CAM-1.0.1" : "e5efba15595b6fe85b46d26dae3b6268",
       "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0",
-      "sem_ver" : "1.0.0-alpha.2",
+      "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : ""
     },
     "details" : {
@@ -213,6 +213,81 @@
           "mapTargetDefinition" : "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
           "mapTargetBindings" : "For example codes, see ProcedureReasonCodes (example to http://hl7.org/fhir/ValueSet/procedure-reason|4.0.1) A code that identifies the reason a procedure is required.",
           "mapTargetCardinality" : "0..*"
+        },
+        "/description[at0001]/items[at0063]" : {
+          "mapTargetName" : "bodySite",
+          "mapTargetFhirPath" : "Procedure.bodySite",
+          "mapTargetDefinition" : "Anatomical location which is the focus of the problem.",
+          "mapTargetBindings" : "The codes SHOULD be taken from SNOMEDCTBodyStructures (preferred to http://hl7.org/fhir/ValueSet/body-site)",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/description[at0001]/items[at0048.1]" : {
+          "mapTargetName" : "outcome",
+          "mapTargetFhirPath" : "Procedure.outcome",
+          "mapTargetDefinition" : "For example codes, see ProcedureOutcomeCodes(SNOMEDCT) (example to http://hl7.org/fhir/ValueSet/procedure-outcome|4.0.1) An outcome of a procedure - whether it was resolved or otherwise.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/description[at0001]/items[at0006.1]" : {
+          "mapTargetName" : "complication",
+          "mapTargetFhirPath" : "Procedure.complication",
+          "mapTargetDefinition" : "Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the notes, which will typically describe the procedure itself rather than any 'post procedure' issues.",
+          "mapTargetBindings" : "For example codes, see Condition/Problem/DiagnosisCodes (example to http://hl7.org/fhir/ValueSet/condition-code|4.0.1) Codes describing complications that resulted from a procedure.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/description[at0001]/items[at0014.1]" : {
+          "mapTargetName" : "statusReason",
+          "mapTargetFhirPath" : "Procedure.statusReason",
+          "mapTargetDefinition" : "Captures the reason for the current state of the procedure.",
+          "mapTargetBindings" : "For example codes, see ProcedureNotPerformedReason(SNOMED-CT) (example to http://hl7.org/fhir/ValueSet/procedure-not-performed-reason|4.0.1) A code that identifies the reason a procedure was not performed.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/description[at0001]/items[at0005.1]" : {
+          "mapTargetName" : "note",
+          "mapTargetFhirPath" : "Procedure.note",
+          "mapTargetDefinition" : "Any other notes and comments about the procedure.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/ism_transition[at0004.1]" : {
+          "mapTargetName" : "status (preparation)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/ism_transition[at0038.1]" : {
+          "mapTargetName" : "status (on hold)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/ism_transition[at0039.1]" : {
+          "mapTargetName" : "status (not done)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/ism_transition[at0068.1]" : {
+          "mapTargetName" : "status (in progress)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/ism_transition[at0041.1]" : {
+          "mapTargetName" : "status (stopped)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
+        },
+        "/ism_transition[at0043.1]" : {
+          "mapTargetName" : "status (completed)",
+          "mapTargetFhirPath" : "Procedure.status",
+          "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
+          "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
+          "mapTargetCardinality" : "1..1"
         }
       }
     }
@@ -321,6 +396,55 @@
                   "value" : "local"
                 },
                 "constraint" : [ "at0034" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0007.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "526" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0007" ]
               } ]
             } ],
             "attributeTuples" : [ ]
@@ -784,6 +908,13 @@
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
             "occurrences" : "0..0",
+            "nodeId" : "at0072.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
             "nodeId" : "at0065.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -798,6 +929,12 @@
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
             "occurrences" : "0..0",
+            "nodeId" : "at0071.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
             "nodeId" : "at0048.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -811,7 +948,6 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0006.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -871,20 +1007,35 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0074.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DURATION",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
             "nodeId" : "at0067.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
+            "occurrences" : "0..1",
             "nodeId" : "at0014.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0005.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -1031,32 +1182,7 @@
           "description" : "*The procedure has been performed and all associated clinical activities completed.(en)"
         }
       },
-      "en" : {
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004.1",
-          "text" : "Preparation",
-          "description" : "The procedure to be undertaken is planned."
-        },
-        "at0038.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0038.1",
-          "text" : "On hold",
-          "description" : "The procedure has been postponed."
-        },
-        "at0039.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0039.1",
-          "text" : "Not done",
-          "description" : "The planned procedure has been cancelled prior to commencement."
-        },
-        "at0068.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0068.1",
-          "text" : "In progress",
-          "description" : "The procedure, or subprocedure in a multicomponent procedure, has been commenced."
-        }
-      },
+      "en" : { },
       "ar-sy" : {
         "at0004.1" : {
           "@type" : "ARCHETYPE_TERM",
