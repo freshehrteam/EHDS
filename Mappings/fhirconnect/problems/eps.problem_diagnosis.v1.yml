@@ -224,3 +224,8 @@ mappings:
       fhir: "$resource"
       openehr: "$archetype/data[at0001]/items[openEHR-EHR-CLUSTER.problem_qualifier.v2]"
     slotArchetype: "CLUSTER.problem_qualifier.v2"
+
+  - name: "note"
+    with:
+      fhir: "$resource.note.text"
+      openehr: "$archetype/data[at0001]/items[at0069]"
