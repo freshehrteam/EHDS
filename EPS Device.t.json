@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9186e48754cb3b688d92370260ce850c",
-      "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D"
+      "MD5-CAM-1.0.1" : "000a851c6141f0c41281a8a881a36afe",
+      "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -154,6 +156,37 @@
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetName" : "Device",
+          "mapTargetFhirPath" : "Device",
+          "MapTargetDefinition" : "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/items[at0002]" : {
+          "mapTargetName" : "text",
+          "mapTargetFhirPath" : "Device.text",
+          "MapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/items[at0024]" : {
+          "mapTargetName" : "identifier",
+          "mapTargetFhirPath" : "Device.identifier",
+          "MapTargetDefinition" : "Unique instance identifiers assigned to a device by manufacturers other organizations or owners.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/items[at0021]" : {
+          "mapTargetName" : "udiCarrier.deviceIdentifier",
+          "mapTargetFhirPath" : "Device.udiCarrier.deviceIdentifier",
+          "MapTargetDefinition" : "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.",
+          "mapTargetCardinality" : "0..1"
+        }
       }
     }
   },
