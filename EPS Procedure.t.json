@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e5efba15595b6fe85b46d26dae3b6268",
+      "MD5-CAM-1.0.1" : "794283b82db1342cc26cfaa9ede22d06",
       "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0",
-      "sem_ver" : "1.0.0-alpha.3",
+      "sem_ver" : "1.0.0-alpha.4",
       "build_uid" : ""
     },
     "details" : {
@@ -288,6 +288,12 @@
           "mapTargetDefinition" : "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
           "mapTargetBindings" : "The codes SHALL be taken from EventStatus (required to http://hl7.org/fhir/ValueSet/event-status|4.0.1) A code specifying the state of the procedure.",
           "mapTargetCardinality" : "1..1"
+        },
+        "/description[at0001]/items[at0073]" : {
+          "mapTargetName" : "performed[x]:performedDateTime",
+          "mapTargetFhirPath" : "Procedure.performed[x]:performedDateTime",
+          "mapTargetDefinition" : "Estimated or actual date, date-time, period, or age when the procedure was performed. Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.",
+          "mapTargetCardinality" : "0..1"
         }
       }
     }
