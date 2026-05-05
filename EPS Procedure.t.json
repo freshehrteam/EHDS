@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "464209781dc87b0cc9ed7d30ac93b8e4",
-      "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0"
+      "MD5-CAM-1.0.1" : "b3915e128f61734c78a08f893b0d39a9",
+      "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -166,6 +168,32 @@
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "" : {
+          "mapTargetName" : "Procedure",
+          "mapTargetFhirPath" : "Procedure",
+          "mapTargetDefinition" : "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+          "mapTargetCardinality" : "0..*"
+        },
+        "/description[at0001]/items[at0049.1]" : {
+          "mapTargetName" : "text",
+          "mapTargetFhirPath" : "Procedure.text",
+          "mapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+          "mapTargetCardinality" : "0..1"
+        },
+        "/description[at0001]/items[at0067.1]" : {
+          "mapTargetName" : "category",
+          "mapTargetFhirPath" : "Procedure.category",
+          "mapTargetDefinition" : "A code that classifies the procedure for searching, sorting and display purposes (e.g. \"Surgical Procedure\").",
+          "mapTargetBindings" : "For example codes, see ProcedureCategoryCodes(SNOMEDCT) (example to http://hl7.org/fhir/ValueSet/procedure-category|4.0.1) A code that classifies a procedure for searching, sorting and display purposes.",
+          "mapTargetCardinality" : "0..1"
+        }
       }
     }
   },
@@ -729,7 +757,6 @@
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0049.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -816,7 +843,6 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0067.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
