@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0aa65de22916012d8164d04691e37fb0",
+      "MD5-CAM-1.0.1" : "f314b949d2f2d3c8ca4b242b3a583882",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.4",
+      "sem_ver" : "1.0.0-alpha.5",
       "build_uid" : ""
     },
     "details" : {
@@ -169,12 +169,6 @@
           "mapTargetDefinition" : "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
           "mapTargetCardinality" : "0..*"
         },
-        "/items[at0002]" : {
-          "mapTargetName" : "text",
-          "mapTargetFhirPath" : "Device.text",
-          "mapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
-          "mapTargetCardinality" : "0..1"
-        },
         "/items[at0021]" : {
           "mapTargetName" : "udiCarrier.deviceIdentifier",
           "mapTargetFhirPath" : "Device.udiCarrier.deviceIdentifier",
@@ -271,6 +265,13 @@
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "items",
       "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0002.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
