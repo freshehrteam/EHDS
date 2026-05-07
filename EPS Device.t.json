@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f314b949d2f2d3c8ca4b242b3a583882",
+      "MD5-CAM-1.0.1" : "9f86cc2853852cd316fc73e22e352602",
       "PARENT:MD5-CAM-1.0.1" : "B4AF4C8AA2F8BFB7EC593F747120036D",
-      "sem_ver" : "1.0.0-alpha.5",
+      "sem_ver" : "1.0.0-alpha.6",
       "build_uid" : ""
     },
     "details" : {
@@ -315,6 +315,15 @@
           } ]
         } ],
         "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "CLUSTER",
+        "occurrences" : "0..1",
+        "nodeId" : "at0026.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-fhir_narrative-001.v0",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -434,7 +443,71 @@
   "generated" : true,
   "templateId" : "EPS Device",
   "otherMetaData" : { },
-  "templateOverlays" : [ ],
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "3642188e-add9-4c12-adf0-88408b158144",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "00880cb27ee56030d404b953917bc804"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0002]" : {
+            "mapTargetName" : "text",
+            "mapTargetFhirPath" : "Device.text",
+            "mapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+            "mapTargetCardinality" : "0..1"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.fhir_narrative.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-fhir_narrative-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "1e4f24ca-3a90-37d4-9b3b-8eeb7c97fde3",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  } ],
   "originalLanguage" : {
     "terminologyId" : {
       "value" : "ISO_639-1"
