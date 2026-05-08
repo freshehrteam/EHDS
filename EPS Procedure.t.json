@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "ac7835cc89373226ec82795ba758ef02",
+      "MD5-CAM-1.0.1" : "756e6d0fcbd546e97ea42c595808ef42",
       "PARENT:MD5-CAM-1.0.1" : "4D0EE4A88E9AB4CD945DED9C4F3E53B0",
-      "sem_ver" : "1.0.0-alpha.6",
+      "sem_ver" : "1.0.0-alpha.7",
       "build_uid" : ""
     },
     "details" : {
@@ -180,12 +180,6 @@
           "mapTargetFhirPath" : "Procedure",
           "mapTargetDefinition" : "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
           "mapTargetCardinality" : "0..*"
-        },
-        "/description[at0001]/items[at0049.1]" : {
-          "mapTargetName" : "text",
-          "mapTargetFhirPath" : "Procedure.text",
-          "mapTargetDefinition" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
-          "mapTargetCardinality" : "0..1"
         },
         "/description[at0001]/items[at0067.1]" : {
           "mapTargetName" : "category",
@@ -907,6 +901,7 @@
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
             "nodeId" : "at0049.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
@@ -2474,7 +2469,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "00880cb27ee56030d404b953917bc804"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
