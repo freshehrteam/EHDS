@@ -62,6 +62,54 @@ mappings:
       fhir: "$resource.reasonCode"
       openehr: "$archetype/description[at0001]/items[at0070]"
 
+  - name: "category"
+    with:
+      fhir: "$resource.category"
+      openehr: "$archetype/description[at0001]/items[at0067]"
+
+  - name: "statusReason"
+    with:
+      fhir: "$resource.statusReason"
+      openehr: "$archetype/description[at0001]/items[at0014]"
+
+  - name: "bodySite"
+    with:
+      fhir: "$resource.bodySite"
+      openehr: "$archetype/description[at0001]/items[at0063]"
+
+  - name: "usedDevice"
+    with:
+      fhir: "$resource.usedReference"
+      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']]"
+    reference:
+      resourceType: "Device"
+      mappings:
+        - name: "usedDevice"
+          with:
+            fhir: "$fhirRoot"
+            openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']]"
+          slotArchetype: "CLUSTER.device.v1"
+          followedBy:
+            mappings:
+              - name: "usedCode"
+                with:
+                  fhir: "$resource.usedCode"
+                  openehr: "items[at0003]"
+
+  - name: "focalDevice"
+    with:
+      fhir: "$resource.focalDevice"
+      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Focal device']"
+    reference:
+      resourceType: "Device"
+      mappings:
+        - name: "focalDevice"
+          with:
+            fhir: "manipulated"
+            openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Focal device']"
+          slotArchetype: "CLUSTER.device.v1"
+
+
   - name: "outcome"
     with:
       fhir: "$resource.outcome"
@@ -72,26 +120,8 @@ mappings:
       fhir: "$resource.complication"
       openehr: "$archetype/description[at0001]/items[at0006]"
 
+
   - name: "note"
     with:
       fhir: "$resource.note.text"
       openehr: "$archetype/description[at0001]/items[at0005]"
-
-  - name: "bodySite"
-    with:
-      fhir: "$resource.bodySite"
-      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]"
-    slotArchetype: "CLUSTER.anatomical_location.v1"
-
-  - name: "usedDevice"
-    with:
-      fhir: "$resource.usedReference"
-      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1]"
-    reference:
-      resourceType: "Device"
-      mappings:
-        - name: "usedDevice"
-          with:
-            fhir: "$fhirRoot"
-            openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1]"
-          slotArchetype: "CLUSTER.device.v1"

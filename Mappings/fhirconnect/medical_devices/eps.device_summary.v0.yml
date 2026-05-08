@@ -24,6 +24,11 @@ mappings:
           - path: "status"
             value: "active"
 
+  - name: "text"
+    with:
+      fhir: "$resource.note.text"
+      openehr: "$archetype/data[at0001]/items[at0015]"
+
   - name: "timingPeriod"
     with:
       fhir: "$resource.timing.as(Period)"
@@ -56,5 +61,4 @@ mappings:
   - name: "bodySite"
     with:
       fhir: "$resource.bodySite"
-      openehr: "$archetype/data[at0001]/items[at0022]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]"
-    slotArchetype: "CLUSTER.anatomical_location.v1"
+      openehr: "$archetype/data[at0001]/items[at0012]"

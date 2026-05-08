@@ -94,24 +94,24 @@ mappings:
 #      operator: "one of"
 #      criteria: "10160-0"
 #
-#  - name: "sectionMedicalDevices"
-#    with:
-#      fhir: "$resource.section"
-#      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medical Devices and Implants']"
-#    slotArchetype: "SECTION.adhoc.v1_medical_devices"
-#    fhirCondition:
-#      targetRoot: "$resource.section"
-#      targetAttribute: "code.coding.code"
-#      operator: "one of"
-#      criteria: "46264-8"
-#
-#  - name: "sectionProcedures"
-#    with:
-#      fhir: "$resource.section"
-#      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Procedures']"
-#    slotArchetype: "SECTION.adhoc.v1_procedures"
-#    fhirCondition:
-#      targetRoot: "$resource.section"
-#      targetAttribute: "code.coding.code"
-#      operator: "one of"
-#      criteria: "47519-4"
+  - name: "sectionMedicalDevices"
+    with:
+      fhir: "$resource.section"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medical Devices and Implants']"
+    slotArchetype: "SECTION.adhoc.v1_medical_devices"
+    fhirCondition:
+      targetRoot: "$resource.section"
+      targetAttribute: "code.coding.code"
+      operator: "one of"
+      criteria: "46264-8"
+
+  - name: "sectionProcedures"
+    with:
+      fhir: "$resource.section"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Procedures']"
+    slotArchetype: "SECTION.adhoc.v1_procedures"
+    fhirCondition:
+      targetRoot: "$resource.section"
+      targetAttribute: "code.coding.code"
+      operator: "one of"
+      criteria: "47519-4"
