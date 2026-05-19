@@ -1,7 +1,7 @@
 grammar: FHIRConnect/v1.0.0
 type: context
 metadata:
-  name: ehds-patient-summary
+  name: eps-patient-summary
   version: 0.0.1-alpha
 spec:
   system: FHIR

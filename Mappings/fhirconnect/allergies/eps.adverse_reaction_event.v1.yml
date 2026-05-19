@@ -12,13 +12,17 @@ spec:
   fhirConfig:
     structureDefinition: http://hl7.org/fhir/StructureDefinition/BackboneElement
 
+terminology:
+  type: "local"
+  conceptmap: "http://hl7.org/fhir/ConceptMap/eps-adverse-reaction-event-fhirconnect"
+
 mappings:
   # EPSAllergyIntolerance.reaction.substance
   - name: "substance"
     with:
       fhir: "$resource.substance"
       openehr: "$archetype/items[at0001]"
-      
+
   # EPSAllergyIntolerance.reaction.manifestation
   - name: "manifestation"
     with:
@@ -54,70 +58,3 @@ mappings:
     with:
       fhir: "$resource.severity"
       openehr: "$archetype/items[at0010]"
-      type: "NONE"
-    manual:
-      - name: "mild"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0011"
-          - path: "value"
-            value: "Mild"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "severity"
-          operator: "one of"
-          criteria: "mild"
-        fhir:
-          - path: "$fhirRoot"
-            value: "mild"
-        openehrCondition:
-          targetRoot: "$archetype/items[at0010]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0011"
-
-      - name: "moderate"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0012"
-          - path: "value"
-            value: "Moderate"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "severity"
-          operator: "one of"
-          criteria: "moderate"
-        fhir:
-          - path: "$fhirRoot"
-            value: "moderate"
-        openehrCondition:
-          targetRoot: "$archetype/items[at0010]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0012"
-
-      - name: "severe"
-        openehr:
-          - path: "defining_code/terminology_id"
-            value: "local"
-          - path: "defining_code/code_string"
-            value: "at0013"
-          - path: "value"
-            value: "Severe"
-        fhirCondition:
-          targetRoot: "$resource"
-          targetAttribute: "severity"
-          operator: "one of"
-          criteria: "severe"
-        fhir:
-          - path: "$fhirRoot"
-            value: "severe"
-        openehrCondition:
-          targetRoot: "$archetype/items[at0010]"
-          targetAttribute: "defining_code/code_string"
-          operator: "one of"
-          criteria: "at0013"
