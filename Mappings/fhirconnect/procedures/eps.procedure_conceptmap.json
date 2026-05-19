@@ -1,6 +1,6 @@
 {
   "resourceType": "ConceptMap",
-  "id": "ehds-procedure-fhirconnect",
+  "id": "eps-procedure-fhirconnect",
   "url": "http://hl7.org/fhir/ConceptMap/ehds-procedure-fhirconnect",
   "description": "EPS Procedure Mappings (ISM transition / status)",
   "group": [
