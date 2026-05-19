@@ -403,7 +403,7 @@
 					"response": []
 				},
 				{
-					"name": "Persist ConceptMap - ehds-procedure",
+					"name": "Persist ConceptMap - eps-procedure",
 					"event": [
 						{
 							"listen": "test",
@@ -437,7 +437,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"resourceType\": \"ConceptMap\",\n  \"id\": \"ehds-procedure-fhirconnect\",\n  \"url\": \"http://hl7.org/fhir/ConceptMap/ehds-procedure-fhirconnect\",\n  \"description\": \"EHDS Procedure Mappings (ISM transition / status)\",\n  \"group\": [\n    {\n      \"source\": \"openehr\",\n      \"target\": \"http://hl7.org/fhir/ValueSet/event-status\",\n      \"element\": [\n        {\n          \"code\": \"532\",\n          \"target\": [\n            {\n              \"code\": \"completed\",\n              \"display\": \"Completed\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"source\": \"http://hl7.org/fhir/ValueSet/event-status\",\n      \"target\": \"openehr\",\n      \"element\": [\n        {\n          \"code\": \"completed\",\n          \"target\": [\n            {\n              \"code\": \"532\",\n              \"display\": \"Completed\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+							"raw": "{\n  \"resourceType\": \"ConceptMap\",\n  \"id\": \"eps-procedure-fhirconnect\",\n  \"url\": \"http://hl7.org/fhir/ConceptMap/eps-procedure-fhirconnect\",\n  \"description\": \"EPS Procedure Mappings (ISM transition / status)\",\n  \"group\": [\n    {\n      \"source\": \"local\",\n      \"target\": \"http://hl7.org/fhir/ValueSet/event-status\",\n      \"element\": [\n        {\n          \"code\": \"at0004\",\n          \"display\": \"planned\",\n          \"target\": [\n            {\n              \"code\": \"preparation\",\n              \"display\": \"Preparation\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"at0038\",\n          \"display\": \"postponed\",\n          \"target\": [\n            {\n              \"code\": \"on-hold\",\n              \"display\": \"On Hold\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"at0039\",\n          \"display\": \"cancelled\",\n          \"target\": [\n            {\n              \"code\": \"not-done\",\n              \"display\": \"Not Done\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"at0068\",\n          \"display\": \"commenced\",\n          \"target\": [\n            {\n              \"code\": \"in-progress\",\n              \"display\": \"In Progress\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"at0041\",\n          \"display\": \"aborted\",\n          \"target\": [\n            {\n              \"code\": \"stopped\",\n              \"display\": \"Stopped\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"at0043\",\n          \"display\": \"completed\",\n          \"target\": [\n            {\n              \"code\": \"completed\",\n              \"display\": \"Completed\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"source\": \"http://hl7.org/fhir/ValueSet/event-status\",\n      \"target\": \"local\",\n      \"element\": [\n        {\n          \"code\": \"preparation\",\n          \"display\": \"Preparation\",\n          \"target\": [\n            {\n              \"code\": \"at0004\",\n              \"display\": \"Procedure planned\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"on-hold\",\n          \"display\": \"On Hold\",\n          \"target\": [\n            {\n              \"code\": \"at0038\",\n              \"display\": \"Procedure postponed\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"not-done\",\n          \"display\": \"Not Done\",\n          \"target\": [\n            {\n              \"code\": \"at0039\",\n              \"display\": \"Procedure cancelled\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"in-progress\",\n          \"display\": \"In Progress\",\n          \"target\": [\n            {\n              \"code\": \"at0068\",\n              \"display\": \"Procedure commenced\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"stopped\",\n          \"display\": \"Stopped\",\n          \"target\": [\n            {\n              \"code\": \"at0041\",\n              \"display\": \"Procedure aborted\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        },\n        {\n          \"code\": \"completed\",\n          \"display\": \"Completed\",\n          \"target\": [\n            {\n              \"code\": \"at0043\",\n              \"display\": \"Procedure completed\",\n              \"equivalence\": \"equivalent\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
 						},
 						"url": {
 							"raw": "https://sandbox.open-fhir.com/terminology/fhir/ConceptMap",
@@ -493,7 +493,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: COMPOSITION.health_summary.v1\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-COMPOSITION.health_summary.v1\n    revision: 1.0.3\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/Composition\n\nmappings:\n  - name: meta\n    with:\n      fhir: \"$resource.meta\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"profile\"\n        fhir:\n          - path: \"profile\"\n            value: \"http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips\"\n\n  - name: title\n    with:\n      fhir: \"$resource\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"title\"\n        fhir:\n          - path: \"title\"\n            value: \"Patient Summary\"\n\n  - name: status\n    with:\n      fhir: \"$resource\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"status\"\n        fhir:\n          - path: \"status\"\n            value: \"final\"\n\n  - name: type\n    with:\n      fhir: \"$resource.type.coding\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"code\"\n        fhir:\n          - path: \"code\"\n            value: \"60591-5\"\n      - name: \"system\"\n        fhir:\n          - path: \"system\"\n            value: \"http://loinc.org\"\n      - name: \"display\"\n        fhir:\n          - path: \"display\"\n            value: \"Patient summary Document\"\n\n  - name: \"sectionAllergiesAndIntolerances\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Allergies and Intolerances']\"\n    slotArchetype: \"SECTION.adhoc.v1_allergies_and_intolerances\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"48765-2\"\n\n  - name: \"sectionProblems\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Problem List']\"\n    slotArchetype: \"SECTION.adhoc.v1_problems\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"11450-4\"\n\n#  - name: \"sectionMedications\"\n#    with:\n#      fhir: \"$resource.section\"\n#      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medication Summary']\"\n#    slotArchetype: \"SECTION.adhoc.v1_medication_summary\"\n#    fhirCondition:\n#      targetRoot: \"$resource.section\"\n#      targetAttribute: \"code.coding.code\"\n#      operator: \"one of\"\n#      criteria: \"10160-0\"\n#\n#  - name: \"sectionMedicalDevices\"\n#    with:\n#      fhir: \"$resource.section\"\n#      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medical Devices and Implants']\"\n#    slotArchetype: \"SECTION.adhoc.v1_medical_devices\"\n#    fhirCondition:\n#      targetRoot: \"$resource.section\"\n#      targetAttribute: \"code.coding.code\"\n#      operator: \"one of\"\n#      criteria: \"46264-8\"\n#\n#  - name: \"sectionProcedures\"\n#    with:\n#      fhir: \"$resource.section\"\n#      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Procedures']\"\n#    slotArchetype: \"SECTION.adhoc.v1_procedures\"\n#    fhirCondition:\n#      targetRoot: \"$resource.section\"\n#      targetAttribute: \"code.coding.code\"\n#      operator: \"one of\"\n#      criteria: \"47519-4\"\n"
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: COMPOSITION.health_summary.v1\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-COMPOSITION.health_summary.v1\n    revision: 1.0.3\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/Composition\n\nmappings:\n  - name: meta\n    with:\n      fhir: \"$resource.meta\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"profile\"\n        fhir:\n          - path: \"profile\"\n            value: \"http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips\"\n\n  - name: title\n    with:\n      fhir: \"$resource\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"title\"\n        fhir:\n          - path: \"title\"\n            value: \"Patient Summary\"\n\n  - name: status\n    with:\n      fhir: \"$resource\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"status\"\n        fhir:\n          - path: \"status\"\n            value: \"final\"\n\n  - name: type\n    with:\n      fhir: \"$resource.type.coding\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"code\"\n        fhir:\n          - path: \"code\"\n            value: \"60591-5\"\n      - name: \"system\"\n        fhir:\n          - path: \"system\"\n            value: \"http://loinc.org\"\n      - name: \"display\"\n        fhir:\n          - path: \"display\"\n            value: \"Patient summary Document\"\n\n  - name: \"sectionAllergiesAndIntolerances\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Allergies']\"\n    slotArchetype: \"SECTION.adhoc.v1_allergies_and_intolerances\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"48765-2\"\n\n  - name: \"sectionProblems\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Problems']\"\n    slotArchetype: \"SECTION.adhoc.v1_problems\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"11450-4\"\n\n#  - name: \"sectionMedications\"\n#    with:\n#      fhir: \"$resource.section\"\n#      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medication Summary']\"\n#    slotArchetype: \"SECTION.adhoc.v1_medication_summary\"\n#    fhirCondition:\n#      targetRoot: \"$resource.section\"\n#      targetAttribute: \"code.coding.code\"\n#      operator: \"one of\"\n#      criteria: \"10160-0\"\n\n  - name: \"sectionMedicalDevices\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Medical Devices']\"\n    slotArchetype: \"SECTION.adhoc.v1_medical_devices\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"46264-8\"\n\n  - name: \"sectionProcedures\"\n    with:\n      fhir: \"$resource.section\"\n      openehr: \"$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS History of Procedures']\"\n    slotArchetype: \"SECTION.adhoc.v1_procedures\"\n    fhirCondition:\n      targetRoot: \"$resource.section\"\n      targetAttribute: \"code.coding.code\"\n      operator: \"one of\"\n      criteria: \"47519-4\"\n"
 						},
 						"url": {
 							"raw": "https://sandbox.open-fhir.com/fc/model",
@@ -1023,7 +1023,166 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: ACTION.procedure.v1\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-ACTION.procedure.v1\n    revision: 1.4.7\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/Procedure\n\nterminology:\n  type: \"local\"\n  conceptmap: \"http://hl7.org/fhir/ConceptMap/ehds-procedure-fhirconnect\"\n\nmappings:\n\n  - name: \"ISMTransition\"\n    with:\n      fhir: \"$resource.status\"\n      openehr: \"$archetype/ism_transition/current_state\"\n\n  - name: \"performedDateTime\"\n    with:\n      fhir: \"$resource.performed.as(DateTime)\"\n      openehr: \"$archetype/time\"\n    openehrCondition:\n      targetRoot: \"$archetype/description[at0001]/items[at0060]\"\n      targetAttribute: \"value\"\n      operator: \"empty\"\n\n#  - name: \"performedPeriod\"\n#    with:\n#      fhir: \"$resource.performed.as(Period)\"\n#      openehr: \"$archetype\"\n#      type: \"NONE\"\n#    openehrCondition:\n#      targetRoot: \"$archetype/description[at0001]/items[at0060]\"\n#      targetAttribute: \"value\"\n#      operator: \"not empty\"\n#    followedBy:\n#      mappings:\n#        - name: \"start\"\n#          with:\n#            fhir: \"start\"\n#            openehr: \"$archetype/time\"\n#        - name: \"end\"\n#          with:\n#            fhir: \"end\"\n#            openehr: \"$archetype/description[at0001]/items[at0060]\"\n\n  - name: \"code\"\n    with:\n      fhir: \"$resource.code\"\n      openehr: \"$archetype/description[at0001]/items[at0002]\"\n\n  - name: \"reason\"\n    with:\n      fhir: \"$resource.reasonCode\"\n      openehr: \"$archetype/description[at0001]/items[at0070]\"\n\n  - name: \"outcome\"\n    with:\n      fhir: \"$resource.outcome\"\n      openehr: \"$archetype/description[at0001]/items[at0048]\"\n\n  - name: \"complication\"\n    with:\n      fhir: \"$resource.complication\"\n      openehr: \"$archetype/description[at0001]/items[at0006]\"\n\n  - name: \"note\"\n    with:\n      fhir: \"$resource.note.text\"\n      openehr: \"$archetype/description[at0001]/items[at0005]\"\n\n  - name: \"bodySite\"\n    with:\n      fhir: \"$resource.bodySite\"\n      openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]\"\n    slotArchetype: \"CLUSTER.anatomical_location.v1\"\n\n  - name: \"usedDevice\"\n    with:\n      fhir: \"$resource.usedReference\"\n      openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1]\"\n    reference:\n      resourceType: \"Device\"\n      mappings:\n        - name: \"usedDevice\"\n          with:\n            fhir: \"$fhirRoot\"\n            openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1]\"\n          slotArchetype: \"CLUSTER.device.v1\"\n"
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: ACTION.procedure.v1\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-ACTION.procedure.v1\n    revision: 1.4.7\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/Procedure\n\nterminology:\n  type: \"local\"\n  conceptmap: \"http://hl7.org/fhir/ConceptMap/eps-procedure-fhirconnect\"\n\nmappings:\n\n  - name: \"ISMTransition\"\n    with:\n      fhir: \"$resource.status\"\n      openehr: \"$archetype/ism_transition/careflow_step\"\n\n  - name: \"performedDateTime\"\n    with:\n      fhir: \"$resource.performed.as(DateTime)\"\n      openehr: \"$archetype/description[at0001]/items[at0060]\"\n\n  - name: \"code\"\n    with:\n      fhir: \"$resource.code\"\n      openehr: \"$archetype/description[at0001]/items[at0002]\"\n\n  - name: \"reason\"\n    with:\n      fhir: \"$resource.reasonCode\"\n      openehr: \"$archetype/description[at0001]/items[at0070]\"\n\n  - name: \"category\"\n    with:\n      fhir: \"$resource.category\"\n      openehr: \"$archetype/description[at0001]/items[at0067]\"\n\n  - name: \"statusReason\"\n    with:\n      fhir: \"$resource.statusReason\"\n      openehr: \"$archetype/description[at0001]/items[at0014]\"\n\n  - name: \"bodySite\"\n    with:\n      fhir: \"$resource.bodySite\"\n      openehr: \"$archetype/description[at0001]/items[at0063]\"\n\n  - name: \"usedDevice\"\n    with:\n      fhir: \"$resource.usedReference\"\n      openehr: \"$reference\"\n    reference:\n      resourceType: \"Device\"\n      mappings:\n        - name: \"usedDevice\"\n          with:\n            fhir: \"$fhirRoot\"\n            openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']\"\n          slotArchetype: \"CLUSTER.device.v1\"\n\n  - name: \"usedCode\"\n    with:\n      fhir: \"$resource.usedCode\"\n      openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']/items[at0003]\"\n\n  - name: \"focalDevice\"\n    with:\n      fhir: \"$resource.focalDevice.manipulated\"\n      openehr: \"$reference\"\n    reference:\n      resourceType: \"Device\"\n      mappings:\n        - name: \"focalDevice\"\n          with:\n            fhir: \"$fhirRoot\"\n            openehr: \"$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Focal device']\"\n          slotArchetype: \"CLUSTER.device.v1\"\n\n  - name: \"outcome\"\n    with:\n      fhir: \"$resource.outcome\"\n      openehr: \"$archetype/description[at0001]/items[at0048]\"\n\n  - name: \"complication\"\n    with:\n      fhir: \"$resource.complication\"\n      openehr: \"$archetype/description[at0001]/items[at0006]\"\n\n  - name: \"note\"\n    with:\n      fhir: \"$resource.note.text\"\n      openehr: \"$archetype/description[at0001]/items[at0005]\"\n"
+						},
+						"url": {
+							"raw": "https://sandbox.open-fhir.com/fc/model",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"open-fhir",
+								"com"
+							],
+							"path": [
+								"fc",
+								"model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Persist Model - SECTION.adhoc.v1_medical_devices",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 or 201\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-yaml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: SECTION.adhoc.v1_medical_devices\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-SECTION.adhoc.v1\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/BackboneElement\n\nmappings:\n  - name: \"entry\"\n    with:\n      fhir: \"entry\"\n      openehr: \"$reference/items[openEHR-EHR-EVALUATION.device_summary.v0]\"\n    reference:\n      resourceType: \"DeviceUseStatement\"\n      mappings:\n        - name: \"deviceSummary\"\n          with:\n            fhir: \"$fhirRoot\"\n            openehr: \"$archetype/items[openEHR-EHR-EVALUATION.device_summary.v0]\"\n          slotArchetype: \"EVALUATION.device_summary.v0\"\n\n  - name: \"title\"\n    with:\n      fhir: \"$fhirRoot\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"manualTitle\"\n        fhir:\n          - path: \"title\"\n            value: \"Medical Devices and Implants\"\n\n  - name: \"code\"\n    with:\n      fhir: \"code.coding\"\n      openehr: \"$composition\"\n    manual:\n      - name: \"manualSystem\"\n        fhir:\n          - path: \"system\"\n            value: \"http://loinc.org\"\n      - name: \"manualCode\"\n        fhir:\n          - path: \"code\"\n            value: \"46264-8\"\n      - name: \"manualDisplay\"\n        fhir:\n          - path: \"display\"\n            value: \"History of medical device use\"\n\n  # emptyReason: absence of information only (no exclusion_global for devices)\n  - name: \"emptyReasonAbsence\"\n    with:\n      fhir: \"emptyReason\"\n      openehr: \"$archetype/items[openEHR-EHR-EVALUATION.absence.v2]\"\n    slotArchetype: \"EVALUATION.absence.v2\"\n"
+						},
+						"url": {
+							"raw": "https://sandbox.open-fhir.com/fc/model",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"open-fhir",
+								"com"
+							],
+							"path": [
+								"fc",
+								"model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Persist Model - EVALUATION.device_summary.v0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 or 201\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-yaml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: EVALUATION.device_summary.v0\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-EVALUATION.device_summary.v0\n    revision: 0.0.3\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/DeviceUseStatement\n\nmappings:\n\n  - name: \"status\"\n    with:\n      fhir: \"$resource\"\n      openehr: \"$archetype/data[at0001]/items[at0002]\"\n    manual:\n      - name: \"activeStatusFhir\"\n        fhir:\n          - path: \"status\"\n            value: \"active\"\n\n      - name: \"activeStatusOpenEhr\"\n        openehr:\n          - path: \"defining_code/terminology_id\"\n            value: \"local\"\n          - path: \"defining_code/code_string\"\n            value: \"at0004\"\n          - path: \"value\"\n            value: \"Current\"\n\n  - name: \"text\"\n    with:\n      fhir: \"$resource.note.text\"\n      openehr: \"$archetype/data[at0001]/items[at0015]\"\n\n  - name: \"timingPeriod\"\n    with:\n      fhir: \"$resource.timing.as(Period)\"\n      openehr: \"$archetype/data[at0001]/items[at0022]\"\n      type: \"NONE\"\n    followedBy:\n      mappings:\n        - name: \"start\"\n          with:\n            fhir: \"start\"\n            openehr: \"items[at0008]\"\n        - name: \"end\"\n          with:\n            fhir: \"end\"\n            openehr: \"items[at0009]\"\n\n  - name: \"device\"\n    with:\n      fhir: \"$resource.device\"\n      openehr: \"$archetype/data[at0001]/items[at0022]/items[openEHR-EHR-CLUSTER.device.v1]\"\n    reference:\n      resourceType: \"Device\"\n      mappings:\n        - name: \"deviceDetails\"\n          with:\n            fhir: \"$fhirRoot\"\n            openehr: \"$archetype/data[at0001]/items[at0022]/items[openEHR-EHR-CLUSTER.device.v1]\"\n          slotArchetype: \"CLUSTER.device.v1\"\n\n  - name: \"bodySite\"\n    with:\n      fhir: \"$resource.bodySite\"\n      openehr: \"$archetype/data[at0001]/items[at0022]/items[at0012]\"\n"
+						},
+						"url": {
+							"raw": "https://sandbox.open-fhir.com/fc/model",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"open-fhir",
+								"com"
+							],
+							"path": [
+								"fc",
+								"model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Persist Model - CLUSTER.device.v1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 or 201\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-yaml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: model\nmetadata:\n  name: CLUSTER.device.v1\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n  openEhrConfig:\n    archetype: openEHR-EHR-CLUSTER.device.v1\n    revision: 1.1.0\n  fhirConfig:\n    structureDefinition: http://hl7.org/fhir/StructureDefinition/Device\n\nmappings:\n\n  - name: \"name\"\n    with:\n      fhir: \"$resource.deviceName.name\"\n      openehr: \"$archetype/items[at0001]\"\n\n  - name: \"type\"\n    with:\n      fhir: \"$resource.type\"\n      openehr: \"$archetype/items[at0003]\"\n\n  - name: \"manufacturer\"\n    with:\n      fhir: \"$resource.manufacturer\"\n      openehr: \"$archetype/items[at0004]\"\n\n  - name: \"manufactureDate\"\n    with:\n      fhir: \"$resource.manufactureDate\"\n      openehr: \"$archetype/items[at0005]\"\n\n  - name: \"expiryDate\"\n    with:\n      fhir: \"$resource.expirationDate\"\n      openehr: \"$archetype/items[at0007]\"\n\n  - name: \"lotNumber\"\n    with:\n      fhir: \"$resource.lotNumber\"\n      openehr: \"$archetype/items[at0006]\"\n\n  - name: \"serialNumber\"\n    with:\n      fhir: \"$resource.serialNumber\"\n      openehr: \"$archetype/items[at0020]\"\n\n  - name: \"modelNumber\"\n    with:\n      fhir: \"$resource.modelNumber\"\n      openehr: \"$archetype/items[at0023]\"\n\n  - name: \"version\"\n    with:\n      fhir: \"$resource.version.value\"\n      openehr: \"$archetype/items[at0025]\"\n\n  - name: \"note\"\n    with:\n      fhir: \"$resource.note.text\"\n      openehr: \"$archetype/items[at0008]\"\n\n  - name: \"identifier\"\n    with:\n      fhir: \"$resource.identifier\"\n      openehr: \"$archetype/items[at0024, 'Other identifier']\"\n\n  - name: \"distinctIdentifier\"\n    with:\n      fhir: \"$resource.distinctIdentifier\"\n      openehr: \"$archetype/items[at0024, 'Distinct identifier']\"\n\n  - name: \"udiCarrier\"\n    with:\n      fhir: \"$resource.udiCarrier.deviceIdentifier\"\n      openehr: \"$archetype/items[at0021]\"\n"
 						},
 						"url": {
 							"raw": "https://sandbox.open-fhir.com/fc/model",
@@ -1184,7 +1343,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "grammar: FHIRConnect/v1.0.0\ntype: context\nmetadata:\n  name: ehds-patient-summary\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n\ncontext:\n  profile:\n    url: \"http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips\"\n    version: \"2.0.0\"\n  template:\n    id: \"EPS Patient Summary\"\n  archetypes:\n    - \"COMPOSITION.health_summary.v1\"\n    - \"SECTION.adhoc.v1_allergies_and_intolerances\"\n    - \"SECTION.adhoc.v1_problems\"\n    - \"SECTION.adhoc.v1_procedures\"\n    - \"SECTION.adhoc.v1_medical_devices\"\n    - \"SECTION.adhoc.v1_medication_summary\"\n    - \"EVALUATION.adverse_reaction_risk.v2\"\n    - \"CLUSTER.adverse_reaction_event.v1\"\n    - \"EVALUATION.problem_diagnosis.v1\"\n    - \"CLUSTER.clinical_evidence.v1-evidence\"\n    - \"CLUSTER.clinical_evidence.v1-stage\"\n    - \"CLUSTER.anatomical_location.v1\"\n    - \"CLUSTER.problem_qualifier.v2\"\n    - \"ACTION.procedure.v1\"\n    - \"EVALUATION.device_summary.v0\"\n    - \"CLUSTER.device.v1\"\n    - \"EVALUATION.absence.v2\"\n    - \"EVALUATION.exclusion_global.v1\"\n  start: \"COMPOSITION.health_summary.v1\"\n"
+							"raw": "grammar: FHIRConnect/v1.0.0\ntype: context\nmetadata:\n  name: eps-patient-summary\n  version: 0.0.1-alpha\nspec:\n  system: FHIR\n  version: R4\n\ncontext:\n  profile:\n    url: \"http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips\"\n    version: \"2.0.0\"\n  template:\n    id: \"EPS Patient Summary\"\n  archetypes:\n    - \"COMPOSITION.health_summary.v1\"\n    - \"SECTION.adhoc.v1_allergies_and_intolerances\"\n    - \"SECTION.adhoc.v1_problems\"\n    - \"SECTION.adhoc.v1_procedures\"\n    - \"SECTION.adhoc.v1_medical_devices\"\n    - \"SECTION.adhoc.v1_medication_summary\"\n    - \"EVALUATION.adverse_reaction_risk.v2\"\n    - \"CLUSTER.adverse_reaction_event.v1\"\n    - \"EVALUATION.problem_diagnosis.v1\"\n    - \"CLUSTER.clinical_evidence.v1-evidence\"\n    - \"CLUSTER.clinical_evidence.v1-stage\"\n    - \"CLUSTER.anatomical_location.v1\"\n    - \"CLUSTER.problem_qualifier.v2\"\n    - \"ACTION.procedure.v1\"\n    - \"EVALUATION.device_summary.v0\"\n    - \"CLUSTER.device.v1\"\n    - \"EVALUATION.absence.v2\"\n    - \"EVALUATION.exclusion_global.v1\"\n  start: \"COMPOSITION.health_summary.v1\"\n"
 						},
 						"url": {
 							"raw": "https://sandbox.open-fhir.com/fc/context",
