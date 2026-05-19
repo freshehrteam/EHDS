@@ -12,6 +12,7 @@ spec:
     structureDefinition: http://hl7.org/fhir/StructureDefinition/BackboneElement
 
 mappings:
+
   - name: "entry"
     with:
       fhir: "entry"
@@ -80,3 +81,31 @@ mappings:
       operator: "one of"
       criteria: "nilknown"
     slotArchetype: "EVALUATION.exclusion_global.v1"
+
+  - name: "narrativeToOpenEhr"
+    unidirectional: "fhir->openehr"
+    with:
+      fhir: "text"
+      openehr: "$archetype/items[openEHR-EHR-EVALUATION.container.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.fhir_narrative.v0]"
+    followedBy:
+      mappings:
+        - name: "div"
+          with:
+            fhir: "div"
+            openehr: "items[at0002]"
+        - name: "status"
+          with:
+            fhir: "$fhirRoot"
+            openehr: "items[at0001]"
+          manual:
+            - name: "manualNarrativeStatus"
+              openehr:
+                - path: "$openehrRoot"
+                  value: "generated"
+
+  - name: "narrativeText"
+    with:
+      fhir: "text"
+      openehr: "$composition"
+    mappingCode: "generateNarrative(entry, conditions)"
+    unidirectional: "openehr->fhir"

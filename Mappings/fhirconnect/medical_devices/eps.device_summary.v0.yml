@@ -17,12 +17,21 @@ mappings:
   - name: "status"
     with:
       fhir: "$resource"
-      openehr: "$archetype"
+      openehr: "$archetype/data[at0001]/items[at0002]"
     manual:
-      - name: "activeStatus"
+      - name: "activeStatusFhir"
         fhir:
           - path: "status"
             value: "active"
+
+      - name: "activeStatusOpenEhr"
+        openehr:
+          - path: "defining_code/terminology_id"
+            value: "local"
+          - path: "defining_code/code_string"
+            value: "at0004"
+          - path: "value"
+            value: "Current"
 
   - name: "text"
     with:
@@ -61,4 +70,4 @@ mappings:
   - name: "bodySite"
     with:
       fhir: "$resource.bodySite"
-      openehr: "$archetype/data[at0001]/items[at0012]"
+      openehr: "$archetype/data[at0001]/items[at0022]/items[at0012]"

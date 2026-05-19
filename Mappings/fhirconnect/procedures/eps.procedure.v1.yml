@@ -14,43 +14,19 @@ spec:
 
 terminology:
   type: "local"
-  conceptmap: "http://hl7.org/fhir/ConceptMap/ehds-procedure-fhirconnect"
+  conceptmap: "http://hl7.org/fhir/ConceptMap/eps-procedure-fhirconnect"
 
 mappings:
 
   - name: "ISMTransition"
     with:
       fhir: "$resource.status"
-      openehr: "$archetype/ism_transition/current_state"
+      openehr: "$archetype/ism_transition/careflow_step"
 
   - name: "performedDateTime"
     with:
       fhir: "$resource.performed.as(DateTime)"
-      openehr: "$archetype/time"
-    openehrCondition:
-      targetRoot: "$archetype/description[at0001]/items[at0060]"
-      targetAttribute: "value"
-      operator: "empty"
-
-#  - name: "performedPeriod"
-#    with:
-#      fhir: "$resource.performed.as(Period)"
-#      openehr: "$archetype"
-#      type: "NONE"
-#    openehrCondition:
-#      targetRoot: "$archetype/description[at0001]/items[at0060]"
-#      targetAttribute: "value"
-#      operator: "not empty"
-#    followedBy:
-#      mappings:
-#        - name: "start"
-#          with:
-#            fhir: "start"
-#            openehr: "$archetype/time"
-#        - name: "end"
-#          with:
-#            fhir: "end"
-#            openehr: "$archetype/description[at0001]/items[at0060]"
+      openehr: "$archetype/description[at0001]/items[at0060]"
 
   - name: "code"
     with:
@@ -80,32 +56,31 @@ mappings:
   - name: "usedDevice"
     with:
       fhir: "$resource.usedReference"
-      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']]"
+      openehr: "$reference"
     reference:
       resourceType: "Device"
       mappings:
         - name: "usedDevice"
           with:
             fhir: "$fhirRoot"
-            openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']]"
+            openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']"
           slotArchetype: "CLUSTER.device.v1"
-          followedBy:
-            mappings:
-              - name: "usedCode"
-                with:
-                  fhir: "$resource.usedCode"
-                  openehr: "items[at0003]"
+
+  - name: "usedCode"
+    with:
+      fhir: "$resource.usedCode"
+      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Used device']/items[at0003]"
 
   - name: "focalDevice"
     with:
-      fhir: "$resource.focalDevice"
-      openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Focal device']"
+      fhir: "$resource.focalDevice.manipulated"
+      openehr: "$reference"
     reference:
       resourceType: "Device"
       mappings:
         - name: "focalDevice"
           with:
-            fhir: "manipulated"
+            fhir: "$fhirRoot"
             openehr: "$archetype/description[at0001]/items[openEHR-EHR-CLUSTER.device.v1, 'Focal device']"
           slotArchetype: "CLUSTER.device.v1"
 

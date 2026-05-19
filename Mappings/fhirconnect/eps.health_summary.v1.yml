@@ -64,7 +64,7 @@ mappings:
   - name: "sectionAllergiesAndIntolerances"
     with:
       fhir: "$resource.section"
-      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Allergies and Intolerances']"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Allergies']"
     slotArchetype: "SECTION.adhoc.v1_allergies_and_intolerances"
     fhirCondition:
       targetRoot: "$resource.section"
@@ -75,7 +75,7 @@ mappings:
   - name: "sectionProblems"
     with:
       fhir: "$resource.section"
-      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Problem List']"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Problems']"
     slotArchetype: "SECTION.adhoc.v1_problems"
     fhirCondition:
       targetRoot: "$resource.section"
@@ -97,7 +97,7 @@ mappings:
   - name: "sectionMedicalDevices"
     with:
       fhir: "$resource.section"
-      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Medical Devices and Implants']"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS Medical Devices']"
     slotArchetype: "SECTION.adhoc.v1_medical_devices"
     fhirCondition:
       targetRoot: "$resource.section"
@@ -108,7 +108,7 @@ mappings:
   - name: "sectionProcedures"
     with:
       fhir: "$resource.section"
-      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EHDS Procedures']"
+      openehr: "$composition/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='EPS History of Procedures']"
     slotArchetype: "SECTION.adhoc.v1_procedures"
     fhirCondition:
       targetRoot: "$resource.section"
