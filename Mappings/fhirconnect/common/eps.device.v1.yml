@@ -67,7 +67,12 @@ mappings:
   - name: "identifier"
     with:
       fhir: "$resource.identifier"
-      openehr: "$archetype/items[at0024]"
+      openehr: "$archetype/items[at0024, 'Other identifier']"
+
+  - name: "distinctIdentifier"
+    with:
+      fhir: "$resource.distinctIdentifier"
+      openehr: "$archetype/items[at0024, 'Distinct identifier']"
 
   - name: "udiCarrier"
     with:

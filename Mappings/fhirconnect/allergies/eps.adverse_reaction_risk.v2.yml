@@ -42,7 +42,7 @@ mappings:
           - path: "code"
             value: "active"
           - path: "system"
-            value: "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+            value: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
           - path: "display"
             value: "Active"
         openehrCondition:
@@ -68,7 +68,7 @@ mappings:
           - path: "code"
             value: "inactive"
           - path: "system"
-            value: "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+            value: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
           - path: "display"
             value: "Inactive"
         openehrCondition:
@@ -330,6 +330,42 @@ mappings:
     with:
       fhir: "$resource.type"
       openehr: "$archetype/data[at0001]/items[at0058]"
+    manual:
+      - name: "Allergy"
+        openehr:
+          - path: "$openehrRoot"
+            value: "Allergy"
+        fhirCondition:
+          targetRoot: "$resource"
+          targetAttribute: "type"
+          operator: "one of"
+          criteria: "allergy"
+        fhir:
+          - path: "$fhirRoot"
+            value: "allergy"
+        openehrCondition:
+          targetRoot: "$archetype"
+          targetAttribute: "data[at0001]/items[at0058]"
+          operator: "one of"
+          criteria: "Allergy"
+
+      - name: "intolerance"
+        openehr:
+          - path: "$openehrRoot"
+            value: "Intolerance"
+        fhirCondition:
+          targetRoot: "$resource"
+          targetAttribute: "type"
+          operator: "one of"
+          criteria: "intolerance"
+        fhir:
+          - path: "$fhirRoot"
+            value: "intolerance"
+        openehrCondition:
+          targetRoot: "$archetype"
+          targetAttribute: "data[at0001]/items[at0058]"
+          operator: "one of"
+          criteria: "Intolerance"
 
   # EPSAllergyIntolerance.note.text — comment/narrative
   - name: "description"
