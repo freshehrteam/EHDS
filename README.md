@@ -23,6 +23,8 @@ Each of the 6 core concepts from EPS consists of one or more [EHDS Logical Model
 openEHR section templates are created at the level of a concept. An embedded template is created for each Logical Model and included in the section template for each relevant concept. Mappings to the corresponding Logical Model items are included in the templates as Annotations for each data element.
 
 The section templates are exported in Web Template format and converted into CSVs using [this online tool](https://wt2xt-app-sd8pw.ondigitalocean.app/).
+
+In the second phase of the project, the same methodology is used to map the [HL7 Europe EPS FHIR profiles](https://build.fhir.org/ig/hl7-eu/eps/index.html) to openEHR.
 <br />
 <br />
 
@@ -38,7 +40,7 @@ The mapping CSVs are in /Mappings.
 <br />
 <br />
 
-### freshEHR Mapping Comments (work in progress!):
+### freshEHR Mapping Comments:
 
 The mapping comments are documented [here](https://freshehr.notion.site/Mapping-Comments-2c0fae3e474880afbb29e6f03b19b1fa).
 <br />
