@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"00880cb27ee56030d404b953917bc804">
+		["MD5-CAM-1.0.1"] = <"ba9d64afed962bf1218bff5ab4ff1d57">
 		["build_uid"] = <"1e4f24ca-3a90-37d4-9b3b-8eeb7c97fde3">
 		["revision"] = <"0.0.1">
 	>
@@ -68,7 +68,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Narrative">
-					description = <"The narrative carried in the div element in FHIR">
+					description = <"The narrative carried in the div element in FHIR messages.">
 				>
 			>
 		>
